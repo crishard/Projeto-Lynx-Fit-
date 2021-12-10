@@ -4,4 +4,4 @@ uma rotina mensal de treinos para o cliente da academia, com base nos dados dess
 mostrar para esse cliente a sua evolução ao longo do tempo, tais como a perda de peso, o ganho de massa
 corporal, dentre outras coisas que normalmente as pessoas buscam ao se matricular em uma acdemia. Fazendo
 com que assim o único papel dopersonal treiner, seja acompanhar se os exercícios estão sendo feitos
-corretamente.
+corretamente...
