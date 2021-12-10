@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://listenx.com.br/blog/wp-content/uploads/2021/07/decoracao-para-academia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
+.principal-cliente{
+    border-radius: 15px;
+    width: 300px;
+    padding: 30px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(187, 207, 235, 0.589);
+    text-align: center;
+}
+.principal-cliente h1{
+    text-transform: uppercase;
+    color: rgb(0, 0, 170);
+}
+
+.entrada::placeholder{
+    color: black;
+}
+
+.entrada{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 18% auto;
+    text-align: center;
+    border: 2.5px solid rgb(0, 0, 170);
+    padding: 12px 10px;
+    outline: none;
+    color: black;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.entrada:focus{
+    width: 240px;
+    border-color: rgb(20, 20, 37);
+}
+
+.login{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2.5px solid rgb(0, 0, 170);
+    padding: 14px 40px;
+    color: black;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.2;
+    cursor: pointer;
+    transition: 0.8s
+}
+
+
+.login:hover{
+
+    background-color: rgb(186, 186, 233);
+}
