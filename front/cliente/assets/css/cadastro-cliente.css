@@ -17,6 +17,10 @@
     margin-right: auto;
     
   }
+  #h1{
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgba(0, 0, 0, 0.418)
+  }
  
   
   input, label {
@@ -31,7 +35,6 @@
  
   body {
     padding-top: 5vh;
-   /* background-image: url(https://listenx.com.br/blog/wp-content/uploads/2021/07/decoracao-para-academia.jpg);*/
     background-size: cover;
     background-position-y: -720px;
    
