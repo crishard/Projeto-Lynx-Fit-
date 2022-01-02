@@ -4,7 +4,7 @@ class Validator {
       this.validations = [
         'data-min-length',
         'data-max-length',
-        'data-cnpj-validate',
+        'data-only-letters',
         'data-email-validate',
         'data-required',
         'data-equal',
@@ -105,68 +105,6 @@ class Validator {
       }
   
     }
-    cnpjvalidate(input) {   
-        let cnpj = input.value;
-         let errorMessage = `Insira um CNPJ Valido`;
-        
-           if(input == ''){
-            
-           return false;
-           }
-           
-           if (input.length != 14) {
-            console.log(cnpj);
-               return false;
-           }
-           // Elimina CNPJs invalidos conhecidos
-          if (cnpj == "00000000000000" || 
-              cnpj == "11111111111111" || 
-              cnpj == "22222222222222" || 
-              cnpj == "33333333333333" || 
-              cnpj == "44444444444444" || 
-              cnpj == "55555555555555" || 
-              cnpj == "66666666666666" || 
-              cnpj == "77777777777777" || 
-              cnpj == "88888888888888" || 
-              cnpj == "99999999999999"){
-              
-                 return false;
-              }
-           // Valida DVs
-           tamanho = input.length - 2
-           numeros = input.substring(0,tamanho);
-           digitos = input.substring(tamanho);
-           soma = 0;
-           pos = tamanho - 7;
-           for (i = tamanho; i >= 1; i--) {
-             soma += numeros.charAt(tamanho - i) * pos--;
-             if (pos < 2)
-                   pos = 9;
-           }
-           resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-           if (resultado != digitos.charAt(0)){
-            console.log(cnpj);
-               return false;
-           }     
-           tamanho = tamanho + 1;
-           numeros = input.substring(0,tamanho);
-           soma = 0;
-           pos = tamanho - 7;
-           for (i = tamanho; i >= 1; i--) {
-             soma += numeros.charAt(tamanho - i) * pos--;
-             if (pos < 2)
-                   pos = 9;
-           }
-           resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-           if (resultado != digitos.charAt(1)){
-            console.log(cnpj);
-                 return  false;
-           }
-          
-           console.log(cnpj);
-           return true;
-           
-       }
     // verificar se um campo está igual o outro
     equal(input, inputName) {
       let inputToCompare = document.getElementsByName(inputName)[0];
@@ -251,8 +189,6 @@ class Validator {
   
   // evento de envio do form, que valida os inputs
   submit.addEventListener('click', function(e) {
-    e.preventDefault();
-  
     validator.validate(form);
   
   });
