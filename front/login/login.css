@@ -1,0 +1,128 @@
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(380px, 1fr));
+    gap: 3.5rem;
+    margin-top: 1.8rem;
+    margin-left: 0.9rem;
+}
+.principal .info img{
+    width: 400px;
+    margin-left: -2rem;
+}
+.principal .info{
+    text-align: center;
+}
+.info{
+    background: rgba(0, 0, 170, 0.408);
+    padding: 20px 0;
+}
+.login-completo{
+    border: 1px solid black;
+    text-align: center;
+    width: 540px;
+    height: 90%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+.principal .info h2{
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1rem;
+    text-align: center;
+    margin-left: -0.5rem;
+}
+.principal .info p{
+    margin-right: 0.9rem;
+    margin-top: 0.9rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.titulo, .paragrafo{
+    margin-left: 20px;
+}
+.principal .login-completo h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.login-cliente, .login-usuario{
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+}
+.login-cliente h2, .login-usuario h2{
+    color: rgb(0, 0, 170);
+}
+.login-cliente .cod, .login-usuario .cod, .login-cliente .senha, .login-usuario .senha{
+    margin-bottom: 1.31rem;
+    font-size: 1rem;
+}
+.login-cliente label, .login-usuario label{
+    font-size: 1.4rem;
+    padding: 0.2rem;
+}
+.login-cliente button, .login-usuario button{
+    width: 7rem;
+    height: 2.3rem;
+    background: rgb(0, 0, 170);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    margin-right: 1rem;
+}
+.login-cliente button:hover, .login-usuario button:hover{
+    background: white;
+    color: black;
+    border: 1px solid rgb(0, 0, 170);
+}
+.login-cliente input::placeholder, .login-usuario input::placeholder{
+    color: black;
+}
+.cadastrar button{
+    width: 20rem;
+}
+.login-cliente h6{
+    margin-top: 1rem;
+}
+/* resposividdade */
+@media (max-width: 900px){
+    .principal .info img{
+        margin-left: 0.2rem;
+    }
+}
+@media (max-width: 750px) {
+    main{
+        display: block;
+    }
+    .login-cliente, .login-usuario{
+        text-align: center;
+    }
+    .principal .info img{
+        width: 500px;
+    }
+    
+}
+@media (max-width: 540px){
+    .principal .info img{
+        margin-left: 1rem;
+        width: 300px;
+    }
+    .back{
+        margin-left: -1rem;
+    }
+}
+@media (max-width: 360px){
+    .principal .info img{
+        margin-left: -0.5rem;
+        width: 260px;
+    }
+    #redirecionar-adm, #redirecionar-usr{
+        margin-bottom: 0.5rem;
+    }
+    .login-cliente input, .login-usuario input{
+        width: 13rem;
+    }
+}

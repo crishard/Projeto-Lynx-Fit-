@@ -1,112 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
-    <title>Jumbotron Template for Bootstrap</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/home-page-cliente.css">
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="./cadastro-usuario.html">Cadastrar<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./atualizar-usuario.html">Atualizar</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./remover-usuario.html">Remover</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./ver-usuarios.html">Visualizar</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Sair</a>
-          </li>
-          <li class="nav-item dropdown">
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sections-home-page.css">
+    <link rel="stylesheet" href="./assets/css/menu-home-page.css">
+    <title>LYNX Fit</title>
+</head>
+<body>
+  <main class="princiapl">
+    <header class="menu-in" id="header">
+                <a href="#home"><img id="logo" src="./assets/img/linx_fit_branco_.png" alt=""></a>
+            <nav id="nav">
+                <button id="btn-mobile">
+                    <span id="iconn"></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="./cadastro-usuario.html">Cadastrar</a></li>
+                    <li><a href="./atualizar-usuario.html">Atualizar</a></li>
+                    <li><a href="./remover-usuario.html">Remover</a></li>
+                    <li><a href="./ver-usuarios.html">Vizualizar</a></li>
+                    <li><a href="/front/login/login.html">Sair</a></li>
+                </ul>
+            </nav>
             </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
-    <main role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3"></h1>
-          <img id="logo-top" src="./assets/img/Linx-Fit-Menu.png" alt="Lynx Fit">
-          <p>Lynx Fit um site de gerenciamento de treinos, onde podemos fornecer aos seus clientes uma rotina mensal de treinos, sem a necessidade de um personal treining para dizé-lo quais exercícios fazer, nossa plataforma também disponibiliza para seus clientes uma vizualização de sua evolução com dados muito bem apresentados, mostrando como sua empresa o ajudou na prática a evoluir fisicamente, proporcionando assim um diferencial para sua academia, atraindo novos</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Ler Mais &raquo;</a></p>
         </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Qualidade de Vida</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Saúde</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Dieta</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
-          </div>
+    </header>
+    <section class="inicio grid">
+        <div class="texto-inicial">
+            <h1 class="titulo">Trazendo maior desempenho <span class="texto-parte"> e segurança</span></h1>
+            <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolor deserunt molestiae voluptates reprehenderit cumque iste nihil, nostrum laudantium tempora eius esse repellat praesentium libero at nesciunt pariatur maxime doloribus?</p>
+            <a href="#" class="inc">Iniciar</a>
         </div>
+        <div class="img-inicio">
+            <img src="./assets/img/01.svg" alt="Ilustração" class="img">
+        </div>
+    </section>
 
-        <hr>
+    <section class="informacoes">
+        <section class="grid">
+            <div class="items">
+                <div class="item">
+                    <ion-icon name="cash-outline" class="icon-i"></ion-icon>
+                    <h3 class="titulo-informacoes">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="barbell-outline" class="icon-i"></ion-icon>
+                    <h3 class="titulo-informacoes">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+                <div class="item">
+                    <ion-icon name="shield-checkmark-outline" class="icon-i"></ion-icon>
+                    <h3 class="titulo-informacoes">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+        </section>
+    </section>
 
-      </div> <!-- /container -->
+    <section class="sobre">
+        <div class="grid">
+            <div class="textos-sobre">
+                <h2 class="subtitulo">Lorem, ipsum.</h2>
+                <p class="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat provident facilis suscipit minus. Autem possimus nesciunt veritatis libero mollitia esse?</p>
+            </div>
+            <div class="numeros">
+                <div class="numero">256</div>
+                <div class="numero">256</div>
+                <div class="numero">256</div>
+                <div class="numero">256</div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section class="missao grid">
+        <div class="textos-missao">
+            <div class="texto-missao">
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque ut veniam necessitatibus! Fugiat eaque, accusantium animi aliquid autem commodi!</p>
+            </div>
+            <div class="texto-missao">
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque ut veniam necessitatibus! Fugiat eaque, accusantium animi aliquid autem commodi!</p>
+            </div>
+            <div class="texto-missao">
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque ut veniam necessitatibus! Fugiat eaque, accusantium animi aliquid autem commodi!</p>
+            </div>
+        </div>
+        
+        <div class="img-missao">
+            <img src="./assets/img/02.svg" alt="Ilustração" class="img">
+        </div>
+    </section>
 
-    <footer class="container">
-      <p>&copy; Fundada em 2021</p>
+    <footer>
+        <div class="grid">
+            <div class="textos-footer">
+                <h2 class="subtitulo">Contato</h2>
+            </div>
+            <div class="footer-item">
+                <a href="#">
+                    <ion-icon name="logo-facebook" class="icon-f"></ion-icon>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="#">
+                    <ion-icon name="logo-instagram" class="icon-f"></ion-icon>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="#">
+                    <ion-icon name="logo-whatsapp" class="icon-f"></ion-icon>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="#">
+                    <ion-icon name="mail-outline" class="icon-f"></ion-icon>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-  </body>
-
+  </main>
+    <script src="./assets/js/home-page.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
