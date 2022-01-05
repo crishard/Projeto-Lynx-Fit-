@@ -20,8 +20,20 @@ body{
     color: var(--cor_principal);
 }
 #header img{
-    height: 4rem;
-    width: 7.8rem;
+    height: 3rem;
+    width: 5rem;
+}
+.fas{
+    font-size: 1.8rem;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 590;
 }
 #header{
     margin-bottom: 2rem;

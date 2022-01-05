@@ -205,3 +205,31 @@ footer{
         grid-column: 1/-1;
     }
 }
+
+.voltar-ao-topo{
+    outline: none;
+    border: 0;
+    color: var(--cor-princiapal);
+    background: silver;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    cursor: pointer;
+    box-shadow: 0px 1px 6px 2px black;
+}
+.voltar-ao-topo:hover{
+    background: var(--cor-princiapal);
+}
+
+.icon-topo{
+    color: black;
+    font-size: 1.2rem;
+    /* background: var(--cor-secundaria); */
+}

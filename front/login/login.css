@@ -15,16 +15,20 @@ main{
 }
 .info{
     background: rgba(0, 0, 170, 0.408);
+    box-shadow: 0px 0px 12px rgba(0, 0, 170, 0.408);
     padding: 20px 0;
-}
-.login-completo{
-    border: 1px solid black;
-    text-align: center;
-    width: 540px;
     height: 90%;
 }
-
-
+.login-completo{
+    box-shadow: 0px 0px 12px;
+    text-align: center;
+    width: 550px;
+    height: 90%;
+}
+.nav-pills{
+    width: 225px;
+    margin-left: 162.5px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 .principal .info h2{
     margin-bottom: 1rem;
@@ -88,12 +92,32 @@ main{
     margin-top: 1rem;
 }
 /* resposividdade */
+@media (max-width:1100px) {
+    .login-completo{
+       width: 96%;
+    }
+    .nav-pills{
+        margin-left: 20%;
+    }
+    
+}
+
 @media (max-width: 900px){
     .principal .info img{
         margin-left: 0.2rem;
     }
+    .info{
+        padding-bottom: 40px;
+    }
+    .login-completo{
+        width: 96%;
+    }
+    .nav-pills{
+        margin-left: 10%;
+    }
 }
-@media (max-width: 750px) {
+
+@media (max-width: 830px) {
     main{
         display: block;
     }
@@ -102,6 +126,17 @@ main{
     }
     .principal .info img{
         width: 500px;
+    }
+    .info{
+        margin-bottom: 30px;
+    }
+    .nav-pills{
+        margin-left: 30%;
+    }
+    .login-completo{
+        height: auto;
+        padding-bottom: 2px;
+        margin-bottom: 20px;
     }
     
 }
@@ -112,6 +147,9 @@ main{
     }
     .back{
         margin-left: -1rem;
+    }
+    .nav-pills{
+        margin-left: 10%;
     }
 }
 @media (max-width: 360px){
