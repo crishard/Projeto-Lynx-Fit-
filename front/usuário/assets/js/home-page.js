@@ -1,4 +1,5 @@
 // home page
+
 // Configuração de Menu
 const btnMobile = document.getElementById('btn-mobile');
 

@@ -8,7 +8,6 @@ body{
     width: 100%;
     
 }
-
 /* Menu */
 #menu a{
     text-decoration: none;
@@ -26,7 +25,6 @@ body{
 .fas{
     font-size: 1.8rem;
 }
-
 .logo a{
     text-decoration: none;
     font-size: 2rem;
@@ -65,6 +63,7 @@ body{
     #btn-mobile{
         display:inline;
     }
+    
     #menu{
         display: block;
         position: absolute;
@@ -75,7 +74,7 @@ body{
         transition: .6s;
         z-index: 100;
         visibility: hidden;
-        overflow-y: hidden
+        overflow-y: hidden;
     }
     #nav.active #menu{
         background-color: silver;
