@@ -20,6 +20,8 @@ main{
     margin: 0px;
     padding: 0px;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
     .container-um .imagem img{
         width: 400px;
         margin-left: -2rem;
@@ -76,9 +78,19 @@ main{
     /**--------------------------------------------------------RESPONSIVIDADE--------------------------------------------------------**/
 
     @media (max-width:1100px) {
+        main{
+            margin: 0%;
+            padding: 0%;
+        }
         .imagem{
            width: 80%;
         }
+        .informacoes{
+            width: 80%;
+        }
+    }
+    .logo  a{
+        font-size: 4rem;
     }
     @media (max-width: 900px){
         .container-um .imagem img{
@@ -126,6 +138,61 @@ main{
                 align-items: center;
             }
     }
+    @media (max-width: 775px){
+        main{
+            margin-right: 20rem;
+        }
+        .imagem{
+            width: 80%;
+         }
+         .informacoes{
+             width: 100%;
+         }
+    }
+    @media (max-width: 700px){
+        main{
+            margin-right: 20rem;
+        }
+        .imagem{
+            width: 70%;
+         }
+         .container-um .imagem img{
+            width: 400px;
+        }
+        .logo  a{
+            font-size: 3rem;
+        }
+        .informacoes{
+            margin-top: -10rem;
+            max-width: 480px;
+            align-items: center;
+        }
+    }
+    @media (max-width: 615px){
+        main{
+            margin: 0;
+            padding: 0;
+        }
+         .container-um .imagem img{
+            width: 300px;
+        }
+        .logo  a{
+            font-size: 3.5rem;
+        }
+        .container-um{
+            margin-top: auto;
+            margin-left: 7rem;
+            max-width: fit-content;
+            padding-top: 0%;
+            align-items: center;
+        }
+        .informacoes{
+            margin-top: -16rem;
+            margin-right: 5rem;
+            max-width: 300px;
+            align-items: center;
+        }
+    }
     @media (max-width: 540px){
         body {
             margin: 0px;
@@ -139,13 +206,14 @@ main{
             align-items: center;
         }
         .container-um .imagem img{
-            width: 300px;
+            width: 400px;
         }
         .logo  a{
             font-size: 4rem;
         }
         .informacoes{
-            margin-top: -18rem;
+            margin-top: -10rem;
+            margin-left: 3rem;
             max-width: 480px;
             align-items: center;
         }
@@ -166,25 +234,64 @@ main{
             text-align: center;
         }
     }
-    @media (max-width: 360px){
+    @media (max-width: 500px){
         body {
             margin: 0px;
             padding: 0px;
             }
         .container-um{
-            margin-top: -3rem;
+            margin-top: auto;
+            margin-left: 4rem;
             max-width: fit-content;
             padding-top: 0%;
             align-items: center;
         }
-        .back{
-            margin-right: 35%;
+        .container-um .imagem img{
+            width: 300px;
         }
+        .logo  a{
+            font-size: 3rem;
+        }
+        .informacoes{
+            margin-top: -16rem;
+            margin-left: 3rem;
+            max-width: 480px;
+            align-items: center;
+        }
+        .paragrafo{
+            width: auto;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .section{
+            margin-top: 15rem;
+            align-items: center;
+        }
+        .container{
+            font-size: 14px;
+        }
+        .d-grid gap-2 d-sm-flex justify-content-sm-center{
+            width: 400px;
+            text-align: center;
+        }
+    }
+    @media (max-width: 400px){
+        body {
+            margin: 0px;
+            padding: 0px;
+            }
+        .container-um{
+            margin-top: auto;
+            margin-left: 1rem;
+            max-width: fit-content;
+            padding-top: 0%;
+            align-items: center;
+        }   
         .container-um .imagem img{
             width: 200px;
         }
         .logo  a{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         .informacoes{
             margin-top: -22rem;
