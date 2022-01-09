@@ -1,20 +1,21 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-:root{
-    --cor_principal: white;
-    --cor_secundaria: rgb(0, 0, 170);
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+:root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+}
 body{
+    color: var(--cor_textos);
     font-family:'Montserrat', sans-serif;
 }
 a{
     text-decoration: none;
-    color: black;
 }
 .container{
     width: 90%;
@@ -33,7 +34,7 @@ h1{
 /* header */
 #menu a{
     text-decoration: none;
-    color: black;
+    color: rgb(22, 21, 21);
     font-weight: bold;
     transition: 0.3s ease-out;
 }
@@ -48,10 +49,9 @@ h1{
     font-size: 1.8rem;
 }
 .logo a{
+    color: var(--cor_textos);
     text-decoration: none;
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
     text-transform: uppercase;
     font-weight: 590;
 }
@@ -73,7 +73,7 @@ h1{
     margin-right: 2rem;
 }
 #menu a {
-    color: black;
+    color: var(--cor_textos);
     display: block;
     padding: 0.05rem;
     font-size: 1.5rem;
@@ -116,7 +116,7 @@ h1{
 .container-header a:hover{
     border: 1px solid var(--cor_secundaria);
     background: var(--cor_principal);
-    color: black;
+    color: var(--cor_textos);
 }
 /* informações */
 .informacoes{
@@ -133,7 +133,7 @@ h1{
 }
 .articulo{
     width: 29%;
-    background: var(--cor_principal);
+    background: #e9e7e7;
     margin-bottom: 3rem;
     border-radius: 10px;
     padding: 45px 30px 60px 30px;
@@ -203,7 +203,7 @@ h1{
 .duvidas a:hover{
     border: 1px solid var(--cor_secundaria);
     background: var(--cor_principal);
-    color: black;
+    color: var(--cor_textos);
 }
 /* footer */
 footer{
@@ -225,7 +225,7 @@ footer{
     margin-top: 2rem;
 }
 .icon-f:hover{
-    color: black;
+    color: var(--cor_textos);
 }
 /* responsividade */
 @media screen and (max-width:1000px){
@@ -293,7 +293,7 @@ footer{
         overflow-y: hidden;
     }
     #nav.active #menu{
-        background-color: silver;
+        background-color: var(--cor_teciaria);
         height: calc(100vh - 5rem);
         visibility: visible;
         overflow-y: auto;
@@ -306,7 +306,7 @@ footer{
         border-bottom: 2px solid rgba(48, 46, 46, 0.05);
     }
     #menu a:hover{
-        background: rgb(128, 126, 126);
+        background: rgb(190, 190, 190);
     }
     #btn-mobile{
         display: flex;

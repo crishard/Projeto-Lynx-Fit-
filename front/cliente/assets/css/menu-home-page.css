@@ -1,35 +1,28 @@
 :root{
     --cor_principal: white;
     --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 body{
     font-family:'Montserrat', sans-serif;
-    width: 100%;
-    
+    color: var(--cor_textos);
 }
 /* Menu */
 #menu a{
     text-decoration: none;
-    color: black;
+    color: var(--cor_textos);
     font-weight: bold;
     transition: 0.3s ease-out;
 }
 #menu a:hover{
     color: var(--cor_principal);
 }
-#header img{
-    height: 3rem;
-    width: 5rem;
-}
-.fas{
-    font-size: 1.8rem;
-}
 .logo a{
     text-decoration: none;
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: var(--cor_textos);
     text-transform: uppercase;
     font-weight: 590;
 }
@@ -51,7 +44,7 @@ body{
     margin-right: 2rem;
 }
 #menu a {
-    color: black;
+    color: var(--cor_textos);
     display: block;
     padding: 0.05rem;
     font-size: 1.5rem;
@@ -59,7 +52,7 @@ body{
 #btn-mobile{
     display: none;
 }
-@media(max-width: 860px) {
+@media(max-width: 1080px) {
     #btn-mobile{
         display:inline;
     }
@@ -77,17 +70,19 @@ body{
         overflow-y: hidden;
     }
     #nav.active #menu{
-        background-color: silver;
+        background-color: var(--cor_teciaria);
         height: calc(100vh - 5rem);
         visibility: visible;
         overflow-y: auto;
-        color: var(--cor_secundaria);
         text-align: center;
     }
     #menu a{
         padding: 1.5rem 0rem;
         margin: 0 1rem;
         border-bottom: 2px solid rgba(48, 46, 46, 0.05);
+    }
+    #menu a:hover{
+        background: rgb(190, 190, 190);
     }
     #btn-mobile{
         display: flex;

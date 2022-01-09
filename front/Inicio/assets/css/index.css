@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+body{
+    background: #f2f2f2;
+}
+main{
+    color: var(--cor_textos);
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.6rem;
+    margin-left: 0.9rem;
+}
+.back .esquerda img{
+    width: 400px;
+}
+.back {
+    width: 550px;
+    text-align: center;
+    margin-left: 2rem;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.back .esquerda h2{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2.1rem;
+    text-align: center;
+    font-size: 4rem;
+    margin-left: -0.5rem;
+    font-weight: 700;
+    color: var(--cor_secundaria);
+}
+.informacoes{
+    margin-top: 8rem;
+    width: 550px;
+    padding: 2rem 0rem 2rem 0rem;
+    align-items: center;
+    text-align: center;
+}
+.paragrafo{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.59rem;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+.inc{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    background: var(--cor_secundaria);
+    color: var(--cor_principal);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-right: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 16px  rgba(0, 0, 170, 0.418);
+}
+.inc:hover{
+    color: var(--cor_textos);
+    background: var(--cor_principal);
+    border: 1px solid var(--cor_secundaria);
+}
+.cd{
+    margin-left: -2.5rem;
+    padding: 10px 10px 0px 10px;
+    height: 44px;
+}
+.lg{
+    width: 110px;
+}
+.sn{
+    width: 140px;
+}
+/**--------------------------------------------------------RESPONSIVIDADE--------------------------------------------------------**/
+@media (max-width:1100px) {
+    main{
+        margin-left: 0;
+        display: block;
+        width: 100%;
+    }
+    .back{
+        width: 90%;
+        margin-left: 3rem;
+    }
+    .informacoes{
+        margin-top: -1rem;
+        width: 90%;
+        margin-left: 3.3rem;
+        margin-bottom: 5rem;
+    }
+    .inc{
+        margin-right: 2rem;
+    }
+    .cd{
+        width: 220px;
+    }
+    .lg{
+        width: 200px;
+    }
+    .sn{
+        width: 220px;
+    }
+    .container{
+        margin-left: 3.3rem;
+    }
+}
+@media (max-width: 830px) {
+    .inc{
+        margin-right: 1rem;
+    }
+    .cd{
+        width: 196px;
+    }
+    .lg{
+        width: 140px;
+    }
+    .sn{
+        width: 150px;
+    }
+}
+
+@media (max-width: 710px){
+    .informacoes{
+        margin-top: 0.1rem;
+    }
+}
+@media (max-width: 620px){
+    .informacoes{
+        margin-top: 0.1rem;
+    }
+}
+@media (max-width: 600px){
+    .inc{
+        display: block;
+    }
+    .cd{
+        margin-left: 25%;
+    }
+    .lg{
+        margin-left: 30%;
+    }
+    .sn{
+        margin-left: 29%;
+    }
+}
+@media (max-width: 500px){
+   .informacoes{
+       margin-top: 0.1rem;
+   }
+   .back .esquerda img{
+       width: 80%;
+   }
+   .back .esquerda h2{
+       font-size: 3rem;
+   }
+}
+@media (max-width: 400px){
+   .informacoes{
+       margin-top: 0.1rem;
+       margin-left: auto;
+   }
+   .back{
+       margin-left: auto;
+   }
+   .cd{
+        margin-left: 2rem;
+    }
+    .lg{
+        margin-left: 3.2rem;
+    }
+    .sn{
+        margin-left: 3rem;
+    }
+}
+@media (max-width:280px) {
+    .cd{
+        margin-left: auto;
+    }
+    .lg{
+        margin-left: 15px;
+    }
+    .sn{
+        margin-left: 10px;
+    }
+    .back .esquerda h2{
+        font-size: 2.6rem;
+    }
+}

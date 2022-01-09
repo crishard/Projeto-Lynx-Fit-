@@ -1,61 +1,51 @@
-/* geral */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
-    color: #643737;
-    border: none;
-  }
-  #imagem{
-		left:1000%;
-		top:100%;
-		margin-left:-40px;
-		margin-top:-40px;
+}
+:root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+#imagem{
+    left:1000%;
+    top:100%;
+    margin-left:-40px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     
-  }
-  #h1{
-    font-family:Arial, Helvetica, sans-serif;
-    color:rgba(0, 0, 0, 0.418)
-  }
- 
-  
-  input, label {
+}
+#h1{
+    color: var(--cor_textos);
+} 
+input, label{
     display: block;
     outline: none;
     width: 100%;
-  }
-  
-  a {
+} 
+a{
     color: #E60084;
-  }
- 
-  body {
+    text-decoration: none;
+}
+body{
+    background: #f2f2f2;
+    color: var(--cor_textos);
     padding-top: 5vh;
     background-size: cover;
     background-position-y: -720px;
-   
-   
-
-  }
-  @media screen and (max-width: 800px) {
-
+    font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width: 800px){
     .full-box,.half-box,#main-container{
       max-width: 300px;
       margin-left: 10px;
-     
-     
-     
     }
-    
 }
-
-
-   
-  #main-container {
+#main-container{
     border-radius: 10px;
     width: 500px;
     padding: 25px;
@@ -63,78 +53,64 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    
-  }
-
-  #main-container h1 {
+}
+#main-container h1 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 1.6rem;
-  }
-  
-  form {
+}
+form{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-   
-  .full-box {
+}
+.full-box{
     flex: 1 1 100%;
     position: relative;
-  }
-  
-  .half-box {
+}
+.half-box{
     flex: 1 1 45%;
     position: relative;
-  }
-  
-  .spacing {
+}
+.spacing{
     margin-right: 2.5%;
-  }
-  
-  label {
+}
+label{
     font-weight: bold;
-    font-size: .8rem;
-  }
-  
-  input {
-    border-bottom: 2px solid #323232;
+    font-size: 1.2rem;
+}
+input{
+    background: #f2f2f2;
     padding: 10px;
-    font-size: .9rem;
+    font-size: 1rem;
     margin-bottom: 40px;
-  }
-  
-  input:focus {
-    border-color: rgb(0,0,190);
-  }
-  
-  input[type="submit"] {
+    border: none;
+    border-bottom: 2px solid #323232;
+}
+input:focus {
+    border-bottom: 2px solid rgb(0,0,190);
+}
+input[type="submit"] {
     background-color: rgb(0,0,190);
     color: #FFF;
     border: none;
     border-radius: 20px;
     height: 40px;
     cursor: pointer;
-  }
-  
-  #agreement {
+}
+#agreement {
     margin-right: 5px;
-  }
-  
-  #agreement, #agreement-label {
+}
+#agreement, #agreement-label {
     display: inline-block;
     width: auto;
-  }
-  
-  .error-validation {
+}
+.error-validation {
     color: #ff1a1a;
     position: absolute;
     top: 57px;
     font-size: 12px;
-  }
-  
-  .template {
+}
+.template {
     display: none;
-  }
-  
+}

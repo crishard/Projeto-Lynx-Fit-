@@ -4,8 +4,16 @@
     box-sizing: border-box;
 }
 :root{
-    --cor-princiapal: white;
-    --cor-secundaria: rgb(0, 0, 170);
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor_textos); 
 }
 .grid{
     display: grid;
@@ -20,7 +28,6 @@
 }
 /* inicio */ 
 #topo{
-
     height: 80vh;
 }
 .titulo{
@@ -53,8 +60,8 @@
 }
 .inc{
     width: 130px;
-    background: var(--cor-secundaria);
-    color: var(--cor-princiapal);
+    background: var(--cor_secundaria);
+    color: var(--cor_principal);
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -63,9 +70,9 @@
     box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.418);
 }
 .inc:hover{
-    color: black;
-    background: var(--cor-princiapal);
-    border: 1px solid var(--cor-secundaria);
+    color: var(--cor_textos);
+    background: var(--cor_principal);
+    border: 1px solid var(--cor_secundaria);
 }
 /* informações */
 .informacoes{
@@ -82,7 +89,7 @@
     flex-wrap: wrap;
 }
 .item{
-    background: var(--cor-princiapal);
+    background: var(--cor_principal);
     width: 30%;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -99,8 +106,8 @@
 }
 /* sobre */
 .sobre{
-    background: var(--cor-secundaria);
-    color: var(--cor-princiapal);
+    background: var(--cor_secundaria);
+    color: var(--cor_principal);
     height: auto;
     padding-bottom: 60px;
 }
@@ -137,8 +144,8 @@
 }
 /* footer */
 footer{
-    background: var(--cor-secundaria);
-    color: var(--cor-princiapal);
+    background: var(--cor_secundaria);
+    color: var(--cor_principal);
     text-align: center;
     padding: 50px 0;
 }
@@ -147,7 +154,7 @@ footer{
     margin-bottom: 30px;
 }
 .icon-f{
-    color: var(--cor-princiapal);
+    color: var(--cor_principal);
     font-size: 30px;
 }
 .footer-item{
@@ -217,12 +224,11 @@ footer{
     }
 }
 .icon-f:hover{
-    color: black;
+    color: var(--cor_textos);
 }
 .voltar-ao-topo{
     outline: none;
     border: 0;
-    color: var(--cor-princiapal);
     background: silver;
     width: 35px;
     height: 35px;
@@ -238,9 +244,9 @@ footer{
     box-shadow: 0px 1px 6px 2px black;
 }
 .voltar-ao-topo:hover{
-    background: var(--cor-princiapal);
+    background: var(--cor_principal);
 }
 .icon-topo{
-    color: black;
+    color: var(--cor_textos);
     font-size: 1.2rem;
 }
