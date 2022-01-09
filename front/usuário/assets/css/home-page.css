@@ -9,6 +9,7 @@
     --cor_secundaria: rgb(0, 0, 170);
     --cor_teciaria: #e9e7e7;
     --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
 }
 body{
     color: var(--cor_textos);
@@ -32,22 +33,17 @@ h1{
     font-size: 3rem;
 }
 /* header */
-#menu a{
+.menu a{
     text-decoration: none;
-    color: rgb(22, 21, 21);
     font-weight: bold;
     transition: 0.3s ease-out;
 }
-#menu a:hover{
+.menu a:hover{
     color: var(--cor_principal);
 }
-#header img{
-    height: 3rem;
-    width: 5rem;
-}
-.fas{
+/* .fas{
     font-size: 1.8rem;
-}
+} */
 .logo a{
     color: var(--cor_textos);
     text-decoration: none;
@@ -55,9 +51,9 @@ h1{
     text-transform: uppercase;
     font-weight: 590;
 }
-#header{
+.menu-in{
     margin-bottom: 2rem;
-    background: rgba(0, 0, 170, 0.418);
+    background: rgb(193, 193, 193);
     position: fixed;
     width: 100%;
     height: 5rem;
@@ -66,13 +62,13 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
-#menu{
+.menu{
     display: flex;
     list-style: none;
     gap: 3rem;
     margin-right: 2rem;
 }
-#menu a {
+.menu a {
     color: var(--cor_textos);
     display: block;
     padding: 0.05rem;
@@ -81,8 +77,61 @@ h1{
 #btn-mobile{
     display: none;
 }
+.menu-menu{
+    margin-bottom: 2rem;
+    background: rgb(193, 193, 193);
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test{
+    background-color: transparent;
+    color: transparent;
+    position: fixed;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 
+.test a{
+    color: transparent;
+} */
+
+.test a{
+    color: transparent;
+}
+.test:hover{
+    margin-bottom: 2rem;
+    background: rgb(193, 193, 193);
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test:hover a{
+    color: var(--cor_textos);
+}
+
+.test a:hover{
+    color: var(--cor_principal);
+}
+
+
 /* parte inicial */
 .container-header{
+    color: var(--cor_tema_claro);
     margin-top: 3rem;
     width: 100%;
     height: 80vh;
@@ -168,6 +217,7 @@ h1{
 }
 /* duvidas */
 .duvidas{
+    color: var(--cor_tema_claro);
     width: 100%;
     height: 90vh;
     display: flex;
@@ -280,7 +330,7 @@ footer{
     #btn-mobile{
         display:inline;
     }
-    #menu{
+    .menu{
         display: block;
         position: absolute;
         width: 100%;
@@ -292,7 +342,7 @@ footer{
         visibility: hidden;
         overflow-y: hidden;
     }
-    #nav.active #menu{
+    #nav.active .menu{
         background-color: var(--cor_teciaria);
         height: calc(100vh - 5rem);
         visibility: visible;
@@ -300,12 +350,12 @@ footer{
         color: var(--cor_secundaria);
         text-align: center;
     }
-    #menu a{
+    .menu a{
         padding: 1.5rem 0rem;
         margin: 0 1rem;
         border-bottom: 2px solid rgba(48, 46, 46, 0.05);
     }
-    #menu a:hover{
+    .menu a:hover{
         background: rgb(190, 190, 190);
     }
     #btn-mobile{

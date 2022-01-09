@@ -13,41 +13,19 @@
         <a href="#topo"><ion-icon name="arrow-up-outline" class="icon-topo"></ion-icon></a>
     </div>
     <main class="princiapl" id="main">
-        <header class="menu-in" id="header">
+        <header class="menu-in" id="myP">
             <div class="logo">
-                <a href="#home"><i class="fas fa-dumbbell"></i> Lynx <span>Fit</span></a>
+                <a href="#topo">Home</a>
+                <!-- <i class="fas fa-dumbbell"></i> -->
             </div>
                 <nav id="nav">
                     <button id="btn-mobile">
                         <span id="iconn"></span>
                     </button>
-                    <ul id="menu" class="menu">
-                        <li class="ief"><a href="#">Cadastrar</i></a>
-                            <ul class="drop">
-                                <li><a href="./cadastro-usuario.html">Usuário</a></li>
-                                <li><a href="#">Equipamento</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Atualizar</i></a>
-                            <ul class="drop">
-                                <li><a href="./atualizar-usuario.html">Usuários</a></li>
-                                <li><a href="#">Equipamentos</a></li>
-                                <li><a href="#">Rotinas</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Remover</i></a>
-                            <ul class="drop">
-                                <li><a href="./remover-usuario.html">Usuário</a></li>
-                                <li><a href="#">Equipamento</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Vizualizar</i></a>
-                            <ul class="drop">
-                                <li><a href="./cadastro-usuario.html">Usuários</a></li>
-                                <li><a href="#">Equipamentos</a></li>
-                                <li><a href="#">Rotinas</a></li>
-                            </ul>
-                        </li>
+                    <ul class="menu">
+                        <li><a href="#">Usuários</i></a></li>
+                        <li><a href="#">Equipamentos</i></a></li>
+                        <li><a href="#">Rotinas</i></a></li>
                         <li><a href="/front/login/login.html">Sair</a></li>
                     </ul>
                 </nav>
@@ -149,9 +127,21 @@
             </div>
         </footer>
     </main>
-        <script src="./assets/js/home-page.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/home-page.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myP").className = "test";
+            } else {
+            document.getElementById("myP").className = "menu-menu";
+            }
+        }
+    </script>
 </body>
 </html>
