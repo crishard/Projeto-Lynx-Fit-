@@ -4,45 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LYNX Fit</title>
   <link rel="stylesheet" href="./assets/css/cadastro-cliente.css">
+  <title>LYNX Fit</title>
 </head>
-
 <body>
-  <div id="main-container">
-    <img id="imagem" src="./assets/img/Linx_Fit_.png" width="100">
-    <h1 id="h1">Cadastre sua Empresa</h1>
-    <form id="register-form" action="">
-      <div class="full-box">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
+  <main class="principal">
+    <div class="back">
+      <div class="info">
+        <h2 class="titulo">Lynx fit</h2>
+        <img src="./assets/img/undraw_domain_names_re_0uun.svg" alt="">
+        <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit debitis quaerat distinctio exercitationem amet asperiores reprehenderit vel perferendis aspernatur consectetur.</p>
       </div>
-      <div class="half-box spacing">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required data-min-length="3" data-max-length="16">
+    </div>
+    <div id="main-container" class="container">
+      <h1 id="h1">Cadastre sua Empresa</h1>
+      <div class="show">
+        <div class="forms">
+          <form id="register-form" action="">
+            <div class="full-box">
+              <label for="email">E-mail</label> <br>
+              <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate class="email">
+            </div>
+            <div class="half-box spacing">
+                <label for="name">Nome</label> <br>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required data-min-length="3" data-max-length="16">
+            </div>
+            <div class="half-box">
+                <label for="lastname">Sobrenome</label> <br>
+                <input type="text" name="lastname" id="lastname" placeholder="Digite seu Sobrenome"data-required data-only-letters>
+            </div>
+            <div class="half-box spacing">
+              <label for="lastname">Senha</label> <br>
+              <input type="password" name="password" id="password" placeholder="Digite sua senha" data-password-validate data-required>
+            </div>
+            <div class="half-box some">
+              <label for="passconfirmation">Confirme sua senha</label> <br>
+              <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
+            </div>
+            <div class="termos"> 
+              <input type="checkbox" name="agreement" id="agreement">
+              <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
+            </div> 
+            <div class="full-box">
+              <input class="inc" id="btn-submit" type="submit" value="Registrar">
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="half-box">
-          <label for="lastname">SobreNome</label>
-          <input type="text" name="lastname" id="lastname" placeholder="Digite seu SobreNome"data-required data-only-letters>
-      </div>
-      <div class="half-box spacing">
-        <label for="lastname">Senha</label>
-        <input type="password" name="password" id="password" placeholder="Digite sua senha" data-password-validate data-required>
-      </div>
-      <div class="half-box">
-        <label for="passconfirmation">Confirmação de senha</label>
-        <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
-      </div>
-      <div> 
-        <input type="checkbox" name="agreement" id="agreement">
-        <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso</a></label>
-      </div> 
-      <div class="full-box">
-        <input id="btn-submit" type="submit" value="Registrar">
-      </div>
-    </form>
-  </div>
-  <p class="error-validation template"></p>
+    </div>
+    <p class="error-validation template"></p>
+  </main>
   <script src="./assets/js/cadastro-cliente.js"></script>
 </body>
 </html>

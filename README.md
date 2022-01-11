@@ -1,6 +1,6 @@
 LYNX FIT
 
-  Esse projeto, é um sistema para academia onde a proposta é oferecer aos donos de academia uma maneira de 
+Esse projeto, é um sistema para academia onde a proposta é oferecer aos donos de academia uma maneira de 
 diminuir as responsabilidades do profissional personal treiner, onde o sistema vai automaticamente gerar
 uma rotina mensal de treinos para o cliente da academia, com base nos dados desse cliente, vai também
 mostrar para esse cliente a sua evolução ao longo do tempo, tais como a perda de peso, o ganho de massa
