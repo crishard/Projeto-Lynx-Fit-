@@ -10,13 +10,13 @@ body{
     color: var(--cor_textos);
 }
 /* Menu */
-#menu a{
+.menu a{
     text-decoration: none;
     color: var(--cor_textos);
     font-weight: bold;
     transition: 0.3s ease-out;
 }
-#menu a:hover{
+.menu a:hover{
     color: var(--cor_principal);
 }
 .logo a{
@@ -26,7 +26,7 @@ body{
     text-transform: uppercase;
     font-weight: 590;
 }
-#header{
+.menu-in{
     margin-bottom: 2rem;
     background: rgba(0, 0, 170, 0.418);
     position: fixed;
@@ -37,13 +37,13 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-#menu{
+.menu{
     display: flex;
     list-style: none;
     gap: 3rem;
     margin-right: 2rem;
 }
-#menu a {
+.menu a {
     color: var(--cor_textos);
     display: block;
     padding: 0.05rem;
@@ -52,12 +52,60 @@ body{
 #btn-mobile{
     display: none;
 }
-@media(max-width: 1080px) {
+.menu-menu{
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 170, 0.418);
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test{
+    background-color: transparent;
+    color: transparent;
+    position: fixed;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test a{
+    color: transparent;
+}
+.test:hover{
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 170, 0.418);
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.test:hover a{
+    color: var(--cor_textos);
+}
+
+.test a:hover{
+    color: var(--cor_principal);
+}
+.test .logo a:hover{
+    color: var(--cor_textos);
+}
+
+@media(max-width: 850px) {
     #btn-mobile{
         display:inline;
     }
     
-    #menu{
+    .menu{
         display: block;
         position: absolute;
         width: 100%;
@@ -69,20 +117,20 @@ body{
         visibility: hidden;
         overflow-y: hidden;
     }
-    #nav.active #menu{
-        background-color: var(--cor_teciaria);
+    #nav.active .menu{
+        background-color: silver;
         height: calc(100vh - 5rem);
         visibility: visible;
         overflow-y: auto;
         text-align: center;
     }
-    #menu a{
+    .menu a{
         padding: 1.5rem 0rem;
         margin: 0 1rem;
         border-bottom: 2px solid rgba(48, 46, 46, 0.05);
     }
-    #menu a:hover{
-        background: rgb(190, 190, 190);
+    .menu a:hover{
+        background: rgb(167, 166, 166);
     }
     #btn-mobile{
         display: flex;

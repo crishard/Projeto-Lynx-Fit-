@@ -8,12 +8,13 @@
     --cor_secundaria: rgb(0, 0, 170);
     --cor_teciaria: #e9e7e7;
     --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body{
     font-family: 'Montserrat', sans-serif;
-    color: var(--cor_textos); 
+    color: var(--cor_textos);
 }
 .grid{
     display: grid;
@@ -40,6 +41,7 @@ body{
     margin-bottom: 20px;
 }
 .inicio{
+    color: rgb(50, 50, 50);
     height: 450px;
 }
 .img{
@@ -89,7 +91,7 @@ body{
     flex-wrap: wrap;
 }
 .item{
-    background: var(--cor_principal);
+    background: var(--cor_teciaria);
     width: 30%;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -131,7 +133,8 @@ body{
 }
 /* missão */
 .missao{
-    padding: 80px 0;
+    color: rgb(50, 50, 50);
+    padding: 80px 0px;
 }
 .textos-missao{
     grid-column: 7/13;
