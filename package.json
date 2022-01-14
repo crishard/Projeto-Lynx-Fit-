@@ -1,0 +1,23 @@
+{
+  "name": "projeto-lynx-fit-",
+  "version": "1.0.0",
+  "description": "Projeto de Programaçao III e Engenharia de Software. Projeto gerenciamento de treinos de academia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crishard/Projeto-Lynx-Fit-.git"
+  },
+  "author": "Leone Rodrigues Santos, Matheus Andrade Uchoa, Moises Pinhao Sobrinho, Antonio Crislan C. Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crishard/Projeto-Lynx-Fit-/issues"
+  },
+  "homepage": "https://github.com/crishard/Projeto-Lynx-Fit-#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "postgres": "^1.0.2"
+  }
+}
