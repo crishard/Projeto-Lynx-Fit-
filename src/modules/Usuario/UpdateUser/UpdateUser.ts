@@ -1,10 +1,10 @@
 import {prisma} from "../../../dataBase/prismaUsuario";
 
 interface IUpdateUser {
-  id: String;
-  username: String;
-  email: String;
-  password: String;
+  id: string;
+  username: string;
+  email: string;
+  password: string;
 }
 
 export class UpdateUser {

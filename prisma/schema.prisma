@@ -17,4 +17,11 @@ model Usuario{
    @@map("usuario") 
 }
 
-
+model Treino{
+  id            String @id @default(uuid())
+  dia           Int @unique
+  series        Int
+  repeticoes    Int
+  equipamento   String
+  treino        String
+}

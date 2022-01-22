@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor_textos);
+}
+main{
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
+header{
+    position: fixed;
+    background: rgba(0, 0, 170, 0.459);
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+.esquerda h3{
+    color: var(--cor_principal);
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+}
+.esquerda span{
+    color: var(--cor_secundaria);
+}
+.menu{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-top: 70px;
+    padding-top: 30px;
+    left: 0;
+    background: var(--cor_secundaria);
+    transition: 0.3s;
+}
+.menu .imagem{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.menu h2{
+    color: var(--cor_principal);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.menu a{
+    color: var(--cor_principal);
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.menu a:hover{
+    background: var(--cor_teciaria);
+    color: var(--cor_textos);
+}
+.menu i{
+    padding-right: 10px;
+}
+label #sidebar_btn{
+    z-index: 1;
+    position: fixed;
+    left: 300px;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+label #sidebar_btn:hover{
+    color: var(--cor_secundaria);
+}
+#check:checked ~ .menu{
+    left: -190px;
+}
+#check:checked ~ .menu .perfil{
+    display: none;
+}
+#check:checked ~ .menu a span{
+    display: none;
+}
+#check:checked ~ .menu .links{
+    margin-top: -90px;
+}
+#check:checked ~ .menu a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+.movimento{
+    background: url(/image/img-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+}
+#check:checked ~ .movimento{
+    margin-left: 60px;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .treino{
+    float: right;
+    margin-left: 100px;
+    margin-top: -80vh;
+}
+.treino{
+    float: right;
+    margin-left: 260px;
+    margin-top: -80vh;
+    margin-right: 40px;
+}
+.personalizar form{
+    margin-top: 20px;
+}
+.personalizar select{
+    font-size: 16px;
+    color: var(--cor_textos);
+    box-shadow: none;
+}
+.personalizar table{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+.personalizar table th{
+    width: 600px;
+    border: 1px solid var(--cor_textos);
+}
+.personalizar table select{
+    border: none;
+    font-size: 16px;
+    padding: 5px 0px;
+    text-align: center;
+    align-items: center;
+    background: none;
+}
