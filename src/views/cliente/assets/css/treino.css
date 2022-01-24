@@ -132,13 +132,17 @@ label #sidebar_btn:hover{
 .personalizar form{
     margin-top: 20px;
 }
+.personalizar form label{
+    font-size: 18px;
+    font-weight: 600;
+}
 .personalizar select{
     font-size: 16px;
     color: var(--cor_textos);
     box-shadow: none;
 }
 .personalizar table{
-    margin-top: 50px;
+    margin-top: 15px;
     align-items: center;
     text-align: center;
 }
@@ -153,4 +157,22 @@ label #sidebar_btn:hover{
     text-align: center;
     align-items: center;
     background: none;
+}
+.treino p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.treino .N-dias{
+    margin-top: 10px;
+}
+
+.pp{
+    margin-top: 40px;
+}
+.personalizar #dias:focus{
+    border: 1px solid var(--cor_secundaria);
+}
+.personalizar #dias{
+    background: var(--cor_teciaria);
+    border: 1px solid var(--cor_tema_claro);
 }
