@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/equipamentos.css">
+    <title>LYNX FIT</title>
+</head>
+<body>
+    <main class="principal">
+        <input type="checkbox" id="check" checked>
+        <header>
+            <label for="check">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+            <div class="esquerda">
+                <h3>Lynx <span>equipamentos</span></h3>
+            </div>
+        </header>
+        <div class="menu">
+            <div>
+                <center>
+                    <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
+                    <h2>Maria</h2>
+                </center>
+            </div>
+            <div class="links">
+                <a href="./home-page-cliente.html" class="home"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="./cadastrar-usuarios.html" class="home"><i class="fas fa-users"></i><span>Usuários</span></a>
+                <a href="./personalizar-treino.html" class="home"><i class="fas fa-list-ul"></i></i><span>Treinos</span></a>
+                <a href="./dados-cliente.html" class="home"><i class="fas fa-database"></i><span>Meus Dados</span></a>
+                <a href="/src/views/login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+            </div>
+        </div>
+        <div class="movimento"></div>
+        <div class="equipamentos">
+            <form action="#" method="post">
+
+                <div class="cadastrar">
+                    <p>Cadastrar um novo equipamento:</p>
+                    <div>
+                        <input type="text">
+                        <button class="button"><i class="far fa-save"></i></button>
+                    </div>
+                </div>
+                <div class="apagar-editar">
+                    <p>Buscar um equipamento:</p>
+                    <div class="busca">
+                        <input type="text">
+                        <button class="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <div class="read">
+                    <p>Equipamentos já cadastrados</p>
+                    <div class="ver">
+                        <table>
+                            <tr>
+                                <th>Nome do equipamento</th>
+                            </tr>
+                        </table>
+                        <!-- <button class="button" type="submit"><i class="far fa-trash-alt"></i></button>
+                        <button class="button" type="submit"><i class="fas fa-pencil-alt"></i></button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+</body>
+</html>

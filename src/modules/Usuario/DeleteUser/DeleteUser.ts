@@ -2,7 +2,7 @@ import { response } from "express";
 import { prisma } from "../../../dataBase/prismaUsuario";
 
 interface IDeleteUser {
-    id: String;
+    id: string;
 }
 
 export class DeleteUser {
@@ -12,8 +12,8 @@ export class DeleteUser {
             return response
             .status(500)
             .json({ status: "erro", message: "Usuario não existe" });
-          }
-         const result =  await prisma.usuario.delete({ where: { id } });
+        }
+        const result =  await prisma.usuario.delete({ where: { id } });
 
         return result;
     }
