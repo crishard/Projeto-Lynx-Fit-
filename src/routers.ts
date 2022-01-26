@@ -6,7 +6,7 @@ import { FindUserController } from "./modules/Usuario/FindUser/FindUserControlle
 import { UpdateUserController } from "./modules/Usuario/UpdateUser/UpdateUserController";
 import { DeleteUserController } from "./modules/Usuario/DeleteUser/DeleteUserController";
 //treino
-import { CreatTreinoController } from "./modules/Treino/CreatTreino/CreatTreinoController";
+import { CreateTreinoController } from "./modules/Treino/CreatTreino/CreatTreinoController";
 import { FindTreinoController } from "./modules/Treino/FindTreino/FindTreinoController";
 import { UpdateTreinoController } from "./modules/Treino/UpdateTreino/UpdateTreinoController";
 import { DeleteTreinoController } from "./modules/Treino/DeleteTreino/DeleteTreinoController";
@@ -19,7 +19,7 @@ const updateUserController = new UpdateUserController();
 const deleteUserController = new DeleteUserController();
 
 //treino
-const createTreinoController = new CreatTreinoController();
+const createTreinoController = new CreateTreinoController();
 const findTeinoController = new FindTreinoController();
 const updateTreinoController = new UpdateTreinoController();
 const deleteTreinoController = new DeleteTreinoController();

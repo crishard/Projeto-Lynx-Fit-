@@ -34,58 +34,66 @@
             </div>
         </div>
         <div class="movimento"></div>
+        <!-- formulario de treino -->
         <div class="treino">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore natus exercitationem provident dolorum voluptate adipisci sed maxime! Quidem, quisquam nihil eveniet perferendis a doloribus natus inventore eaque, quam doloremque sint.</p>
             <div class="personalizar">
-                <form action="post">
-                    <label for="dias">Quantos dias na semana pretende treinar?</label><br>
-                    <select id="dias" name="" class="N-dias">
-                        <option value="0">Selecione</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </form>
-                <p class="pp">Agora é hora de personalizar o treino do cliente da sua academia:</p>
-                <table>
-                    <tr>
-                        <th>Dia</th>
-                        <th>Treino</th>
-                        <th>Equipamento</th>
-                        <th>Series</th>
-                        <th>Repetições</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="" id="">
-                                <option value="0">Selecione</option>
-                                <option value="1">Segunda</option>
-                                <option value="2">Terça</option>
-                                <option value="3">Quarta</option>
-                                <option value="4">Quinta</option>
-                                <option value="5">Sexta</option>
-                                <option value="6">Sábado</option>
-                            </select>
-                        </td>
+                <div class="aluno">
+                    <p>Para o aluno deseja personalizar um treino?</p>
+                    <input type="text" placeholder="Ex: Joãozinho123">
+                </div>
+                <div class="form">
+                    <p class="pp">Personalize agora o treino:</p>
+                    <div class="enter">
+                        <div class="dia">
+                            <h3>Dia</h3>
+                                <select name="" id="">
+                                    <option value="0">Selecione</option>
+                                    <option value="1">Segunda</option>
+                                    <option value="2">Terça</option>
+                                    <option value="3">Quarta</option>
+                                    <option value="4">Quinta</option>
+                                    <option value="5">Sexta</option>
+                                    <option value="6">Sábado</option>
+                                </select>
+                        </div>
+                        <div class="nome-treino">
+                            <h3>Treino</h3>
+                                <input type="text" placeholder="Ex: Treino de pernas">
+                        </div>
+                        <div class="equipamento">
+                            <h3>Equipamento</h3>
+                                <input type="text" placeholder="Ex: Alters">
+                        </div>
+                        <div class="series">
+                            <h3>Series</h3>
+                                <input type="text" placeholder="Ex: 4">
+                        </div>
+                        <div class="repeticoes">
+                            <h3>Repetições</h3>
+                                <input type="text" placeholder="Ex: 12">
+                        </div>
+                        <div class="salvar">
+                        </div>
+                    </div>
+                    <div class="buttons">
 
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                        <button class="button"><i class="far fa-save"></i></button>
+                        <button class="button"><i class="far fa-window-close"></i></button>
+                    </div>
+                </div>
+
+                <div class="rotina">
+                    <p>Essa é a rotina dele</p>
+                    <table>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Treino</th>
+                            <th>Equipamentos</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                        </tr>
+                    </table>
+                </div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>

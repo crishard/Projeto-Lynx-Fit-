@@ -9,19 +9,47 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+//Matheus
 model Usuario{
   id String @id @default(uuid())
   email String @unique
   username String
   password String
-   @@map("usuario") 
+
+  treino Treino[]
+  @@map("usuario") 
 }
 
+
+
+
+//Crislan
 model Treino{
-  id            String @id @default(uuid())
-  dia           Int @unique
-  series        Int
-  repeticoes    Int
-  equipamento   String
-  treino        String
+  id              String @id @default(uuid())
+  dia             Int @unique
+  id_usuario      String
+  usuario         Usuario      @relation(fields: [id_usuario], references: [id])
+  // nome            String
+  // usuario         Usuario @relation(fields: [nome], references: [username])
+  series          Int
+  repeticoes      Int
+  equipamento     String
+  treino          String
+
+
+  @@map("treino") 
 }
+
+
+
+
+
+
+//Leone
+
+
+
+
+
+
+//Moisés

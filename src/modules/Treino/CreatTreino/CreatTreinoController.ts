@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { CreateTreino } from "./CreatTreino";
+import { CreateTreino } from "./CreateTreino";
 
-export class CreatTreinoController {
+export class CreateTreinoController {
   
   async handle(req: Request, res: Response) {
     const {dia, equipamento, treino, series, repeticoes} = req.body;
