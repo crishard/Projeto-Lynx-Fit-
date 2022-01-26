@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { FindUser } from "./FIndUser";
+import { FindUser } from "./FindUser";
 
 export class FindUserController {
   async handle(req: Request, res: Response) {
