@@ -47,7 +47,13 @@ model Treino{
 
 //Leone
 
-
+model Cliente{
+  id String @id @default(uuid())
+  nome String 
+  email String @unique
+  cnpj String @unique
+  senha String 
+}
 
 
 

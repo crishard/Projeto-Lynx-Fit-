@@ -10,6 +10,13 @@ import { CreateTreinoController } from "./modules/Treino/CreatTreino/CreatTreino
 import { FindTreinoController } from "./modules/Treino/FindTreino/FindTreinoController";
 import { UpdateTreinoController } from "./modules/Treino/UpdateTreino/UpdateTreinoController";
 import { DeleteTreinoController } from "./modules/Treino/DeleteTreino/DeleteTreinoController";
+
+// Cliente
+import { CreateClienteController } from "./modules/Cliente/CreateCliente/CreateClienteController";
+import { FindClienteController } from "./modules/Cliente/FindCliente/FindClienteController";
+import { UpdateClienteController } from "./modules/Cliente/UpdateCliente/UpdateClienteController";
+import { DeleteClienteController } from "./modules/Cliente/DeleteCliente/DeleteClienteController";
+
 const routes = Router();
 
 //usuário
@@ -24,6 +31,12 @@ const findTeinoController = new FindTreinoController();
 const updateTreinoController = new UpdateTreinoController();
 const deleteTreinoController = new DeleteTreinoController();
 
+// Cliente
+const createClienteController = new CreateClienteController();
+const findClienteController = new FindClienteController();
+const updateClienteController = new UpdateClienteController();
+const deleteClienteController = new DeleteClienteController();
+
 //usuario
 routes.post("/client/", createClientController.handle);
 routes.get("/getuser", findUserController.handle);
@@ -35,4 +48,10 @@ routes.post("/treino/", createTreinoController.handle);
 routes.get("/gettreino", findTeinoController.handle);
 routes.put("/updatetreino", updateTreinoController.handle);
 routes.delete("/deletetreino/:id", deleteTreinoController.handle);
+
+// Cliente
+routes.post("/cliente/", createClienteController.handle);
+routes.get("/getcliente", findClienteController.handle);
+routes.put("/updatecliente", updateClienteController.handle);
+routes.delete("/deletecliente/:id", deleteClienteController.handle);
 export {routes};
