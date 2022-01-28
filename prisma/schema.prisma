@@ -15,9 +15,18 @@ model Usuario{
   email String @unique
   username String
   password String
-
+  id_client      String
+  cliente        Cliente      @relation(fields: [id_client], references: [id])
   treino Treino[]
   @@map("usuario") 
+}
+
+model Equipamento{
+  id_equipamento String @id @default(uuid())
+  nome_equipamento String
+  id_client      String
+  cliente         Cliente      @relation(fields: [id_client], references: [id])
+  @@map("equipamento")
 }
 
 
@@ -53,6 +62,8 @@ model Cliente{
   email String @unique
   cnpj String @unique
   senha String 
+  equipamentos Equipamento[]
+  usuario Usuario[]
 }
 
 

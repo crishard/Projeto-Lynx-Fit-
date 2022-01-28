@@ -9,11 +9,9 @@ export class DeleteUser {
     async execute({ id }: IDeleteUser) {
 
         if (!id) {
-            return response
-            .status(500)
-            .json({ status: "erro", message: "Usuario não existe" });
+            throw new Error("id não encotrado");
         }
-        const result =  await prisma.usuario.delete({ where: { id } });
+         const result =  await prisma.usuario.delete({ where: { id } });
 
         return result;
     }
