@@ -1,31 +1,31 @@
 import { Router } from "express";
 
 //usuario
-import { CreateUserController } from "./modules/Usuario/CreatUser/CreatUserController";
-import { FindUserController } from "./modules/Usuario/FindUser/FindUserController";
-import { UpdateUserController } from "./modules/Usuario/UpdateUser/UpdateUserController";
-import { DeleteUserController } from "./modules/Usuario/DeleteUser/DeleteUserController";
-import { ValidacaoUsuarioController} from "./modules/Validacao/ValidacaoUsuario/ValidacaoUsuarioController"
+import { CreateUserController } from "./modules/Usuario/CriarUsuario/CriarUsuarioController";
+import { FindUserController } from "./modules/Usuario/BuscarUsuario/BuscarUsuarioController";
+import { UpdateUserController } from "./modules/Usuario/AtualizarUsuario/AtualizarUsuarioController";
+import { DeleteUserController } from "./modules/Usuario/DeletarUsuario/DeletarUsuarioController";
+import { ValidacaoUsuarioController} from "./modules/Login/LoginUsuario/LoginUsuarioController"
 
 //treino
-import { CreateTreinoController } from "./modules/Treino/CreatTreino/CreatTreinoController";
-import { FindTreinoController } from "./modules/Treino/FindTreino/FindTreinoController";
-import { UpdateTreinoController } from "./modules/Treino/UpdateTreino/UpdateTreinoController";
-import { DeleteTreinoController } from "./modules/Treino/DeleteTreino/DeleteTreinoController";
+import { CreateTreinoController } from "./modules/Treino/CriarTreino/CriarTreinoController";
+import { FindTreinoController } from "./modules/Treino/BuscarTreino/BuscarTreinoController";
+import { UpdateTreinoController } from "./modules/Treino/AtualizarTreino/AtualizarTreinoController";
+import { DeleteTreinoController } from "./modules/Treino/DeletarTreino/DeletarTreinoController";
 
 // Cliente
-import { CreateClienteController } from "./modules/Cliente/CreateCliente/CreateClienteController";
-import { FindClienteController } from "./modules/Cliente/FindCliente/FindClienteController";
-import { UpdateClienteController } from "./modules/Cliente/UpdateCliente/UpdateClienteController";
-import { DeleteClienteController } from "./modules/Cliente/DeleteCliente/DeleteClienteController";
-import { ensureAuthenticateCliente } from "./middleware/ensureAuthenticateCliente";
-import { ValidacaoClienteController } from "./modules/Validacao/ValidacaoCliente/ValidacaoClienteController";
+import { CreateClienteController } from "./modules/Cliente/CriarCliente/CriarClienteController";
+import { FindClienteController } from "./modules/Cliente/BuscarCliente/BuscarClienteController";
+import { UpdateClienteController } from "./modules/Cliente/AtualizarCliente/AtualizarClienteController";
+import { DeleteClienteController } from "./modules/Cliente/DeletarCliente/DeletarClienteController";
+import { ensureAuthenticateCliente } from "./middleware/AutenticacaoCliente";
+import { ValidacaoClienteController } from "./modules/Login/LoginCliente/LoginClienteController";
 
 //Equipamentos
-import { CreateEquipamentController } from "./modules/Equipamentos/CreateEquipmento/CreateEquipamentController";
-import { ReadEquipamentController } from "./modules/Equipamentos/ReadEquipamento/ReadEquipamentController";
-import { UpdateEquipamentController } from "./modules/Equipamentos/UpDateEquipamento/UpdateEquipamentController";
-import { DeleteEquipamentController } from "./modules/Equipamentos/DeleteEquipamento/DeleteEquipamentController";
+import { CreateEquipamentController } from "./modules/Equipamentos/CriarEquipmento/CriarEquipamentController";
+import { ReadEquipamentController } from "./modules/Equipamentos/BuscarEquipamento/BuscarEquipamentoController";
+import { UpdateEquipamentController } from "./modules/Equipamentos/AtualizarEquipamento/AtualizarEquipamentoController";
+import { DeleteEquipamentController } from "./modules/Equipamentos/DeletarEquipamento/DeletarEquipamentoController";
 
 const routes = Router();
 
@@ -63,18 +63,17 @@ routes.put("/cliente/update", updateUserController.handle);
 routes.delete("/cliente/delete/:id", deleteUserController.handle);
 
 //treino
-routes.post("/treino/",createTreinoController.handle);
-routes.get("/gettreino", findTeinoController.handle);
-routes.put("/updatetreino", updateTreinoController.handle);
-routes.delete("/deletetreino/:id", deleteTreinoController.handle);
+routes.post("/cliente/cria/treino",ensureAuthenticateCliente,createTreinoController.handle);
+routes.get("/cliente/ver/treino",ensureAuthenticateCliente ,findTeinoController.handle);
+routes.put("/cliente/atualizar/treino", ensureAuthenticateCliente, updateTreinoController.handle);
+routes.delete("/cliente/delete/treino/:id",ensureAuthenticateCliente, deleteTreinoController.handle);
 
 // Cliente
-routes.post("/cliente/",createClienteController.handle);
-routes.get("/getcliente", findClienteController.handle);
-routes.put("/updatecliente", updateClienteController.handle);
-routes.delete("/deletecliente/:id", deleteClienteController.handle);
+routes.post("/criar_cliente/",createClienteController.handle);
+routes.get("/ver_cliente", findClienteController.handle);
+routes.put("/update_cliente", updateClienteController.handle);
+routes.delete("/delete_cliente/:id", deleteClienteController.handle);
 routes.post("/cliente/autenticar", validacaoClienteController.handle);
-
 //Equipamentos
 routes.post("/cliente/equipamento",ensureAuthenticateCliente,createEquipamentController.handle);
 routes.get("/cliente/buscar_equipamento",ensureAuthenticateCliente,readEquipamentController.handle);

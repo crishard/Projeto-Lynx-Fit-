@@ -13,49 +13,37 @@ datasource db {
 model Usuario{
   id String @id @default(uuid())
   email String @unique
-  username String
+  username String @unique
   password String
   id_client      String
   cliente        Cliente      @relation(fields: [id_client], references: [id])
   treino Treino[]
   @@map("usuario") 
 }
-
 model Equipamento{
   id_equipamento String @id @default(uuid())
-  nome_equipamento String
+  nome_equipamento String @unique
   id_client      String
   cliente         Cliente      @relation(fields: [id_client], references: [id])
+  treino Treino[]
   @@map("equipamento")
 }
-
-
-
-
 //Crislan
 model Treino{
   id              String @id @default(uuid())
   dia             Int @unique
-  id_usuario      String
-  usuario         Usuario      @relation(fields: [id_usuario], references: [id])
-  // nome            String
-  // usuario         Usuario @relation(fields: [nome], references: [username])
+  nome_equipamento  String
+  equipamento     Equipamento @relation(fields: [nome_equipamento], references: [nome_equipamento])
   series          Int
   repeticoes      Int
-  equipamento     String
   treino          String
-
-
-  @@map("treino") 
+  nome_usuario      String
+  usuario         Usuario @relation(fields: [nome_usuario], references: [username])
+  id_client      String
+  cliente         Cliente @relation(fields: [id_client], references: [id])
+  @@map("treino")
 }
-
-
-
-
-
-
 //Leone
-
 model Cliente{
   id String @id @default(uuid())
   nome String 
@@ -64,6 +52,9 @@ model Cliente{
   senha String 
   equipamentos Equipamento[]
   usuario Usuario[]
+  treino Treino[]
+
+  @@map("cliente")
 }
 
 
