@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { ValidacaoUsuario } from "./LoginUsuario";
+import { LoginUsuario } from "./LoginUsuario";
 
-export class ValidacaoUsuarioController {
+export class LoginUsuarioController {
   async handle(req: Request, res: Response) {
-    const { email, password } = req.body;
-    const validacaoUsuario = new ValidacaoUsuario();
-    const result = await validacaoUsuario.execute({
+    const { email, senha } = req.body;
+    const loginUsuario = new LoginUsuario();
+    const result = await loginUsuario.execute({
       email,
-      password,
+      senha,
     });
     return res.json(result);
   }

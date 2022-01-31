@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { ValidacaoCliente } from "./LoginCliente";
+import { LoginCliente } from "./LoginCliente";
 
 export class ValidacaoClienteController {
   async handle(req: Request, res: Response) {
     const { email, senha } = req.body;
-    const validacaoCliente = new ValidacaoCliente();
-    const result = await validacaoCliente.execute({
+    const loginCliente = new LoginCliente();
+    const result = await loginCliente.execute({
       email,
       senha,
     });
