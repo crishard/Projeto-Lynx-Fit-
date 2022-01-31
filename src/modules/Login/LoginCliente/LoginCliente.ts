@@ -2,33 +2,33 @@ import { compare } from "bcrypt";
 import { prisma } from "../../../dataBase/prismaCliente";
 import { sign } from "jsonwebtoken";
 
-interface IAuthenticateClient {
+interface ILoginCliente {
   email: string;
   senha: string;
 }
 
-export class ValidacaoCliente {
-  async execute({ senha, email }: IAuthenticateClient) {
+export class LoginCliente {
+  async execute({ senha, email }: ILoginCliente) {
     // Receber email e senha
     //Verificar se o usuario está cadastrado para
     console.log(senha, email);
-    const client = await prisma.cliente.findFirst({
+    const cliente = await prisma.cliente.findFirst({
       where: { email },
     });
 
-    if (!client) {
+    if (!cliente) {
       throw new Error(" email ou senha invalido");
     }
 
     // Verificar se a senha corresponde ao emails
-    const senhaMatch = await compare(senha, client.senha);
+    const senhaMatch = await compare(senha, cliente.senha);
 
     if (!senhaMatch) {
       throw new Error("sername ou senha invalido");
     }
     // Gerar token
     const token = sign({ email }, "chavesecretaclient", {
-      subject: client.id,
+      subject: cliente.id,
       expiresIn: "1d",
     });
     return token;

@@ -1,12 +1,12 @@
 import { response } from "express";
 import { prisma } from "../../../dataBase/prismaCliente";
 
-interface IDeleteTreino {
+interface IDeletarTreino {
     id: string;
 }
 
-export class DeleteTreino {
-    async execute({ id }: IDeleteTreino) {
+export class DeletarTreino {
+    async execute({ id }: IDeletarTreino) {
 
         if (!id) {
             return response

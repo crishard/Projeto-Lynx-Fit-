@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { UpdateTreino } from "./AtualizarTreino";
+import { AtualizarTreino } from "./AtualizarTreino";
 
-export class UpdateTreinoController {
+export class AtualizarTreinoController {
   async handle(req: Request, res: Response) {
     const {dia, nome_equipamento, series, repeticoes, treino} = req.body;
-    const updateTreino = new UpdateTreino();
-    const result = await updateTreino.execute({
+    const atualizarTreino = new AtualizarTreino();
+    const result = await atualizarTreino.execute({
       dia,
       nome_equipamento,
       series,

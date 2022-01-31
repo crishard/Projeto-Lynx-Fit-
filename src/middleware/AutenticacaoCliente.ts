@@ -5,7 +5,7 @@ interface iPayload {
   sub: string;
 }
 
-export async function ensureAuthenticateCliente(
+export async function AutenticacaoCliente(
   req: Request,
   res: Response,
   next: NextFunction

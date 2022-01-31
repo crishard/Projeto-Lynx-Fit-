@@ -1,6 +1,6 @@
 import {prisma} from "../../../dataBase/prismaCliente";
 
-interface IUpdateTreino {
+interface IAtualizarTreino {
   dia: number;
   nome_equipamento: string;
   series: number;
@@ -8,8 +8,8 @@ interface IUpdateTreino {
   treino: string;
 }
 
-export class UpdateTreino {
-  async execute({ dia, nome_equipamento, series, repeticoes, treino }: IUpdateTreino) {
+export class AtualizarTreino {
+  async execute({ dia, nome_equipamento, series, repeticoes, treino }: IAtualizarTreino) {
     if (!dia) {
         throw new Error("Id não encontrado");
     }
