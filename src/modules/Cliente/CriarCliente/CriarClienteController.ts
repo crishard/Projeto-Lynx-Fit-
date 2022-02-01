@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { CreateCliente } from "./CriarCliente";
+import { CriarCliente } from "./CriarCliente";
 
-export class CreateClienteController {
+export class CriarClienteController {
   async handle(req: Request, res: Response) {
     const { nome,email,senha, cnpj} = req.body;
-    const createCliente = new CreateCliente();
-    const result = await createCliente.execute({
+    const criarCliente = new CriarCliente();
+    const result = await criarCliente.execute({
       nome,
       email,
       senha,

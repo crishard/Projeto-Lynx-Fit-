@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { UpdateCliente } from "./AtualizarCliente";
+import { AtualizarCliente } from "./AtualizarCliente";
 
-export class UpdateClienteController {
+export class AtualizarClienteController {
   async handle(req: Request, res: Response) {
     const {id,nome,email,senha, cnpj} = req.body;
-    const updateCliente = new UpdateCliente();
-    const result = await updateCliente.execute({
+    const atualizarCliente = new AtualizarCliente();
+    const result = await atualizarCliente.execute({
       id,
       nome,
       email,
