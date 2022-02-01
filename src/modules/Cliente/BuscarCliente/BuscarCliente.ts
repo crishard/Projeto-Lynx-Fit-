@@ -1,9 +1,9 @@
 import { prisma } from "../../../dataBase/prismaCliente";
 
-export class FindCliente {
+export class BuscarCliente {
   async execute() {
-    const findCliente = await prisma.cliente.findMany();
+    const buscarCliente = await prisma.cliente.findMany();
 
-    return findCliente;
+    return buscarCliente;
   }
 }

@@ -14,10 +14,10 @@ import { AtualizarTreinoController } from "./modules/Treino/AtualizarTreino/Atua
 import { DeletarTreinoController } from "./modules/Treino/DeletarTreino/DeletarTreinoController";
 
 // Cliente
-import { CreateClienteController } from "./modules/Cliente/CriarCliente/CriarClienteController";
-import { FindClienteController } from "./modules/Cliente/BuscarCliente/BuscarClienteController";
-import { UpdateClienteController } from "./modules/Cliente/AtualizarCliente/AtualizarClienteController";
-import { DeleteClienteController } from "./modules/Cliente/DeletarCliente/DeletarClienteController";
+import { CriarClienteController } from "./modules/Cliente/CriarCliente/CriarClienteController";
+import { BuscarClienteController } from "./modules/Cliente/BuscarCliente/BuscarClienteController";
+import { AtualizarClienteController } from "./modules/Cliente/AtualizarCliente/AtualizarClienteController";
+import { DeletarClienteController } from "./modules/Cliente/DeletarCliente/DeletarClienteController";
 import { AutenticacaoCliente } from "./middleware/AutenticacaoCliente";
 import { ValidacaoClienteController } from "./modules/Login/LoginCliente/LoginClienteController";
 
@@ -43,10 +43,10 @@ const updateTreinoController = new AtualizarTreinoController();
 const deleteTreinoController = new DeletarTreinoController();
 
 // Cliente
-const createClienteController = new CreateClienteController();
-const findClienteController = new FindClienteController();
-const updateClienteController = new UpdateClienteController();
-const deleteClienteController = new DeleteClienteController();
+const createClienteController = new CriarClienteController();
+const buscarClienteController = new BuscarClienteController();
+const atualizarClienteController = new AtualizarClienteController();
+const deletarClienteController = new DeletarClienteController();
 const validacaoClienteController = new ValidacaoClienteController();
 
 //Equipamento
@@ -70,9 +70,9 @@ routes.delete("/cliente/delete/treino/:id",AutenticacaoCliente, deleteTreinoCont
 
 // Cliente
 routes.post("/criar_cliente/",createClienteController.handle);
-routes.get("/ver_cliente", findClienteController.handle);
-routes.put("/update_cliente", updateClienteController.handle);
-routes.delete("/delete_cliente/:id", deleteClienteController.handle);
+routes.get("/ver_cliente", buscarClienteController.handle);
+routes.put("/atualizar_cliente", atualizarClienteController.handle);
+routes.delete("/deletar_cliente/:id", deletarClienteController.handle);
 routes.post("/cliente/autenticar", validacaoClienteController.handle);
 //Equipamentos
 routes.post("/cliente/equipamento",AutenticacaoCliente,createEquipamentController.handle);

@@ -1,20 +1,20 @@
 import { response } from "express";
 import { prisma } from "../../../dataBase/prismaCliente";
 
-interface IDeleteCliente {
+interface IDeletarCliente {
     id: string;
 }
 
-export class DeleteCliente {
-    async execute({ id }: IDeleteCliente) {
+export class DeletarCliente {
+    async execute({ id }: IDeletarCliente) {
 
         if (!id) {
             return response
             .status(500)
             .json({ status: "erro", message: "O Cliente não existe" });
           }
-         const result =  await prisma.cliente.delete({ where: { id } });
+         const resultado =  await prisma.cliente.delete({ where: { id } });
 
-        return result;
+        return resultado;
     }
 }

@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { DeleteCliente } from "./DeletarCliente";
+import { DeletarCliente } from "./DeletarCliente";
 
-export class DeleteClienteController {
+export class DeletarClienteController {
     async handle(req: Request, res: Response) {
       const { id} = req.params;
-      const deleteCliente = new DeleteCliente();
-      const result = await deleteCliente.execute({
+      const deletarCliente = new DeletarCliente();
+      const resultado = await deletarCliente.execute({
         id
       });
-      return res.json(result);
+      return res.json(resultado);
     }
   }

@@ -24,10 +24,10 @@ export class LoginCliente {
     const senhaMatch = await compare(senha, cliente.senha);
 
     if (!senhaMatch) {
-      throw new Error("sername ou senha invalido");
+      throw new Error("Nome de usuário ou senha invalido");
     }
     // Gerar token
-    const token = sign({ email }, "chavesecretaclient", {
+    const token = sign({ email }, "chavesecretacliente", {
       subject: cliente.id,
       expiresIn: "1d",
     });
