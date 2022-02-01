@@ -1,11 +1,16 @@
 import { Request, Response } from "express";
-import { DeleteEquipament } from "./DeletarEquipamento";
+import { DeletarEquipamento } from "./DeletarEquipamento";
 
-export class DeleteEquipamentController {
+export class DeletarEquipamentoController {
     async handle(req: Request, res: Response) {
       const { id_equipamento} = req.params;
-      const deleteEquipament = new DeleteEquipament();
-      const result = await deleteEquipament.execute({id_equipamento});
-      return res.json(result);
+      const deletarEquipamento = new DeletarEquipamento();
+      const resultado = await deletarEquipamento.execute({
+        id_equipamento
+      });
+      if( resultado instanceof Error){
+        return res.status(400).json(resultado.message)
+      }
+      return res.json(resultado);
     }
   }

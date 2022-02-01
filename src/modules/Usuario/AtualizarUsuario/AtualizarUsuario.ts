@@ -1,38 +1,38 @@
 import {prisma} from "../../../dataBase/prismaCliente";
 
-interface IUpdateUser {
+interface IAtualizarUsuario {
+ 
   id: string;
-  username: string;
+  nome: string;
   email: string;
-  password: string;
+  senha: string;
 }
 
-export class UpdateUser {
-  async execute({ id,username,email,password }: IUpdateUser) {
+export class AtualizarUsuario {
+  async execute({ id,nome,email,senha }: IAtualizarUsuario) {
     if (!id) {
-        throw new Error("Id não encontrado");
+        return new Error("Id não encontrado");
       }
     
-      const todoAlreadyExist = await prisma.usuario.findUnique({ where: { id } });
+      const VerficarUsuario = await prisma.usuario.findUnique({ where: { id } });
     
-      if (!todoAlreadyExist) {
-        throw new Error("Usuario não existe");
+      if (!VerficarUsuario) {
+        return new Error("Usuario não existe");
       }
     
-    const result = await prisma.usuario.update({
+    const resultado = await prisma.usuario.update({
         where: {
             id,
           },
           data: {
-            username,
+            nome,
             email,
-            password
+            senha
             
           },
         });
 
-        return result;
+        return resultado;
     }
 
 }
-    

@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import { FindUser } from "./BuscarUsuario";
+import { BuscarUsuario } from "./BuscarUsuario";
 
-export class FindUserController {
+export class BuscarUsuarioController {
   async handle(req: Request, res: Response) {
-    const findUser = new FindUser();
+    const buscarUsuario = new BuscarUsuario();
 
-    const result = await findUser.execute();
+    const resultado = await buscarUsuario.execute();
 
-    return res.json(result);
+    return res.json(resultado);
   }
 }

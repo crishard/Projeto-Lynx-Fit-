@@ -1,18 +1,20 @@
 import { response } from "express";
 import { prisma } from "../../../dataBase/prismaCliente";
 
-interface IDeleteUser {
+interface IDeletarUsuario {
     id: string;
 }
 
-export class DeleteUser {
-    async execute({ id }: IDeleteUser) {
+export class DeletarUsuario {
+    async execute({ id }: IDeletarUsuario) {
 
-        if (!id) {
-            throw new Error("id não encotrado");
+        const VerficarUsuario = await prisma.usuario.findUnique({ where: { id } });
+    
+        if (!VerficarUsuario) {
+          return new Error("Usuario não existe");
         }
-         const result =  await prisma.usuario.delete({ where: { id } });
+         const resultado =  await prisma.usuario.delete({ where: { id } });
 
-        return result;
+        return resultado;
     }
 }

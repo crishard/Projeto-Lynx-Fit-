@@ -19,7 +19,7 @@ export async function AutenticacaoUsuario(
 
   try {
     const { sub } = verify(token, "chavesecreta") as iPayload;
-    req.id_user = sub;
+    req.id_usuario = sub;
     return next();
   } catch (err) {
     return res.status(401).json({ mesage: "Token invalido" });

@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import { ReadEquipament } from "./BuscarEquipamento";
+import { BuscarEquipamento } from "./BuscarEquipamento";
 
-export class ReadEquipamentController {
+export class BuscarEquipamentoController {
   async handle(req: Request, res: Response) {
-    const readEquipament = new ReadEquipament();
+    const buscarEquipamento = new BuscarEquipamento();
 
-    const result = await readEquipament.execute();
+    const resultado = await buscarEquipamento.execute();
 
-    return res.json(result);
+    return res.json(resultado);
   }
 }
