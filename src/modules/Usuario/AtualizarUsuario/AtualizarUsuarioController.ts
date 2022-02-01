@@ -1,16 +1,19 @@
 import { Request, Response } from "express";
-import { UpdateUser } from "./AtualizarUsuario";
+import { AtualizarUsuario } from "./AtualizarUsuario";
 
-export class UpdateUserController {
+export class AtualizarUsuarioController {
   async handle(req: Request, res: Response) {
-    const {id,username,email,password} = req.body;
-    const updateUser = new UpdateUser();
-    const result = await updateUser.execute({
+    const {id,nome,email,senha} = req.body;
+    const atualizarUsuario = new AtualizarUsuario();
+    const resultado = await atualizarUsuario.execute({
       id,
-      username,
+      nome,
       email,
-      password,
+      senha,
     });
-    return res.json(result);
+    if( resultado instanceof Error){
+      return res.status(400).json(resultado.message)
+    }
+    return res.json(resultado);
   }
 }

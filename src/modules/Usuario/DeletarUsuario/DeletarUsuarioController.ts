@@ -1,13 +1,16 @@
 import { Request, Response } from "express";
-import { DeleteUser } from "./DeletarUsuario";
+import { DeletarUsuario } from "./DeletarUsuario";
 
-export class DeleteUserController {
+export class DeletarUsuarioController {
     async handle(req: Request, res: Response) {
       const { id} = req.params;
-      const deleteUser = new DeleteUser();
-      const result = await deleteUser.execute({
+      const deletarUsuario = new DeletarUsuario();
+      const resultado = await deletarUsuario.execute({
         id
       });
-      return res.json(result);
+      if( resultado instanceof Error){
+        return res.status(400).json(resultado.message)
+      }
+      return res.json(resultado);
     }
   }

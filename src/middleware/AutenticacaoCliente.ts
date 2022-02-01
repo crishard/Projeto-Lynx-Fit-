@@ -18,7 +18,7 @@ export async function AutenticacaoCliente(
   const [, token] = authHeader.split(" ");
 
   try {
-    const { sub } = verify(token, "chavesecretaclient") as iPayload;
+    const { sub } = verify(token, "chavesecretacliente") as iPayload;
     req.id_client = sub;
     return next();
   } catch (err) {
