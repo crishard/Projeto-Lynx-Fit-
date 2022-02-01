@@ -1,6 +1,6 @@
 import {prisma} from "../../../dataBase/prismaCliente";
 
-interface IUpdateCliente {
+interface IAtualizarCliente {
   id: string;
   nome: string;
   email: string;
@@ -8,32 +8,32 @@ interface IUpdateCliente {
   cnpj: string;
 }
 
-export class UpdateCliente {
-  async execute({ id,nome,email,senha, cnpj }: IUpdateCliente) {
+export class AtualizarCliente {
+  async execute({ id,nome,email,senha, cnpj }: IAtualizarCliente) {
     if (!id) {
-        throw new Error("Id não encontrado");
-      }
-    
-      const todoAlreadyExist = await prisma.cliente.findUnique({ where: { id } });
-    
-      if (!todoAlreadyExist) {
-        throw new Error("Cliente não existe");
-      }
-    
-    const result = await prisma.cliente.update({
-        where: {
-            id,
-          },
-          data: {
-            nome,
-            email,
-            senha,
-            cnpj
-            
-          },
-        });
-
-        return result;
+      return new Error("Id não encontrado");
     }
+    
+    const clienteExiste = await prisma.cliente.findUnique({ where: { id } });
+  
+    if (!clienteExiste) {
+      return new Error("Cliente não existe");
+    }
+    
+    const resultado = await prisma.cliente.update({
+      where: {
+        id,
+      },
+      data: {
+        nome,
+        email,
+        senha,
+        cnpj
+          
+      },
+    });
+
+    return resultado;
+  }
 
 }

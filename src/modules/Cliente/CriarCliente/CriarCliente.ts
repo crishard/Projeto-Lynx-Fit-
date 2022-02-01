@@ -1,18 +1,18 @@
 import { hash } from "bcrypt";
 import { prisma } from "../../../dataBase/prismaCliente";
 
-interface ICreateCliente {
+interface ICriarCliente {
     nome: string;
     email: string;
     senha: string;
     cnpj: string;
 }
 
-  export class CreateCliente {
-    async execute({ nome,email ,senha, cnpj}: ICreateCliente) {
+  export class CriarCliente {
+    async execute({ nome,email ,senha, cnpj}: ICriarCliente) {
       // validar o cliente existnte
       
-      const clientExists = await prisma.cliente.findFirst({
+      const clienteExiste = await prisma.cliente.findFirst({
         where: {
             cnpj: {
             equals: cnpj,
@@ -20,7 +20,7 @@ interface ICreateCliente {
           },
         },
       });
-      if (clientExists) {
+      if (clienteExiste) {
         throw new Error("Cliente já existe");
       }
       // criptografar a senha
