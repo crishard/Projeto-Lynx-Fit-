@@ -1,17 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  :root{
-    --cor_principal: white;
-    --cor_secundaria: rgb(0, 0, 170);
-    --cor_teciaria: #e9e7e7;
-    --cor_textos: rgb(30, 30, 30);
-    --cor_tema_claro: rgb(50, 50, 50);
-    --cor_logo: rgba(0, 0, 170, 0.500)
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-  
 .records{
     width: 100%;
     user-select: none;
@@ -30,45 +16,18 @@
     padding-left: 20px;
 }
 
-.records th:last-child, .records td:last-child{
+.records th:last-child,
+.records td:last-child{
     padding: 0;
     min-width: 140px;
     text-align: center;
 }
 
 .records tr:hover{
-    background-color: var(--cor_teciaria);
-}
-@media(max-width:800px){
-    .records{
-        border-spacing: 5px;
-    }
-    .records thead{
-        display:none;
-    }
-    .records tr{
-        box-shadow: 0 1px 3px var(--cor_teciaria);
-    }
-    .records td:not(:first-child){
-        display:flex;
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-    .records td{
-        margin:10px 0;
-    }
-    .records tr:hover{
-        background-color: inherit;
-    }
-    .records th{
-        height: 30px;
-        background-color: #f2f2f2;
-        padding-left: 20px;
-        font-size: 1.2rem;    
-    }
+    background-color: #f2f2f2;
 }
 
-@media(max-width:500px){
+@media(max-width:480px){
     .records{
         border-spacing: 5px;
     }
@@ -83,26 +42,12 @@
         justify-content: space-between;
         padding: 0 20px;
     }
+
     .records td{
         margin:10px 0;
-        font-size: 12px;
     }
+
     .records tr:hover{
         background-color: inherit;
-    }
-    .records th{
-        font-size: 12px;
-    }
-}
-@media(max-width:400px){
-    .records th{
-        font-size: 12px;
-        height: 20px;
-        background-color: #f2f2f2;
-        padding-left: 20px;
-        font-size: 1.2rem;    
-    }
-    .records td{
-        font-size: 10px;
     }
 }
