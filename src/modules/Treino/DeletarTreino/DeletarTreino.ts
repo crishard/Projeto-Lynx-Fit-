@@ -8,11 +8,12 @@ interface IDeletarTreino {
 export class DeletarTreino {
     async execute({ id }: IDeletarTreino) {
 
-        if (!id) {
-            return response
-            .status(500)
-            .json({ status: "erro", message: "Usuario não existe" });
+        const VerficarEquipamento = await prisma.treino.findUnique({ where: { id} });
+    
+        if (!VerficarEquipamento) {
+          return new Error("Equipamento não existe");
         }
+      
         const treinoDeletado =  await prisma.treino.delete({ where: { id } });
 
         return treinoDeletado;

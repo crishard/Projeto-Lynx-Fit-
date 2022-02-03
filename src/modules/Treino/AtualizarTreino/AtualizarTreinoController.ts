@@ -12,6 +12,9 @@ export class AtualizarTreinoController {
       repeticoes,
       treino
     });
+    if( result instanceof Error){
+      return res.status(400).json(result.message)
+    }
     return res.json(result);
   }
 }

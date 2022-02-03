@@ -21,7 +21,7 @@ interface ICriarCliente {
         },
       });
       if (clienteExiste) {
-        throw new Error("Cliente já existe");
+        return new Error("Cliente já existe");
       }
       // criptografar a senha
       const hashPassword = await hash(senha, 10);
