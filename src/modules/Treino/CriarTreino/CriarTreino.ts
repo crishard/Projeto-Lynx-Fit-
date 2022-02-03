@@ -18,7 +18,7 @@ interface ICriarTreino {
         },
       });
       if (treinoExist) {
-        throw new Error("Treino para esee dia já foi criado");
+        return new Error("Treino para esee dia já foi criado");
       }
       const Treino = await prisma.treino.create({
         data: {

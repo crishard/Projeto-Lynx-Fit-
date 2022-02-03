@@ -8,6 +8,9 @@ export class DeletarClienteController {
       const resultado = await deletarCliente.execute({
         id
       });
+      if( resultado instanceof Error){
+        return res.status(400).json(resultado.message)
+      }
       return res.json(resultado);
     }
   }

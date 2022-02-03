@@ -17,14 +17,14 @@ export class LoginUsuario {
     });
 
     if (!usuario) {
-      throw new Error(" email ou senha invalido");
+      return new Error(" email ou senha invalido");
     }
 
     // Verificar se a senha corresponde ao emails
     const passwordMatch = await compare(senha, usuario.senha);
 
     if (!passwordMatch) {
-      throw new Error("username ou password invalido");
+      return new Error("username ou password invalido");
     }
     // Gerar token
     const token = sign({ email }, "chavesecreta", {

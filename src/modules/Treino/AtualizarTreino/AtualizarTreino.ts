@@ -11,7 +11,7 @@ interface IAtualizarTreino {
 export class AtualizarTreino {
   async execute({ dia, nome_equipamento, series, repeticoes, treino }: IAtualizarTreino) {
     if (!dia) {
-        throw new Error("Id não encontrado");
+        return new Error("Id não encontrado");
     }
     const result = await prisma.treino.update({
         where: {
