@@ -61,15 +61,22 @@ body{
     text-align: justify;
 }
 .inc{
-    width: 130px;
-    background: var(--cor_secundaria);
-    color: var(--cor_principal);
     display: inline-block;
+    margin: 30px 0px 0px 0px;
+    width: 9rem;
+    padding: 0.8rem 0;
+    background: var(--cor_secundaria);
     text-align: center;
     text-decoration: none;
+    color: var(--cor_principal);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.150);
+    display: inline-block;
+    text-align: center;
     padding: 10px 0;
     border: 1px solid transparent;
-    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.418);
+
 }
 .inc:hover{
     color: var(--cor_textos);

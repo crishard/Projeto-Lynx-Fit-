@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Dados Pessoais LYNX FIT</title>
-          <link rel="stylesheet" href="./assets/css/dados.css" content="width-device-width, initial-scale-1.0">
-          <link rel="stylesheet" href="./assets/css/modal/button.css">
-          <link rel="stylesheet" href="./assets/css/modal/main.css">
-          <link rel="stylesheet" href="./assets/css/modal/modal.css">
-          <link rel="stylesheet" href="./assets/css/modal/records.css">
-          <script src="https://kit.fontawesome.com/a076d0399.js"></script>
-          <script src="./assets/js/evolucao.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILIZAÇÃO CSS-->
+    <link rel="stylesheet" href="./assets/css/dados.css" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="./assets/css/modal/menu.css">
+    <link rel="stylesheet" href="./assets/css/modal/button.css">
+    <link rel="stylesheet" href="./assets/css/modal/main.css">
+    <link rel="stylesheet" href="./assets/css/modal/modal.css">
+    <link rel="stylesheet" href="./assets/css/modal/records.css">
+
+    <!--ESTILIZAÇÃO JS-->
+    <script src="https://kit.fontawesome.com/a076d0399.js"></script>
+    <script src="./assets/js/evolucao.js" defer></script>
+
+    <!--TITULO DA PAGINA-->
+    <title>Rotina LYNX FIT</title>
 </head>
 <body>
-        <div class="wrapper">
-                <sidebar>
-                        <div class="logo">LYNX FIT</div>
-                        <div class="avatar">
-                          <div class="avatar__img">
-                            <img src="https://picsum.photos/70" alt="avatar">
-                          </div>
-                          <div class="avatar__name">Alírio Scott</div>
-                        </div>
-                        <nav class="menu">
-                          <a class="menu__item" href="../Inicio/index.html">
-                            <i class="menu__icon fa fa-home"></i>
-                            <span class="menu__text">Início</span>
-                          </a>
-                          <a class="menu__item" href="home-page-usuario.html">
-                            <i class="menu__icon fa fa-bar-chart"></i>
-                            <span class="menu__text">Inicio do Usuário</span>
-                          </a>
-                          <a class="menu__item" href="evolucao.html">
-                            <i class="menu__icon fa fa-envelope"></i>
-                            <span class="menu__text">Evolução</span>
-                          </a>
-                          <a class="menu__item menu__item--active" href="rotina.html">
-                            <i class="menu__icon fa fa-calendar"></i>
-                            <span class="menu__text">Rotina</span>
-                          </a>
-                          <a class="menu__item" href="dados.html">
-                            <i class="menu__icon fa fa-list"></i>
-                            <span class="menu__text">Meus Dados</span>
-                          </a>
-                          <a class="menu__item" href="../login/login.html">
-                            <i class="menu__icon fa fa-bar-chart"></i>
-                            <span class="menu__text">Sair</span>
-                          </a>
-                        </nav>
-                        <div class="copyright">&copy; LYNX FIT - 2021 - &infintie;.</div>
-                </sidebar>
-                <main>
-                    <section class="dados">
-                        <table class="records">
-                            <thead>
-                                <tr>
-                                    <th>Matricula:</th>
-                                    <td>FIT12345</td>
-                                </tr>
-                            </thead>
-                                <tr>
-                                    <th>Nome:</th>
-                                    <td>Alírio Scott Dygeras</td>
-                                </tr>
-                                <tr>
-                                    <th>E-mail:</th>
-                                    <td>scotinbombado@linxfit.com.br</td>
-                                </tr>
-                                <tr>
-                                    <th>Gordura (%):</th>
-                                    <td>25 %</td>
-                                </tr>
-                                <tr>
-                                    <th>Altura (cm):</th>
-                                    <td>1,65cm</td>
-                                </tr>
-                                <tr>
-                                    <th>Peso (kg):</th>
-                                    <td>68kg</td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </section>
-                </main>
+    <!--MAIN-->
+    <main class="principal">
+
+    <!--CABEÇALHO-->
+        <input type="checkbox" id="check" checked>
+        <header>
+            <label for="check">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+            <div class="esquerda">
+                <h3>Lynx <span>Treino</span></h3>
+            </div>
+        </header>
+
+    <!--MENU-->
+        <div class="menu">
+            <div>
+                <center>
+                    <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
+                    <h2>Alírio Scott</h2>
+                </center>
+            </div>
+            <div class="links">
+                <a href="./home-page-usuario.html" class="home"><i class="fas fa-home"></i><span>Início</span></a>
+                <a href="./evolucao.html" class="home"><i class="fas fa-database"></i><span>Evolução</span></a>
+                <a href="./rotina.html" class="home"><i class="fas fa-dumbbell"></i><span>Rotina</span></a>
+                <a href="./dados.html" class="home"><i class="fas fa-user"></i><span>Meus Dados</span></a>
+                <a href="../login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+            </div>
         </div>
+
+        <div class="movimento"></div>
+        
+    <!--DADOS PESSOAIS-->
+        <section class="dados">
+            <table class="records">
+                <thead>
+                  <tr>
+                      <th>Matricula:</th>
+                      <td>FIT12345</td>
+                  </tr>
+                </thead>
+                    <tr>
+                        <th>Nome:</th>
+                        <td>Alírio Scott Dygeras</td>
+                    </tr>
+                    <tr>
+                        <th>E-mail:</th>
+                        <td>scotinbombado@linxfit.com.br</td>
+                    </tr>
+                    <tr>
+                        <th>Gordura (%):</th>
+                        <td>25 %</td>
+                    </tr>
+                    <tr>
+                        <th>Altura (cm):</th>
+                        <td>1,65cm</td>
+                    </tr>
+                    <tr>
+                        <th>Peso (kg):</th>
+                        <td>68kg</td>
+                    </tr>
+                </thead>
+            </table>
+          </section>
+        </main>
+    <!--RODAPE-->
+    <!--JAVA SCRIPT-->
+    <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
 </body>
 </html>
