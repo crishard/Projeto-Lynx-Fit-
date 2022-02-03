@@ -1,3 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
+    --cor_logo: rgba(0, 0, 170, 0.500)
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  
 .records{
     width: 100%;
     user-select: none;
@@ -16,15 +30,14 @@
     padding-left: 20px;
 }
 
-.records th:last-child,
-.records td:last-child{
+.records th:last-child, .records td:last-child{
     padding: 0;
     min-width: 140px;
     text-align: center;
 }
 
 .records tr:hover{
-    background-color: #f2f2f2;
+    background-color: var(--cor_teciaria);
 }
 
 @media(max-width:480px){

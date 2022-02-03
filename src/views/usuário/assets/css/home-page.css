@@ -100,11 +100,6 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
-/* 
-.test a{
-    color: transparent;
-} */
-
 .test a{
     color: transparent;
 }
@@ -162,7 +157,7 @@ h1{
     color: var(--cor_principal);
     border-radius: 5px;
     border: 1px solid transparent;
-    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.418);
+    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.150);
 }
 .container-header a:hover{
     border: 1px solid var(--cor_secundaria);
@@ -194,7 +189,7 @@ h1{
     text-align: center;
 }
 .articulo:hover{
-    box-shadow: 0px 4px 10px rgba(17, 29, 48, 0.26);
+    box-shadow: 0px 4px 10px rgba(58, 60, 65, 0.26);
 }
 .articulo i{
     font-size: 2.2rem;
@@ -250,7 +245,7 @@ h1{
     color: var(--cor_principal);
     border-radius: 5px;
     border: 1px solid transparent;
-    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.418);
+    box-shadow: 0px 8px 32px  rgba(0, 0, 170, 0.150);
 }
 .duvidas a:hover{
     border: 1px solid var(--cor_secundaria);
