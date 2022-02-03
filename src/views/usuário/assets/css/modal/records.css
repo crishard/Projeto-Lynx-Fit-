@@ -39,6 +39,34 @@
 .records tr:hover{
     background-color: var(--cor_teciaria);
 }
+@media(max-width:800px){
+    .records{
+        border-spacing: 5px;
+    }
+    .records thead{
+        display:none;
+    }
+    .records tr{
+        box-shadow: 0 1px 3px var(--cor_teciaria);
+    }
+    .records td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .records td{
+        margin:10px 0;
+    }
+    .records tr:hover{
+        background-color: inherit;
+    }
+    .records th{
+        height: 30px;
+        background-color: #f2f2f2;
+        padding-left: 20px;
+        font-size: 1.2rem;    
+    }
+}
 
 @media(max-width:500px){
     .records{
@@ -68,7 +96,11 @@
 }
 @media(max-width:400px){
     .records th{
-        font-size: 10px;
+        font-size: 12px;
+        height: 20px;
+        background-color: #f2f2f2;
+        padding-left: 20px;
+        font-size: 1.2rem;    
     }
     .records td{
         font-size: 10px;
