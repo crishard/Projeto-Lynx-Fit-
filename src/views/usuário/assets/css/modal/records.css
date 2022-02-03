@@ -40,7 +40,7 @@
     background-color: var(--cor_teciaria);
 }
 
-@media(max-width:480px){
+@media(max-width:500px){
     .records{
         border-spacing: 5px;
     }
@@ -55,12 +55,22 @@
         justify-content: space-between;
         padding: 0 20px;
     }
-
     .records td{
         margin:10px 0;
+        font-size: 12px;
     }
-
     .records tr:hover{
         background-color: inherit;
+    }
+    .records th{
+        font-size: 12px;
+    }
+}
+@media(max-width:400px){
+    .records th{
+        font-size: 10px;
+    }
+    .records td{
+        font-size: 10px;
     }
 }
