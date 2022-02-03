@@ -13,8 +13,8 @@ datasource db {
 model Usuario{
   id String @id @default(uuid())
   email String @unique
-  username String @unique
-  password String
+  nome String @unique
+  senha String
   id_client      String
   cliente        Cliente      @relation(fields: [id_client], references: [id])
   treino Treino[]
@@ -38,7 +38,7 @@ model Treino{
   repeticoes      Int
   treino          String
   nome_usuario      String
-  usuario         Usuario @relation(fields: [nome_usuario], references: [username])
+  usuario         Usuario @relation(fields: [nome_usuario], references: [nome])
   id_client      String
   cliente         Cliente @relation(fields: [id_client], references: [id])
   @@map("treino")

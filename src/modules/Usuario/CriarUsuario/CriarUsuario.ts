@@ -1,18 +1,18 @@
 import { hash } from "bcrypt";
 import { prisma } from "../../../dataBase/prismaCliente";
 
-interface ICreateUsuario {
+interface ICriarUsuario {
     id_client: string;
-    username: string;
+    nome: string;
     email: string;
-    password: string;
+    senha: string;
   }
 
-  export class CreateUserCase {
-    async execute({id_client,username,password ,email}: ICreateUsuario) {
+  export class CriarUsuario {
+    async execute({id_client,nome,senha ,email}: ICriarUsuario) {
       // validar o usuario existnte
-      console.log(username);
-      const UserExists = await prisma.usuario.findFirst({
+      console.log(nome);
+      const UsuarioExiste = await prisma.usuario.findFirst({
         where: {
             email: {
             equals: email,
@@ -20,17 +20,17 @@ interface ICreateUsuario {
           },
         },
       });
-      if (UserExists) {
-        throw new Error("Usuario já existe");
+      if (UsuarioExiste) {
+        return new Error("Usuario já existe");
       }
       // criptografar a senha
-      const hashPassword = await hash(password, 10);
+      const hashPassword = await hash(senha, 10);
   
       // salvar o client
-    const user = prisma.usuario.create({
-      data: { username: username, email:email, password: hashPassword, id_client: id_client },
+    const usuario = prisma.usuario.create({
+      data: { nome: nome, email:email, senha: hashPassword, id_client: id_client },
  
       });
-      return user;
+      return usuario;
     }
   }
