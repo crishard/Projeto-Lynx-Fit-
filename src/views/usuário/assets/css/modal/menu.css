@@ -12,19 +12,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-}
-:root{
-  --cor_principal: white;
-  --cor_secundaria: rgb(0, 0, 170);
-  --cor_teciaria: #e9e7e7;
-  --cor_textos: rgb(30, 30, 30);
-  --cor_tema_claro: rgb(50, 50, 50);
-}
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
 body{
   font-family: 'Montserrat', sans-serif;
   color: var(--cor_textos);
@@ -135,4 +122,13 @@ label #sidebar_btn:hover{
   float: right;
   margin-left: 100px;
   margin-top: -80vh;
+}
+
+@media screen and (max-width: 480px){
+  header{
+    margin-top: -1.5rem;
+  }
+  .menu{
+    margin-top: 45px;
+  }
 }

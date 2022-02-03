@@ -20,13 +20,41 @@
   height: 500px;
 }
 
-@media screen and (min-width: 850px) {
-  .menu__icon {
-    font-size: 0.9rem;
-    padding-right: 16px;
+@media screen and (max-width: 800px) {
+  .gordura{
+    align-items: center;
+    width: 350px;
+    height: 350px;
   }
-  .menu__item--active {
-    border-left: 4px solid var(--red);
-    box-shadow: inset 10px 0px 17px -13px var(--red);
+}
+@media screen and (max-width: 700px) {
+  .gordura{
+    align-items: center;
+    width: 280px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .gordura{
+    align-items: center;
+    margin-left: 170px;
+    width: 260px;
+    height: 260px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gordura{
+    align-items: center;
+    margin-left: 150px;
+    width: 230px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .gordura{
+    align-items: center;
+    margin-left: 70px;
+    width: 230px;
+    height: 230px;
   }
 }
