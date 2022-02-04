@@ -8,6 +8,9 @@ export class DeletarTreinoController {
       const result = await deletarTreino.execute({
         id
       });
+      if( result instanceof Error){
+        return res.status(400).json(result.message)
+      }
       return res.json(result);
     }
   }

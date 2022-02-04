@@ -11,6 +11,9 @@ export class CriarClienteController {
       senha,
       cnpj,
     });
+    if( result instanceof Error){
+      return res.status(400).json(result.message)
+    }
     return res.json(result);
   }
 }

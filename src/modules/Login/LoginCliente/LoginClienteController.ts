@@ -9,6 +9,9 @@ export class ValidacaoClienteController {
       email,
       senha,
     });
+    if( resultado instanceof Error){
+      return res.status(400).json(resultado.message)
+    }
     return res.json(resultado);
   }
 }
