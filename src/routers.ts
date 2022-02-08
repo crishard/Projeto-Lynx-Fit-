@@ -35,7 +35,7 @@ const buscarUsuarioController = new BuscarUsuarioController();
 const atualizarUsuarioController = new AtualizarUsuarioController();
 const deletarUsuarioController = new DeletarUsuarioController();
 const validacaoUsuarioController = new LoginUsuarioController();
-
+const buscarDadosUsuarioController = new BuscarDadosUsuarioController();
 //treino
 const createTreinoController = new CriarTreinoController();
 const findTeinoController = new BuscarTreinoController();
@@ -62,7 +62,7 @@ routes.post("/usuario/autenticar", validacaoUsuarioController.handle);
 routes.get("/cliente/buscar_usuario", buscarUsuarioController.handle);
 routes.put("/cliente/atualizar_usuario", atualizarUsuarioController.handle);
 routes.delete("/cliente/deletar_usuario/:id", deletarUsuarioController.handle);
-
+routes.put("/cliente/dados_usuario", buscarDadosUsuarioController.handle);
 
 //treino
 routes.post("/cliente/criar_treino",AutenticacaoCliente,createTreinoController.handle);
