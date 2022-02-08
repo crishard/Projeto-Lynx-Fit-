@@ -37,7 +37,7 @@ model Treino{
   series          Int
   repeticoes      Int
   treino          String
-  nome_usuario      String
+  nome_usuario      String @unique
   usuario         Usuario @relation(fields: [nome_usuario], references: [nome])
   id_client      String
   cliente         Cliente @relation(fields: [id_client], references: [id])

@@ -2,6 +2,7 @@ import {prisma} from "../../../dataBase/prismaCliente";
 
 interface IAtualizarTreino {
   dia: number;
+  nome_usuario: string;
   nome_equipamento: string;
   series: number;
   repeticoes: number;
@@ -9,7 +10,7 @@ interface IAtualizarTreino {
 }
 
 export class AtualizarTreino {
-  async execute({ dia, nome_equipamento, series, repeticoes, treino }: IAtualizarTreino) {
+  async execute({ dia, nome_equipamento, series, repeticoes, treino, nome_usuario }: IAtualizarTreino) {
     if (!dia) {
         return new Error("Id não encontrado");
     }
@@ -18,6 +19,7 @@ export class AtualizarTreino {
             dia,
         },
           data: {
+            nome_usuario: nome_usuario,
             nome_equipamento: nome_equipamento,
             series,
             repeticoes,
