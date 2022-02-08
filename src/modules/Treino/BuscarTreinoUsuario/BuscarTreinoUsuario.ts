@@ -1,15 +1,15 @@
 import { prisma} from "../../../dataBase/prismaCliente";
 
-interface IBuscarDadosUsuario{
+interface IBuscarTreinoUsuario{
     nome_usuario: string;
 }
-export class BuscarDadosUsuario{
-    async execute({nome_usuario}: IBuscarDadosUsuario){
-        const buscarDadosUsuario = await prisma.usuario.findUnique({
+export class BuscarTreinoUsuario{
+    async execute({nome_usuario}: IBuscarTreinoUsuario){
+        const buscarTreinoUsuario = await prisma.treino.findUnique({
             where: {
                 nome_usuario: nome_usuario
             },
           })
-        return buscarDadosUsuario;
+        return buscarTreinoUsuario;
     }
 }
