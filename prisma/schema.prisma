@@ -59,14 +59,14 @@ model Cliente{
 }
 model Medidas{
   id              String @id @default(uuid())
-  torax           String
-  busto           String
-  cintura         String
-  quadril         String
-  peso            String
-  altura          String
+  torax           Decimal
+  busto           Decimal
+  cintura         Decimal
+  quadril         Decimal
+  peso            Decimal
+  altura          Decimal
   p_gordura       String
-  nome_usuario    String
+  nome_usuario    String @unique
   usuario         Usuario @relation(fields: [nome_usuario], references: [nome])
 
   @@map("medidas")
