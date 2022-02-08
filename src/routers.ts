@@ -5,14 +5,14 @@ import { CriarUsuarioController } from "./modules/Usuario/CriarUsuario/CriarUsua
 import { BuscarUsuarioController } from "./modules/Usuario/BuscarUsuario/BuscarUsuarioController";
 import { AtualizarUsuarioController } from "./modules/Usuario/AtualizarUsuario/AtualizarUsuarioController";
 import { DeletarUsuarioController } from "./modules/Usuario/DeletarUsuario/DeletarUsuarioController";
-import { LoginUsuarioController} from "./modules/Login/LoginUsuario/LoginUsuarioController"
-
+import { LoginUsuarioController} from "./modules/Login/LoginUsuario/LoginUsuarioController";
+import { BuscarDadosUsuarioController} from "./modules/Usuario/BuscarDadosUsuario/BuscarDadosUsuarioController";
 //treino
 import { CriarTreinoController } from "./modules/Treino/CriarTreino/CriarTreinoController";
 import { BuscarTreinoController } from "./modules/Treino/BuscarTreino/BuscarTreinoController";
 import { AtualizarTreinoController } from "./modules/Treino/AtualizarTreino/AtualizarTreinoController";
 import { DeletarTreinoController } from "./modules/Treino/DeletarTreino/DeletarTreinoController";
-
+import { BuscarTreinoUsuarioController } from "./modules/Treino/BuscarTreinoUsuario/BuscarTreinoUsuarioController";
 // Cliente
 import { CriarClienteController } from "./modules/Cliente/CriarCliente/CriarClienteController";
 import { BuscarClienteController } from "./modules/Cliente/BuscarCliente/BuscarClienteController";
@@ -41,6 +41,7 @@ const createTreinoController = new CriarTreinoController();
 const findTeinoController = new BuscarTreinoController();
 const updateTreinoController = new AtualizarTreinoController();
 const deleteTreinoController = new DeletarTreinoController();
+const buscarTreinoUsuarioController = new BuscarTreinoUsuarioController();
 
 // Cliente
 const createClienteController = new CriarClienteController();
@@ -68,7 +69,7 @@ routes.post("/cliente/criar_treino",AutenticacaoCliente,createTreinoController.h
 routes.get("/cliente/buscar_treino",AutenticacaoCliente ,findTeinoController.handle);
 routes.put("/cliente/atualizar_treino", AutenticacaoCliente, updateTreinoController.handle);
 routes.delete("/cliente/deletar_treino/:id",AutenticacaoCliente, deleteTreinoController.handle);
-
+routes.delete("/cliente/treino_usuario/",AutenticacaoCliente, buscarTreinoUsuarioController.handle);
 // Cliente
 routes.post("/criar_cliente/",createClienteController.handle);
 routes.get("/buscar_cliente", buscarClienteController.handle);
