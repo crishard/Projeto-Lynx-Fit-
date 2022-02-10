@@ -1,7 +1,7 @@
 import { BuscarDadosUsuario } from "./BuscarDadosUsuario";
 import { Request, Response } from "express";
 
-export class BuscarClienteController{
+export class BuscarDadosUsuarioController{
     async handle(req: Request, res: Response){
         const {id} = req.body;
 

@@ -32,7 +32,7 @@ model Equipamento{
 //Crislan
 model Treino{
   id              String @id @default(uuid())
-  dia             Int @unique
+  dia             Int
   nome_equipamento  String
   equipamento     Equipamento @relation(fields: [nome_equipamento], references: [nome_equipamento])
   series          Int
@@ -66,8 +66,8 @@ model Medidas{
   peso            Decimal
   altura          Decimal
   p_gordura       String
-  nome_usuario    String
-  usuario         Usuario @relation(fields: [nome_usuario], references: [nome])
+  id_usuario    String
+  usuario         Usuario @relation(fields: [id_usuario], references: [id])
 
   @@map("medidas")
 }

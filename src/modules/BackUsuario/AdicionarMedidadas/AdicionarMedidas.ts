@@ -2,6 +2,7 @@ import { Decimal } from "@prisma/client/runtime";
 import { prisma } from "../../../dataBase/prismaCliente";
 
 interface IAdicionarMedidas {
+    id: string;
     torax: Decimal;
     busto: Decimal;
     cintura: Decimal;
@@ -9,10 +10,10 @@ interface IAdicionarMedidas {
     peso: Decimal;
     altura: Decimal
     p_gordura: string;
-    nome_usuario: string;
+    id_usuario: string;
   }
   export class AdicionarMedidas {
-    async execute({torax, busto, cintura, quadril, peso, nome_usuario, altura, p_gordura}: IAdicionarMedidas) {
+    async execute({torax, busto, cintura, quadril, peso, id_usuario, altura, p_gordura}: IAdicionarMedidas) {
       const Medidas = await prisma.medidas.create({
         data: {
           torax,
@@ -20,7 +21,7 @@ interface IAdicionarMedidas {
           cintura,
           quadril, 
           peso,
-          nome_usuario: nome_usuario,
+          id_usuario: id_usuario,
           altura,
           p_gordura
         },
