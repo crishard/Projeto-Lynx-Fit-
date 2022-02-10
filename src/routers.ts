@@ -31,8 +31,8 @@ import { AtualizarEquipamentoController } from "./modules/Equipamentos/Atualizar
 import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEquipamento/DeletarEquipamentoController";
 
 //Medidas
-import { AdicionarMedidasController } from "./modules/BackUsuario/AdicionarMedidadas/AdicionarMedidasController";
-import { BuscarMedidasController } from "./modules/BackUsuario/BuscarMedidas/BuscarMedidasController"
+import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas/AdicionarMedidasController";
+import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
 
 
