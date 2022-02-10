@@ -3,9 +3,10 @@ import { CriarTreino } from "./CriarTreino";
 
 export class CriarTreinoController {
   async handle(req: Request, res: Response) {
-    const {dia, treino, series, repeticoes, nome_equipamento, nome_usuario} = req.body;
+    const {id, dia, treino, series, repeticoes, nome_equipamento, nome_usuario} = req.body;
     const criarTreino = new CriarTreino();
     const result = await criarTreino.execute({
+      id,
       nome_equipamento: nome_equipamento,
       dia,
       series,

@@ -1,5 +1,6 @@
 import { prisma } from "../../../dataBase/prismaCliente";
 interface ICriarTreino {
+    id: string;
     dia: number;
     series: number;
     repeticoes: number;
@@ -9,11 +10,11 @@ interface ICriarTreino {
     id_client: string;
   }
   export class CriarTreino {
-    async execute({dia, series, nome_equipamento, repeticoes, treino, nome_usuario, id_client}: ICriarTreino) {
+    async execute({id, dia, series, nome_equipamento, repeticoes, treino, nome_usuario, id_client}: ICriarTreino) {
       const treinoExist = await prisma.treino.findFirst({
         where: {
-            dia: {
-            equals: dia
+            id: {
+            equals: id
           },
         },
       });
