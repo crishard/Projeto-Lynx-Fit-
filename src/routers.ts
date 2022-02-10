@@ -86,7 +86,7 @@ routes.post("/cliente/criar_treino",AutenticacaoCliente,createTreinoController.h
 routes.get("/cliente/buscar_treino",AutenticacaoCliente ,findTeinoController.handle);
 routes.put("/cliente/atualizar_treino", AutenticacaoCliente, updateTreinoController.handle);
 routes.delete("/cliente/deletar_treino/:id",AutenticacaoCliente, deleteTreinoController.handle);
-routes.delete("/cliente/treino_usuario/",AutenticacaoCliente, buscarTreinoUsuarioController.handle);
+routes.get("/treino_usuario/",AutenticacaoUsuario, buscarTreinoUsuarioController.handle);
 
 // Cliente
 routes.post("/criar_cliente/",createClienteController.handle);

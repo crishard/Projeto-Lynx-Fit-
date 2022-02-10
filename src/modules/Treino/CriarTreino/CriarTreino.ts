@@ -11,16 +11,16 @@ interface ICriarTreino {
   }
   export class CriarTreino {
     async execute({id, dia, series, nome_equipamento, repeticoes, treino, nome_usuario, id_client}: ICriarTreino) {
-      const treinoExist = await prisma.treino.findFirst({
-        where: {
-            id: {
-            equals: id
-          },
-        },
-      });
-      if (treinoExist) {
-        return new Error("Treino para esee dia já foi criado");
-      }
+      // const treinoExist = await prisma.treino.findFirst({
+      //   where: {
+      //       id: {
+      //       equals: id
+      //     },
+      //   },
+      // });
+      // if (treinoExist) {
+      //   return new Error("Treino para esee dia já foi criado");
+      // }
       const Treino = await prisma.treino.create({
         data: {
           dia,
