@@ -1,3 +1,4 @@
+//Imports
 import { Router } from "express";
 
 //usuario
@@ -31,9 +32,11 @@ import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEqui
 
 //Medidas
 import { AdicionarMedidasController } from "./modules/BackUsuario/AdicionarMedidadas/AdicionarMedidasController";
+import { BuscarMedidasController } from "./modules/BackUsuario/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
-import { AtualizarMedidasController } from "./modules/BackUsuario/AtualizarMedidas/AtualizarMedidasController";
 
+
+//metodos
 const routes = Router();
 
 //usuário
@@ -66,7 +69,9 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 
 //Medidas
 const adicionarMedidasController = new AdicionarMedidasController();
-const atualizarMedidasController = new AtualizarMedidasController();
+const buscarMedidasController = new BuscarMedidasController();
+
+//rotas
 
 //usuario
 routes.post("/cliente/criar_usuario",AutenticacaoCliente,criarUsuarioController.handle);
@@ -98,6 +103,6 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 
 //Medidas
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
-routes.put("/usuario/atualizar_medidas", AutenticacaoUsuario, atualizarMedidasController.handle)
+routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
 
 export {routes};
