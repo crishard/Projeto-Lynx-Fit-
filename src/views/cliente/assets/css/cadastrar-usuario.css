@@ -31,7 +31,20 @@ input::placeholder{
 select:focus{
     border: 1px solid var(--cor_secundaria);
 }
-
+/* menu */
+label #sidebar_btn1{
+    z-index: 1;
+    position: fixed;
+    left: 80px;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  label #sidebar_btn1:hover{
+    color: var(--cor_secundaria);
+  }
 /* parte da direita da pagina */
 #check:checked ~ .equipamentos{
     display: block;

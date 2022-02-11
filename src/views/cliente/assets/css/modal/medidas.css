@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
+    --cor_logo: rgba(0, 0, 170, 0.500)
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  
+.recordsMedidas{
+    width: 100%;
+    user-select: none;
+    text-align: center;
+    color: black;
+}
+
+.recordsMedidas th{
+    width: 200px;
+    height: 50px;
+    background-color: #f2f2f2;
+    padding-left: 20px;
+    font-size: 1.2rem;    
+}
+.recordsMedidas td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+.recordsMedidas th:last-child, .recordsMedidas td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.recordsMedidas tr:hover{
+    background-color: var(--cor_teciaria);
+}
+@media(max-width:800px){
+    .recordsMedidas{
+        border-spacing: 5px;
+    }
+    .recordsMedidas thead{
+        display:none;
+    }
+    .recordsMedidas tr{
+        box-shadow: 0 1px 3px var(--cor_teciaria);
+    }
+    .recordsMedidas td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .recordsMedidas td{
+        margin:10px 0;
+    }
+    .recordsMedidas tr:hover{
+        background-color: inherit;
+    }
+    .recordsMedidas th{
+        height: 30px;
+        background-color: #f2f2f2;
+        padding-left: 20px;
+        font-size: 1.2rem;    
+    }
+}
+
+@media(max-width:500px){
+    .recordsMedidas{
+        border-spacing: 5px;
+    }
+    .recordsMedidas thead{
+        display:none;
+    }
+    .recordsMedidas tr{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+    .recordsMedidas td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .recordsMedidas td{
+        margin:10px 0;
+        font-size: 12px;
+    }
+    .recordsMedidas tr:hover{
+        background-color: inherit;
+    }
+    .rerecordsMedidascords th{
+        font-size: 12px;
+    }
+}
+@media(max-width:400px){
+    .recordsMedidas th{
+        font-size: 12px;
+        height: 20px;
+        background-color: #f2f2f2;
+        padding-left: 20px;
+        font-size: 1.2rem;    
+    }
+    .recordsMedidas td{
+        font-size: 10px;
+    }
+}
