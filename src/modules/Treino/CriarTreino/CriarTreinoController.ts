@@ -15,9 +15,9 @@ export class CriarTreinoController {
       treino,
       id_client: req.id_client,
     });
-    // if(result instanceof Error){
-    //   return res.status(400).json(result.message)
-    // }
+    if(result instanceof Error){
+      return res.status(400).json(result.message)
+    }
     return res.json(result);
   }
 }
