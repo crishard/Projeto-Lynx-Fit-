@@ -14,7 +14,7 @@
 
 /*Tabela de exercícios*/
 .exercicios{
-  background: rgba(0, 0, 170, 0.500);
+  background: var(--cor_principal);
   margin-left: 260px;
   margin-top: -550px;
   width: 75%;
