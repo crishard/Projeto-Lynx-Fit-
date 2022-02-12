@@ -1,12 +1,14 @@
-import { Request, Response } from "express";
 import { BuscarCliente } from "./BuscarCliente";
+import { Request, Response } from "express";
 
-export class BuscarClienteController {
-  async handle(req: Request, res: Response) {
-    const buscarCliente = new BuscarCliente();
+export class BuscarClienteController{
+    async handle(req: Request, res: Response){
+        const {id} = req.body;
 
-    const result = await buscarCliente.execute();
+        const buscarCliente = new BuscarCliente();
 
-    return res.json(result);
-  }
+        const result = await buscarCliente.execute({id});
+
+        return res.json(result);
+    }
 }

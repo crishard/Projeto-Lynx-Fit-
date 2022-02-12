@@ -28,7 +28,6 @@ export class AtualizarUsuario {
             nome,
             email,
             senha
-            
           },
         });
 
