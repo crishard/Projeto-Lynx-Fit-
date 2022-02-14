@@ -2,8 +2,8 @@ import { prisma } from "../../../dataBase/prismaCliente";
 
 export class BuscarTreino {
   async execute() {
-    const findTreino = await prisma.treino.findMany();
+    const buscarTreino = await prisma.treino.findMany();
 
-    return findTreino;
+    return buscarTreino;
   }
 }
