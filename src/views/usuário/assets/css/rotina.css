@@ -14,10 +14,17 @@
 
 /*Tabela de exercícios*/
 .exercicios{
-  background: rgba(0, 0, 170, 0.500);
+  background: var(--cor_principal);
   margin-left: 260px;
   margin-top: -550px;
   width: 75%;
+}
+.titulo{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--cor_principal);
+  background-color: rgba(0, 0, 170, 0.800);
 }
  
 /*Calendário*/

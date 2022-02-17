@@ -12,62 +12,56 @@
   }
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
   
-table{
-    border: 1px solid rgb(0, 0, 170);
-    
-}
-.records{
+.recordsMedidas{
     width: 100%;
     user-select: none;
     text-align: center;
     color: black;
 }
 
-.records th{
+.recordsMedidas th{
     width: 200px;
     height: 50px;
-    background-color: rgba(0, 0, 170, 0.500);
+    background-color: #f2f2f2;
     padding-left: 20px;
-    font-size: 1.2rem;   
-    border: 1px solid rgb(0, 0, 170);
+    font-size: 1.2rem;    
 }
-.records td{
+.recordsMedidas td{
     height: 50px;
     padding-left: 20px;
-    border: 1px solid rgb(0, 0, 170);
 }
 
-.records th:last-child, .records td:last-child{
+.recordsMedidas th:last-child, .recordsMedidas td:last-child{
     padding: 0;
     min-width: 140px;
     text-align: center;
 }
 
-.records tr:hover{
+.recordsMedidas tr:hover{
     background-color: var(--cor_teciaria);
 }
 @media(max-width:800px){
-    .records{
+    .recordsMedidas{
         border-spacing: 5px;
     }
-    .records thead{
+    .recordsMedidas thead{
         display:none;
     }
-    .records tr{
+    .recordsMedidas tr{
         box-shadow: 0 1px 3px var(--cor_teciaria);
     }
-    .records td:not(:first-child){
+    .recordsMedidas td:not(:first-child){
         display:flex;
         justify-content: space-between;
         padding: 0 20px;
     }
-    .records td{
+    .recordsMedidas td{
         margin:10px 0;
     }
-    .records tr:hover{
+    .recordsMedidas tr:hover{
         background-color: inherit;
     }
-    .records th{
+    .recordsMedidas th{
         height: 30px;
         background-color: #f2f2f2;
         padding-left: 20px;
@@ -76,40 +70,40 @@ table{
 }
 
 @media(max-width:500px){
-    .records{
+    .recordsMedidas{
         border-spacing: 5px;
     }
-    .records thead{
+    .recordsMedidas thead{
         display:none;
     }
-    .records tr{
+    .recordsMedidas tr{
         box-shadow: 0 1px 3px var(--shadow-color);
     }
-    .records td:not(:first-child){
+    .recordsMedidas td:not(:first-child){
         display:flex;
         justify-content: space-between;
         padding: 0 20px;
     }
-    .records td{
+    .recordsMedidas td{
         margin:10px 0;
         font-size: 12px;
     }
-    .records tr:hover{
+    .recordsMedidas tr:hover{
         background-color: inherit;
     }
-    .records th{
+    .rerecordsMedidascords th{
         font-size: 12px;
     }
 }
 @media(max-width:400px){
-    .records th{
+    .recordsMedidas th{
         font-size: 12px;
         height: 20px;
         background-color: #f2f2f2;
         padding-left: 20px;
         font-size: 1.2rem;    
     }
-    .records td{
+    .recordsMedidas td{
         font-size: 10px;
     }
 }
