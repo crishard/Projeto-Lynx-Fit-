@@ -15,11 +15,12 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: var(--cor_textos);
 }
-main{
-  height: 100vh;
-  background-color: var(--cor_teciaria)
-}
-    /* MAIN */
+
+/* MAIN */
+ #check:checked ~ .dados{
+  display: block;
+  margin-left: 100px;
+  }
  .dados{
   background: var(--cor_principal);
   width: 75%;
@@ -27,6 +28,10 @@ main{
   margin-top: -35rem;
   margin-left: 260px;
  }
+ #check:checked ~ .dadosMedidas{
+  display: block;
+  margin-left: 100px;
+}
  .dadosMedidas{
   background: var(--cor_principal);
   width: 75%;
@@ -36,16 +41,34 @@ main{
 }
 .titulo{
   margin-top: 1.5rem;
+  padding: 5px 0px 5px 0px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--cor_principal);
   background-color: rgba(0, 0, 170, 0.800);
 }
 .titulodois{  
+  padding: 5px 0px 5px 0px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--cor_principal);
   background-color: rgba(0, 0, 170, 0.800);
+}
+@media screen and (min-width: 1400px) {
+  .dados{
+    background: var(--cor_principal);
+    width: 85%;
+    height: 190px;
+    margin-top: -55rem;
+    margin-left: 260px;
+   }
+   .dadosMedidas{
+    background: var(--cor_principal);
+    width: 85%;
+    height: 400px;
+    margin-top: 5rem;
+    margin-left: 260px;
+  }
 }
  @media screen and (max-width: 1100px) {
   .dados {
@@ -63,7 +86,6 @@ main{
     grid-template-areas: "sidebar content";
   }
 }
-
   @media screen and (max-width: 700px) {
     .dados {
       margin-left: 100px;
