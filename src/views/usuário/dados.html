@@ -18,14 +18,14 @@
     <script src="./assets/js/evolucao.js" defer></script>
 
     <!--TITULO DA PAGINA-->
-    <title>Rotina LYNX FIT</title>
+    <title>Dados Pessoais LYNX FIT</title>
 </head>
 <body>
     <!--MAIN-->
     <main class="principal">
 
     <!--CABEÇALHO-->
-        <input type="checkbox" id="check" checked>
+        <input type="checkbox" id="check">
         <header>
             <label for="check">
                 <i class="fas fa-bars" id="sidebar_btn"></i>
@@ -55,14 +55,15 @@
         <div class="movimento"></div>
         
     <!--DADOS PESSOAIS-->
-        <section class="dados">
+    <div class="conteudo">
+     <section class="dados">
+            <h3 class="titulo">DADOS PESSOAIS</h3>
             <table class="records">
                 <thead>
-                  <tr>
-                      <th>Matricula:</th>
-                      <td>FIT12345</td>
-                  </tr>
-                </thead>
+                    <tr>
+                        <th>Matricula:</th>
+                        <td>FIT12345</td>
+                    </tr>
                     <tr>
                         <th>Nome:</th>
                         <td>Alírio Scott Dygeras</td>
@@ -71,23 +72,72 @@
                         <th>E-mail:</th>
                         <td>scotinbombado@linxfit.com.br</td>
                     </tr>
-                    <tr>
-                        <th>Gordura (%):</th>
-                        <td>25 %</td>
-                    </tr>
-                    <tr>
-                        <th>Altura (cm):</th>
-                        <td>1,65cm</td>
-                    </tr>
-                    <tr>
-                        <th>Peso (kg):</th>
-                        <td>68kg</td>
-                    </tr>
                 </thead>
             </table>
-          </section>
+        </section>
+        
+        <button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar  Medidas</button>
+       
+        <section class="dadosMedidas"> 
+            <h3 class="titulodois">DADOS DE MEDIDAS</h3>
+            <table class="records">
+            <thead>
+                <tr>
+                    <th>Altura (cm):</th>
+                    <td>1,65cm</td>
+                </tr>
+                <tr>
+                  <th>Busto (cm):</th>
+                  <td>cm</td>
+                </tr>
+                <tr>
+                    <th>Cintura (cm):</th>
+                    <td>cm</td>
+                </tr>
+                <tr>
+                    <th>Gordura (%):</th>
+                    <td>25 %</td>
+                </tr>
+                <tr>
+                    <th>Peso (kg):</th>
+                    <td>68kg</td>
+                </tr>
+                <tr>
+                    <th>Tórax (cm):</th>
+                    <td>cm</td>
+                </tr>
+                <tr>
+                    <th>Quadril (cm):</th>
+                    <td>cm</td>
+                </tr>
+            </thead>
+        </table>
+    </section>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2 class="tituloModal">Adicione uma nova medida</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form class="modal-form">
+                    <input type="text" class="modal-field" placeholder="Altura (cm)">
+                    <input type="text" class="modal-field" placeholder="Busto (cm)">
+                    <input type="text" class="modal-field" placeholder="Cintura (cm)">
+                    <input type="number" class="modal-field" placeholder="Gordura (cm)">
+                    <input type="text" class="modal-field" placeholder="Peso (cm)">
+                    <input type="text" class="modal-field" placeholder="Tórax (cm)">
+                    <input type="text" class="modal-field" placeholder="Quadril (cm)">
+                </form>
+                <footer class="modal-footer">
+                    <button type="input" class="buttonSave">Salvar</button>
+                    <button type="input" class="buttonCancel">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+     </div>
         </main>
-    <!--RODAPE-->
+        <!--RODAPE-->
+    <footer></footer>
     <!--JAVA SCRIPT-->
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
 </body>

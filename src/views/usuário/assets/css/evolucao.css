@@ -13,13 +13,24 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+#check:checked ~ .gordura{
+  display: block;
+  margin-left: 150px;
+}
 .gordura{
   margin-top: -550px;
-  margin-left: 260px;
+  margin-left: 300px;
   width: 500px;
   height: 500px;
 }
-
+@media screen and (min-width: 1400px) {
+  .gordura{
+    margin-top: -820px;
+    margin-left: 300px;
+    width: 500px;
+    height: 500px;
+  }
+}
 @media screen and (max-width: 800px) {
   .gordura{
     align-items: center;

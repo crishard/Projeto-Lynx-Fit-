@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/cadastrar-usuario.css">
-    <title>LYNX FIT</title>
+    <link rel="stylesheet" href="./assets/css/modal/main.css">
+    <link rel="stylesheet" href="./assets/css/modal/menu.css">
+    <link rel="stylesheet" href="./assets/css/modal/modal.css">
+    <link rel="stylesheet" href="./assets/css/modal/records.css">
+
+    <script src="./assets/js/cadastro.js" defer></script>
+    <title>Cadastro de Alunos - LYNX FIT</title>
 </head>
 <body>
     <main class="principal">
-        <input type="checkbox" id="check" checked>
+        <input type="checkbox" id="check">
         <header>
             <label for="check">
-                <i class="fas fa-bars" id="sidebar_btn" style="margin-left: -4rem"></i>
+                <i class="fas fa-bars" id="sidebar_btn1" style="margin-left: -4rem"></i>
             </label>
             <div class="esquerda">
                 <h3>Lynx <span>cadastros</span></h3>
@@ -23,62 +29,89 @@
             <div>
                 <center>
                     <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
-                    <h2>Maria</h2>
+                    <h2>JoãoLuiz</h2>
                 </center>
             </div>
             <div class="links">
                 <a href="./home-page-cliente.html" class="home"><i class="fas fa-home"></i><span>Home</span></a>
-                <a href="./cadastrar-usuarios.html" class="home"><i class="fas fa-users"></i><span>Usuários</span></a>
                 <a href="./personalizar-treino.html" class="home"><i class="fas fa-list-ul"></i></i><span>Treinos</span></a>
+                <a href="./cadastrar-equipamentos.html" class="home"><i class="fas fa-dumbbell"></i><span>Equipamentos</span></a>
                 <a href="./dados-cliente.html" class="home"><i class="fas fa-database"></i><span>Meus Dados</span></a>
                 <a href="/src/views/login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
             </div>
         </div>
         <div class="movimento"></div>
-        <div class="equipamentos">
-            
-            <h1 id="h1">Cadastre seu aluno</h1>
-            <Br></Br>
-            <form id="register-form" action="">
-
-                <div class="full-box">
-                    <label for="email">E-mail</label> <br>
-                    <input type="email" name="email" id="email" placeholder="Digite o e-mail" data-min-length="2" data-email-validate class="email">
+        <section class="cadastros">
+            <h3 class="titulo">ALUNOS CADASTRADOS</h3>    
+            <table class="records">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Sexo</th>
+                        <th><button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maria</td>
+                        <td>maria@gmail.com</td>
+                        <td>Feminino</td>
+                        <td>
+                            <button class="button"><i id="iconEdit" class="far fa-save"></i></button>
+                            <button class="button"><i id="iconDel" class="far fa-window-close"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>João Pedro</td>
+                        <td>joao@gmail.com</td>
+                        <td>Masculino</td>
+                        <td>
+                            <button class="button"><i id="iconEdit" class="far fa-save"></i></button>
+                            <button class="button"><i id="iconDel" class="far fa-window-close"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jose da Silva</td>
+                        <td>jose@gmail.com</td>
+                        <td>Masculino</td>
+                        <td>
+                            <button class="button"><i id="iconEdit" class="far fa-save"></i></button>
+                            <button class="button"><i id="iconDel" class="far fa-window-close"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2 class="tituloModal">Adicione um aluno</h2>
+                        <span class="modal-close" id="modalClose">&#10006;</span>
+                    </header>
+                    <form class="modal-form">
+                        <input type="text" class="modal-field" placeholder="Nome">
+                        <input type="text" class="modal-field" placeholder="Sobrenome">
+                        <input type="email" class="modal-field" placeholder="E-mail">
+                        <input type="password" class="modal-field" placeholder="Senha">
+                        <input type="password" class="modal-field" placeholder="Confirmação de Senha">
+                        <select name="sexo" id="genero" class="genero">
+                            <option value="0">Gênero</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                        </select>
+                        <div class="termos"> 
+                            <input type="checkbox" name="agreement" id="agreement">
+                            <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
+                        </div>
+                    </form>
+                    <footer class="modal-footer">
+                        <button type="input" class="buttonSave">Salvar</button>
+                        <button type="input" class="buttonCancel">Cancelar</button>
+                    </footer>
                 </div>
-
-                <div class="half-box spacing">
-                    <label for="name" id="name">Nome</label> <br>
-                    <input type="text" name="name" id="name" placeholder="Digite o nome" data-required data-min-length="3" data-max-length="16">
-                </div>
-
-                <div class="half-box">
-                    <label for="lastname">Sobrenome</label> <br>
-                    <input type="text" name="lastname" id="lastname" placeholder="Digite o Sobrenome"data-required data-only-letters>
-                </div>
-
-                <div class="half-box spacing">
-                    <label for="lastname">Senha</label> <br>
-                    <input type="password" name="password" id="password" placeholder="Digite a senha" data-password-validate data-required>
-                </div>
-
-                <div class="stiloSenha">
-                    <label for="passconfirmation" id="confirme">Confirme sua senha</label> <br>
-                    <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente a senha" data-equal="password">
-                </div>
-
-                <div class="termos"> 
-                    <input type="checkbox" name="agreement" id="agreement">
-                    <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
-                </div>
-
-                <div class="full-box">
-                    <input class="inc" id="btn-submit" type="submit" value="Registrar">
-                </div>
-
-            </form>
-        </div>
-        </div>
-    </main>
-    <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+            </div>
+        </section>
+</main>
+<script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
 </body>
 </html>
