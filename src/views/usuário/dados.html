@@ -76,6 +76,8 @@
             </table>
         </section>
         
+        <button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar  Medidas</button>
+       
         <section class="dadosMedidas"> 
             <h3 class="titulodois">DADOS DE MEDIDAS</h3>
             <table class="records">
@@ -109,8 +111,29 @@
                     <td>cm</td>
                 </tr>
             </thead>
-            </table>
-        </section>
+        </table>
+    </section>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2 class="tituloModal">Adicione uma nova medida</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form class="modal-form">
+                    <input type="text" class="modal-field" placeholder="Altura (cm)">
+                    <input type="text" class="modal-field" placeholder="Busto (cm)">
+                    <input type="text" class="modal-field" placeholder="Cintura (cm)">
+                    <input type="number" class="modal-field" placeholder="Gordura (cm)">
+                    <input type="text" class="modal-field" placeholder="Peso (cm)">
+                    <input type="text" class="modal-field" placeholder="Tórax (cm)">
+                    <input type="text" class="modal-field" placeholder="Quadril (cm)">
+                </form>
+                <footer class="modal-footer">
+                    <button type="input" class="buttonSave">Salvar</button>
+                    <button type="input" class="buttonCancel">Cancelar</button>
+                </footer>
+            </div>
+        </div>
      </div>
         </main>
         <!--RODAPE-->

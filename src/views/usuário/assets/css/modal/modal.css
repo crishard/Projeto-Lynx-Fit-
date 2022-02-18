@@ -1,3 +1,8 @@
+.tituloModal{
+    font-size: 2rem;
+    margin-top: -1.5rem;
+    padding: 5px 0px;
+}
 .modal{
     position: fixed;
     top:0;
@@ -8,7 +13,10 @@
     opacity: 0;
     z-index: -1;
 }
-
+.inc{
+    align-items: center;
+    margin-left: 200px;
+}
 .modal.active{
     opacity: 1;
     z-index: 1;
@@ -18,7 +26,8 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    width: 50vw;
+    width: 50%;
+    height: 60%;
     margin: 15vh auto;
     padding-bottom: 20px;
     background-color: white;
@@ -43,13 +52,13 @@
     text-align: center;
     user-select: none;
     cursor: pointer;
+    margin-top: -1.25rem;
+    padding: 0px 0px 10px 0px;
 }
-
 .modal-close:hover{
     background-color: #FF4949;
     color: white;
 }
-
 .modal-form{
     display: flex;
     justify-content: space-between;
@@ -57,28 +66,35 @@
     gap: 20px;
     padding: 0 20px;
 }
-
 .modal-field{
-    width: calc(50% - 10px);
+    align-items: center;
+    width: 150px;
     height: 40px;
     outline-style: none;
     border-style: none;
     box-shadow: 0 0 2px black;
-    padding: 0 10px;
+    padding: 0 2px;
     font-size:1rem;
 }
-
 .modal-field:focus{
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 3px var(--primary-color);
+    border: 2px solid rgba(0, 0, 170, 0.500);
+    box-shadow: 0 0 3px rgba(0, 0, 170, 0.500);
 }
-
-
 .modal-footer{
     background-color: inherit;
-    text-align: right;
+    text-align: center;
     padding: 0 20px;
+    margin-top: 2rem;
 }
+
+.genero{
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    margin-left: 2.5rem;
+}
+
+
 
 @media (max-width:480px){
     .modal{
