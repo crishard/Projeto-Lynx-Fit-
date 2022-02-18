@@ -31,16 +31,6 @@ header{
     height: 70px;
 }
 
-footer{
-    margin-top: 5rem;
-    width:100;
-    align-items: center;
-    text-align: center;
-    font-weight: 200;
-    font-style: italic;
-    padding: 20px;
-    background-color: var(--cor_teciaria);
-}
 
 @media (max-width:480px){
     header{

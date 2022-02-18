@@ -15,29 +15,37 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: var(--cor_textos);
 }
+footer{
+  margin-top: 10rem;
+  width:100;
+  align-items: center;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  padding: 20px;
+  background-color: var(--cor_teciaria);
+}
 
 /* MAIN */
- #check:checked ~ .dados{
+ #check:checked ~ .conteudo{
   display: block;
-  margin-left: 100px;
+  margin-left: -150px;
   }
  .dados{
   background: var(--cor_principal);
   width: 75%;
-  height: 190px;
+  height: 210px;
   margin-top: -35rem;
   margin-left: 260px;
  }
- #check:checked ~ .dadosMedidas{
-  display: block;
-  margin-left: 100px;
-}
+
  .dadosMedidas{
   background: var(--cor_principal);
   width: 75%;
-  height: 400px;
-  margin-top: 5rem;
+  height: 420px;
+  margin-top: 4rem;
   margin-left: 260px;
+  padding: 0px 0px 20px 0px;
 }
 .titulo{
   margin-top: 1.5rem;
@@ -58,14 +66,14 @@ body{
   .dados{
     background: var(--cor_principal);
     width: 85%;
-    height: 190px;
+    height: 210px;
     margin-top: -55rem;
     margin-left: 260px;
    }
    .dadosMedidas{
     background: var(--cor_principal);
     width: 85%;
-    height: 400px;
+    height: 420px;
     margin-top: 5rem;
     margin-left: 260px;
   }
@@ -88,10 +96,12 @@ body{
 }
   @media screen and (max-width: 700px) {
     .dados {
-      margin-left: 100px;
+      margin-left: 150px;
+      margin-top: -35rem;
     }
     .dadosMedidas {
-      margin-left: 100px;
+      margin-left: 150px;
+      margin-top: 3rem;
     }
   }
   @media screen and (max-width: 600px) {

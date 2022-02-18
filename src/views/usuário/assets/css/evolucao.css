@@ -15,7 +15,7 @@
 
 #check:checked ~ .gordura{
   display: block;
-  margin-left: 100px;
+  margin-left: 150px;
 }
 .gordura{
   margin-top: -550px;
