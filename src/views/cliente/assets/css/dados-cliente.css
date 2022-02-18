@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    --cor_principal: white;
+    --cor_secundaria: rgb(0, 0, 170);
+    --cor_teciaria: #e9e7e7;
+    --cor_textos: rgb(30, 30, 30);
+    --cor_tema_claro: rgb(50, 50, 50);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  
+  body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor_textos);
+  }
+  
+  /* MAIN */
+   #check:checked ~ .dados{
+    display: block;
+    margin-left: 100px;
+    }
+   .dados{
+    background: var(--cor_principal);
+    width: 75%;
+    height: 210px;
+    margin-top: -35rem;
+    margin-left: 260px;
+   }
+  .titulo{
+    margin-top: 1.5rem;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor_principal);
+    background-color: rgba(0, 0, 170, 0.800);
+  }
+  @media screen and (min-width: 1400px) {
+    .dados{
+      background: var(--cor_principal);
+      width: 85%;
+      height: 210px;
+      margin-top: -55rem;
+      margin-left: 260px;
+     }
+  }
+   @media screen and (max-width: 1100px) {
+    .dados {
+      margin-left: 150px;
+      margin-top: -450px;
+      grid-template-columns: 200px 5fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "sidebar content";
+    }
+  }
+    @media screen and (max-width: 700px) {
+      .dados {
+        margin-left: 100px;
+      }
+      .dadosMedidas {
+        margin-left: 100px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .dados {
+        margin-left: 100px;
+      }
+      .dadosMedidas {
+        margin-left: 100px;
+      }
+    }
+    @media(max-width:440px){
+      .dados{
+        text-align: center;
+          align-items: center;
+          width: 65%;
+      }
+      .dadosMedidas{
+        text-align: center;
+          align-items: center;
+          width: 65%;
+      }
+  }

@@ -16,14 +16,6 @@ body{
     color: var(--cor_textos);
     background: var(--cor_teciaria);
 }
-main{
-    height: 100vh;
-}
-a{
-    text-decoration: none;
-    font-size: 18px;
-}
-
 input::placeholder{
     color: var(--cor_textos);
     font-size: 16px;
@@ -46,18 +38,16 @@ label #sidebar_btn1{
     color: var(--cor_secundaria);
   }
 /* parte da direita da pagina */
-#check:checked ~ .equipamentos{
+#check:checked ~ .cadastros{
     display: block;
-    margin-top: -85vh;
-    margin-left: 100px;
+    margin-left: 150px;
 }
-.equipamentos{
-    color: var(--cor_textos);
-    margin-top: -85vh;
-    margin-right: 40px;
-    margin-left: 270px;
+.cadastros{
+    background: var(--cor_principal);
+    margin-left: 260px;
+    margin-top: -550px;
+    width: 75%;
 }
-
 .read{
     margin-top: 1rem;
     width: 60%;
@@ -71,13 +61,48 @@ label #sidebar_btn1{
     border: 1px solid var(--cor_textos);
     font-size: 18px;
 }
-.cadastrar .button, .busca .button{
-    margin-top: 0.9rem;
+.cadastros p{
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: -5px;
+}
+.cadastros input{
+    font-size: 18px;
+    width: 320px;
+    height: 35px;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.titulo{
+    margin-top: 1.5rem;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor_principal);
+    background-color: rgba(0, 0, 170, 0.800);
+  }
+
+/*Botões*/
+.buttonAdd{
+    margin-top: auto;
+    margin-left: 800;
     font-size: 20px;
     background: var(--cor_principal);
-    color: var(--cor_secundaria);
     cursor: pointer;
-    width: 30px;
+    width: 170px;
+    height: 35px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttonSave{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
     height: 30px;
     display: inline-block;
     text-align: center;
@@ -85,19 +110,44 @@ label #sidebar_btn1{
     border: 1px solid transparent;
     box-shadow: 0px 0.8px 3px var(--cor_textos);
 }
-.equipamentos p{
-    font-size: 23px;
-    font-weight: 400;
-    margin-bottom: -5px;
+.buttonCancel{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
 }
-.equipamentos input{
-    font-size: 18px;
-    width: 320px;
-    height: 35px;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+#iconEdit{
+    color: var(--cor_textos);
 }
-
+#iconDel{
+    color: var(--cor_textos);
+}
+.button{
+    margin-top: auto;
+    font-size: 16px;
+    background: var(--cor_principal);
+    color: var(--cor_secundaria);
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-left: 90%;
+}
 /* Formulário de cadastro*/
 
 form{
@@ -123,7 +173,7 @@ input:focus {
 }
 
 a{
-    color: #E60084;
+    color: rgba(0, 0, 170, 0.800);
     text-decoration: none;
 }
 
@@ -147,8 +197,7 @@ a{
 }
 
 #agreement{
-    margin-right: 1.5rem;
-    margin-left: -9.1rem;
+    margin-left: -9rem;
 }
 
 #agreement-label{
@@ -164,19 +213,29 @@ a{
 }
 
 .termos{
-    margin-top: 2.3rem;
-    margin-right: 3rem;
-    margin-left: 0;
+    margin-top: 3rem;
+    margin-left: -10rem;
 }
 
 #name{
     margin-left: -0.2rem;
 }
 
-
-
-
 /* Responsividade do "molde" do cliente*/
+@media screen and (min-width: 1400px) {
+    #check:checked ~ .cadastros{
+        display: block;
+        margin-top: -850px;
+        margin-left: 100px;
+    }
+    .cadastros{
+        background: var(--cor_principal);
+        margin-left: 260px;
+        margin-top: -850px;
+        width: 80%;
+        height: auto;
+    }
+}
 @media screen and (max-width:800px){
     .read{
         width: 80%;
@@ -186,7 +245,7 @@ a{
     .read{
         width: 90%;
     }
-    .equipamentos input{
+    .cadastros input{
         width: 200px;
         font-size: 16px;
         height: 18px;
@@ -203,18 +262,18 @@ a{
         margin-left: 5px;
         margin-right: 20px;
     }
-    .equipamentos input{
+    .cadastros input{
         width: 200px;
         font-size: 16px;
         height: 18px;
     }
-    .equipamentos p{
+    .cadastros p{
         font-size: 20px;
     }
 }
 @media screen and (max-width: 410px){
   
-    .equipamentos input{
+    .cadastros input{
         width: 160px;
         font-size: 14px;
         height: 16px;
@@ -224,113 +283,17 @@ a{
 }
 @media screen and (max-width: 410px){
   
-    .equipamentos .cadastrar, .equipamentos .apagar-editar{
+    .cadastros .cadastrar, .cadastros .apagar-editar{
         align-items: center;
         text-align: center;
     }
-    .equipamentos .cadastrar p, .equipamentos .apagar-editar p{
+    .cadastros .cadastrar p, .cadastros .apagar-editar p{
         margin-bottom: 20px;
     }
-    .equipamentos .apagar-editar p{
+    .cadastros .apagar-editar p{
         margin-top: 15px;
     }
-    .equipamentos input{
+    .cadastros input{
         margin-bottom: 10px;
-    }
-}
-
-/* Responsividade do formulário*/
-
-@media screen and (max-width: 900px){
-    .container{
-        width: 100%;
-        align-items: initial;
-        margin-left: 0.1rem;
-    }
-
-    #confirme{
-        margin-left: 1.3rem;
-    }
-
-    #passwordconfirmation{
-        width: 80%;
-        margin-left: 1.3rem;
-    }
-}
-
-@media screen and (max-width: 700px){
-    form{
-        display: block;
-    }
-    .container .email{
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 1010px){
-    .container{
-        width: 80%;
-        margin-left: 5rem;
-    }
-}
-
-@media screen and (max-width: 1100px){
-    main{
-        display: block;
-    }
-}
-
-@media screen and (max-width: 720px){
-    main{
-        margin-left: 0.1rem;
-    }
-    .container{
-        width: 100%;
-        margin-left: 1rem;
-    }
-}
-@media screen and (max-width: 550px){
-    .back{
-        width: 100%;
-        margin-left: 0.1rem;
-    }
-    .back .info img{
-        width: 80%;
-    }
-}
-@media screen and (max-width: 420px){
-    .container h1{
-        font-size: 1.5rem;
-    }
-
-    .estiloSenha{
-        margin-right: -3rem;
-
-    }
-    #passwordconfirmation{
-        width: 80%;
-        margin-left: 1.3rem;
-    }
-    #confirme{
-        margin-left: 1.3rem;
-    }
-    .termos{
-        margin-left: 7.2rem;
-        display: flex;
-        
-    }
-    
-    #agreement-label{
-        margin-left: 1px;
-    }
-}
-@media screen and (max-width: 380px){
-    .container{
-        margin-left: 0.1rem;
-    }
-    .termos label{
-        text-align: left;
-        margin-left: 0;
-        font-size: 1rem;
     }
 }
