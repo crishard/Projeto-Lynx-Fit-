@@ -173,7 +173,7 @@ input:focus {
 }
 
 a{
-    color: #E60084;
+    color: rgba(0, 0, 170, 0.800);
     text-decoration: none;
 }
 
@@ -197,8 +197,7 @@ a{
 }
 
 #agreement{
-    margin-right: 1.5rem;
-    margin-left: -9.1rem;
+    margin-left: -9rem;
 }
 
 #agreement-label{
@@ -214,9 +213,8 @@ a{
 }
 
 .termos{
-    margin-top: 2.3rem;
-    margin-right: 3rem;
-    margin-left: 0;
+    margin-top: 3rem;
+    margin-left: -10rem;
 }
 
 #name{

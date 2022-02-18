@@ -26,7 +26,8 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    width: 50vw;
+    width: 60%;
+    height: 70%;
     margin: 15vh auto;
     padding-bottom: 20px;
     background-color: white;
@@ -83,6 +84,14 @@
     background-color: inherit;
     text-align: center;
     padding: 0 20px;
+    margin-top: -0.2rem;
+}
+
+.genero{
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    margin-left: 2.5rem;
 }
 
 
