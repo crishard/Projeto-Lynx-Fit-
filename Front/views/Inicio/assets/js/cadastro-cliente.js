@@ -188,9 +188,9 @@ class Validator {
   let validator = new Validator();
   
   // evento de envio do form, que valida os inputs
-  submit.addEventListener('click', function(e) {
+  cadastrar.addEventListener('click', function(e) {
+    
     validator.validate(form);
   
   });
 
-  
