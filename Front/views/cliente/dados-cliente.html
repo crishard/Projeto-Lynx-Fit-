@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
-    <link rel="stylesheet" href="./assets/css/modal/modal.css">
 
     <!--ESTILIZAÇÃO JS-->
     <script src="https://kit.fontawesome.com/a076d0399.js"></script>
-    <script src="./assets/js/evolucao.js" defer></script>
+    <script src="./assets/js/dados-cliente.js" defer></script>
 
     <!--TITULO DA PAGINA-->
     <title>Dados da Empresa - LYNX FIT</title>
@@ -72,6 +71,29 @@
                     </tr>
                 </thead>
             </table>
+            
+            <div class="alterar-dados">
+                <button type="button" class="button" id="editar"><i id="editar" class="far fa-edit"></i></button>
+                <button class="button"><i id="deletar" class="far fa-window-close"></i></button>
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <h2 class="tituloModal">Alterar dados da Empresa</h2>
+                            <span class="modal-close" id="modalClose">&#10006;</span>
+                        </header>
+                        <form class="modal-form">
+                            <input type="text" class="modal-field" placeholder="CNPJ">
+                            <input type="text" class="modal-field" placeholder="Nome da Empresa">
+                            <input type="email" class="modal-field" placeholder="E-mail">
+                        </form>
+                        <footer class="modal-footer">
+                            <button  type="input" class="buttonSave">Salvar</button>
+                            <button type="input" class="buttonCancel">Cancelar</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
         </section>
         </main>
         <!--RODAPE-->
