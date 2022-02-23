@@ -1,9 +1,19 @@
 .tituloModal{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: -1.5rem;
     padding: 5px 0px;
 }
 .modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+.modalEditar{
     position: fixed;
     top:0;
     left:0;
@@ -23,11 +33,11 @@
 }
 
 .modal-content{
-    display: flex;
+    display: fixed;
     flex-direction: column;
     gap:20px;
-    width: 60%;
-    height: 70%;
+    width: 65%;
+    height: 60%;
     margin: 15vh auto;
     padding-bottom: 20px;
     background-color: white;
@@ -67,6 +77,8 @@
     padding: 0 20px;
 }
 .modal-field{
+    margin-top: 1rem;
+    margin-left: 4.5rem;
     align-items: center;
     width: 150px;
     height: 40px;
@@ -74,7 +86,7 @@
     border-style: none;
     box-shadow: 0 0 2px black;
     padding: 0 2px;
-    font-size:1rem;
+    font-size:12px;
 }
 .modal-field:focus{
     border: 2px solid rgba(0, 0, 170, 0.500);
@@ -83,19 +95,24 @@
 .modal-footer{
     background-color: inherit;
     text-align: center;
-    padding: 0 20px;
-    margin-top: -0.2rem;
+    padding: 0 50px;
+    margin-top: -0.7rem;
 }
-
+.termos{
+    align-items: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
 .genero{
     font-size: 14px;
-    width: 150px;
-    height: 30px;
-    margin-left: 2.5rem;
+    width: 320px;
+    height: 35px;
+    margin-left: 4.5rem;
 }
-
-
-
+.genero:focus{
+    border: 2px solid rgba(0, 0, 170, 0.500);
+    box-shadow: 0 0 3px rgba(0, 0, 170, 0.500);
+}
 @media (max-width:480px){
     .modal{
         top:100%;

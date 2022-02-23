@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
+
+    <script src="./assets/js/equipamentos.js" defer></script>
     <title>Cadastro de Equipamentos - LYNX FIT</title>
 </head>
 <body>
@@ -57,25 +59,56 @@
                 
                 <div class="read">
                     <section class="cadastros">
-                        <h3 class="titulo">ALUNOS CADASTRADOS</h3>    
+                        <h3 class="titulo">EQUIPAMENTOS CADASTRADOS</h3>    
                         <table class="records">
                             <thead>
                                 <tr>
                                     <th>Nome do Equipamento</th>
+                                    <th>Ação</th>
+
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>Mesa Adutora</td>
+                                    <td>
+                                        <button type="button" class="button" id="editar"><i id="editar" class="far fa-edit"></i></button>
+                                        <button class="button"><i id="deletar" class="far fa-window-close"></i></button>
+                                    </td>
+                                    <div class="modal" id="modal">
+                                        <div class="modal-content">
+                                            <header class="modal-header">
+                                                <h2 class="tituloModal">Alterar Equipamento Cadastrado</h2>
+                                                <span class="modal-close" id="modalClose">&#10006;</span>
+                                            </header>
+                                            <form class="modal-form">
+                                                <input type="text" class="modal-field" placeholder="Nome do Equipamento">
+                                            </form>
+                                            <footer class="modal-footer">
+                                                <button type="input" class="buttonSave">Salvar</button>
+                                                <button type="input" class="buttonCancel">Cancelar</button>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </tr>
+                                
+                                <tr>
                                     <td>Mesa Flexora</td>
+                                    <td>
+                                        <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
+                                        <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Esteira</td>
-                                </tr>
-                                <tr>
-                                    <td>Mesa Adutora</td>
+                                    <td>
+                                        <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
+                                        <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+                        
                     </section>
                 </div>
             </form>

@@ -61,7 +61,7 @@ select:focus{
     margin-top: 0.9rem;
     font-size: 20px;
     background: var(--cor_principal);
-    color: var(--cor_secundaria);
+    color: var(--cor_textos);
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -81,7 +81,7 @@ select:focus{
     margin-top: 1.5rem;
     padding: 5px 0px 5px 0px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--cor_principal);
     background-color: rgba(0, 0, 170, 0.800);
   }
@@ -97,6 +97,74 @@ select:focus{
     margin-right: 2rem;
     margin-bottom: 2rem;
 }
+
+/*Botões*/
+.buttonAdd{
+    margin-top: auto;
+    margin-left: 800;
+    font-size: 20px;
+    background: var(--cor_principal);
+    cursor: pointer;
+    width: 170px;
+    height: 35px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttonSave{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttonCancel{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+#editar{
+    color: var(--cor_textos);
+}
+#deletar{
+    color: var(--cor_textos);
+}
+.button{
+    margin-top: auto;
+    font-size: 16px;
+    background: var(--cor_principal);
+    color: var(--cor_secundaria);
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-left: 90%;
+}
+
 /* Responsividade */
 @media screen and (max-width:800px){
     .read{

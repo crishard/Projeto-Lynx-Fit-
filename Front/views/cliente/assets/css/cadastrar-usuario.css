@@ -37,7 +37,8 @@ label #sidebar_btn1{
   label #sidebar_btn1:hover{
     color: var(--cor_secundaria);
   }
-/* parte da direita da pagina */
+
+  /* parte da direita da pagina */
 #check:checked ~ .cadastros{
     display: block;
     margin-left: 150px;
@@ -77,7 +78,7 @@ label #sidebar_btn1{
     margin-top: 1.5rem;
     padding: 5px 0px 5px 0px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--cor_principal);
     background-color: rgba(0, 0, 170, 0.800);
   }
@@ -123,10 +124,10 @@ label #sidebar_btn1{
     border: 1px solid transparent;
     box-shadow: 0px 0.8px 3px var(--cor_textos);
 }
-#iconEdit{
+#editar{
     color: var(--cor_textos);
 }
-#iconDel{
+#deletar{
     color: var(--cor_textos);
 }
 .button{
@@ -148,8 +149,8 @@ label #sidebar_btn1{
     gap: 10px;
     margin-left: 90%;
 }
-/* Formulário de cadastro*/
 
+/* Formulário de cadastro*/
 form{
     display: flex;
     flex-wrap: wrap;
@@ -215,6 +216,7 @@ a{
 .termos{
     margin-top: 3rem;
     margin-left: -10rem;
+    font-size: 14px;
 }
 
 #name{
