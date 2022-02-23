@@ -19,20 +19,26 @@
   /* MAIN */
    #check:checked ~ .dados{
     display: block;
-    margin-left: 100px;
+    margin-left: 150px;
     }
+    #check:checked ~ .alterar-dados{
+      display: block;
+      margin-left: 150px;
+      }
    .dados{
     background: var(--cor_principal);
     width: 75%;
-    height: 210px;
     margin-top: -35rem;
     margin-left: 260px;
+   }
+   .alterar-dados{
+     margin-left: 260px;
    }
   .titulo{
     margin-top: 1.5rem;
     padding: 5px 0px 5px 0px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--cor_principal);
     background-color: rgba(0, 0, 170, 0.800);
   }
@@ -209,7 +215,7 @@
   background: rgba(0, 0, 170, 0.500);
   color: var(--cor_secundaria);
   cursor: pointer;
-  width: 150px;
+  width: 200px;
   height: 30px;
   display: inline-block;
   text-align: center;
