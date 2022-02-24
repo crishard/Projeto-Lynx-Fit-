@@ -1,4 +1,5 @@
 import {prisma} from "../../../dataBase/prismaCliente";
+import { hash } from "bcrypt";
 
 interface IAtualizarCliente {
   id: string;
@@ -19,6 +20,7 @@ export class AtualizarCliente {
     if (!clienteExiste) {
       return new Error("Cliente não existe");
     }
+    const hashPassword = await hash(senha, 10);
     
     const resultado = await prisma.cliente.update({
       where: {
@@ -27,7 +29,7 @@ export class AtualizarCliente {
       data: {
         nome,
         email,
-        senha,
+        senha: hashPassword,
         cnpj
           
       },

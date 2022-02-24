@@ -123,6 +123,13 @@ main{
     color: transparent;
 }
 
+/* modal para cliente */
+.cliente{
+    background: black;
+}
+
+
+/* modal para usuario */
 @media screen and (max-width:1100px){
     main{
         margin-left: 0;

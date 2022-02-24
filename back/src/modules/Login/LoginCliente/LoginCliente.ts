@@ -11,7 +11,7 @@ export class LoginCliente {
   async execute({ senha, email }: ILoginCliente) {
     // Receber email e senha
     //Verificar se o usuario está cadastrado para
-    console.log(senha, email);
+    // console.log(senha, email);
     const cliente = await prisma.cliente.findFirst({
       where: { email },
     });
