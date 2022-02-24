@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/login.css">
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <title>LYNX FIT</title>
 </head>
 <body>
     <main class="principal">
+
+        <div class="usuario">
+            <div class="link">
+                <button type="button"><a href="../usuário/home-page-usuario.html"></a></button>
+            </div>
+        </div>
+        <div class="cliente">
+            <div class="link">
+                <button type="button"><a href="../usuário/home-page-usuario.html"></a></button>
+            </div>
+        </div>
         <div class="back">
             <div class="info">
                 <h2 class="titulo">Lynx Fit</h2>
@@ -26,8 +38,8 @@
                         <label for="email">E-mail</label> <br>
                         <input type="email" id="email" class="email" placeholder="Ex: joaozinho123@gmail.com" required> <br>
                         <label for="senha">Senha</label> <br>
-                        <input type="password" id="pass" class="senha" placeholder="********" required> <br>
-                        <a href="#" class="inc">Entrar</a>
+                        <input type="password" id="senha" class="senha" placeholder="********" required> <br>
+                        <a href="#" class="inc" id="login">Entrar</a>
                         <a href="#" class="inc">Voltar</a>
                     </form>
                     <div class="sem-cadastro">
@@ -37,6 +49,9 @@
                 </div>
             </div>
         </div>
+
+
     </main>
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>

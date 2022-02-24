@@ -3,7 +3,8 @@ import { AtualizarCliente } from "./AtualizarCliente";
 
 export class AtualizarClienteController {
   async handle(req: Request, res: Response) {
-    const {id,nome,email,senha, cnpj} = req.body;
+    const {nome,email,senha, cnpj} = req.body;
+    const {id} = req.params;
     const atualizarCliente = new AtualizarCliente();
     const result = await atualizarCliente.execute({
       id,

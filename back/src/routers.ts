@@ -36,6 +36,9 @@ import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarM
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
 
 
+
+import { BuscarClienteeController } from "./modules/Cliente/teste/verControl";
+import {LoginController} from "./modules/Login/LoginController"
 //metodos
 const routes = Router();
 
@@ -71,11 +74,16 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
 
+
+const login = new LoginController();
+routes.post("/login", login.handle);
+const buscarclientee = new BuscarClienteeController();
+routes.get("/busca", buscarclientee.handle);
 //rotas
 
 //usuario
 routes.post("/cliente/criar_usuario",AutenticacaoCliente,criarUsuarioController.handle);
-routes.post("/usuario/autenticar", validacaoUsuarioController.handle);
+// routes.post("/usuario/autenticar", validacaoUsuarioController.handle);
 routes.get("/cliente/buscar_usuario", buscarUsuarioController.handle);
 routes.put("/cliente/atualizar_usuario", atualizarUsuarioController.handle);
 routes.delete("/cliente/deletar_usuario/:id", deletarUsuarioController.handle);
@@ -89,11 +97,11 @@ routes.delete("/cliente/deletar_treino/:id",AutenticacaoCliente, deleteTreinoCon
 routes.get("/treino_usuario/",AutenticacaoUsuario, buscarTreinoUsuarioController.handle);
 
 // Cliente
-routes.post("/criar_cliente/",createClienteController.handle);
-routes.get("/buscar_cliente", buscarClienteController.handle);
-routes.put("/atualizar_cliente", atualizarClienteController.handle);
+routes.post("/criar_cliente",createClienteController.handle);
+routes.get("/buscar_cliente/:id", buscarClienteController.handle);
+routes.put("/atualizar_cliente/:id", atualizarClienteController.handle);
 routes.delete("/deletar_cliente/:id", deletarClienteController.handle);
-routes.post("/cliente/autenticar", validacaoClienteController.handle);
+// routes.post("/cliente/autenticar", validacaoClienteController.handle);
 
 //Equipamentos
 routes.post("/cliente/criar_equipamento",AutenticacaoCliente,criarEquipamentoController.handle);

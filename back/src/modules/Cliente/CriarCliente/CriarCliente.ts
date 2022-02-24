@@ -16,7 +16,6 @@ interface ICriarCliente {
         where: {
             cnpj: {
             equals: cnpj,
-            
           },
         },
       });
