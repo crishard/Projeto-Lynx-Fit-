@@ -125,11 +125,42 @@ main{
 
 /* modal para cliente */
 .cliente{
-    background: black;
+    display: none;
+    text-align: center;
+    width: 500px;
+    background: var(--cor_teciaria);
+    height: 400px;
+    align-items: center;
+    margin-left: 30%;
+    position: absolute;
+}
+.link{
+    margin: 155px 50px 30px 330px;
+}
+.cliente h3{
+    margin-top: 160px;
+}
+/* modal para usuario */
+.usuario{
+    display: none;
+    text-align: center;
+    width: 500px;
+    background: var(--cor_teciaria);
+    height: 400px;
+    align-items: center;
+    margin-left: 30%;
+    position: absolute;
+}
+.usuario h3{
+    margin-top: 160px;
+}
+.usuarioLogado{
+    display: block;
+}
+.clienteLogado{
+    display: block;
 }
 
-
-/* modal para usuario */
 @media screen and (max-width:1100px){
     main{
         margin-left: 0;
