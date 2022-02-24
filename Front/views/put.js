@@ -2,10 +2,7 @@ const nomeinput = document.getElementById("nome1");
 const emailinput = document.getElementById("email1");
 
 const cnpjinput = document.getElementById("cnpj1");
-
 const senhainput = document.getElementById("senha1");
-
-
 const submit = document.getElementById('btn-submit');
 
 

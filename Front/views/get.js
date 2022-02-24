@@ -6,10 +6,10 @@ function getUsers() {
       const data = response.data
       renderApiResult.textContent = JSON.stringify(data);
       show(data);
-      
     })
     .catch(error => console.log(error))
 }
+
 function getUser() {
   axios.get(`${url}/3cf7fd5f-f066-4a2f-9251-3c4c1928e5d8`)
     .then(response => {
@@ -18,12 +18,9 @@ function getUser() {
       userId.textContent = data.cnpj
       userCity.textContent = data.email
       senha.textContent = data.senha
-
-        // show(data);
     })
     .catch(error => console.log(error))
 }
-
 //mais de um usuário
 getUsers();
 
