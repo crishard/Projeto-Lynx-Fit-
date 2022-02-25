@@ -10,22 +10,22 @@ function getUsers() {
     .catch(error => console.log(error))
 }
 
-function getUser() {
-  axios.get(`${url}/3cf7fd5f-f066-4a2f-9251-3c4c1928e5d8`)
-    .then(response => {
-      const data = response.data;
-      userNome.textContent = data.nome
-      userId.textContent = data.cnpj
-      userCity.textContent = data.email
-      senha.textContent = data.senha
-    })
-    .catch(error => console.log(error))
-}
+// function getUser() {
+//   axios.get(`${url}/3cf7fd5f-f066-4a2f-9251-3c4c1928e5d8`)
+//     .then(response => {
+//       const data = response.data;
+//       userNome.textContent = data.nome
+//       userId.textContent = data.cnpj
+//       userCity.textContent = data.email
+//       senha.textContent = data.senha
+//     })
+//     .catch(error => console.log(error))
+// }
 //mais de um usuário
 getUsers();
 
 //só da conta de quem tiver logado
-getUser();
+// getUser();
 
 function show(users){
     let out = ''

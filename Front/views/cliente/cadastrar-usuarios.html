@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
-
     <script src="./assets/js/cadastro.js" defer></script>
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <title>Cadastro de Alunos - LYNX FIT</title>
 </head>
 <body>
@@ -48,7 +48,6 @@
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th>Sexo</th>
                         <th><button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button></th>
                         <div class="modal" id="modal">
                             <div class="modal-content">
@@ -57,91 +56,33 @@
                                     <span class="modal-close" id="modalClose">&#10006;</span>
                                 </header>
                                 <form class="modal-form">
-                                    <input type="text" class="modal-field" placeholder="Nome">
+                                    <input type="text" class="modal-field" placeholder="Nome" id="nome">
                                     <input type="text" class="modal-field" placeholder="Sobrenome">
-                                    <input type="email" class="modal-field" placeholder="E-mail">
-                                    <input type="password" class="modal-field" placeholder="Senha">
+                                    <input type="email" class="modal-field" placeholder="E-mail" id="email">
+                                    <input type="password" class="modal-field" placeholder="Senha" id="senha">
                                     <input type="password" class="modal-field" placeholder="Confirmação de Senha">
-                                    <select name="sexo" id="genero" class="genero">
-                                        <option value="0">Gênero</option>
-                                        <option value="1">Masculino</option>
-                                        <option value="2">Feminino</option>
-                                    </select>
                                     <div class="termos"> 
                                         <input type="checkbox" name="agreement" id="agreement">
                                         <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
                                     </div>
                                 </form>
                                 <footer class="modal-footer">
-                                    <button  type="input" class="buttonSave">Salvar</button>
+                                    <button  type="input" class="buttonSave" id="salvar">Salvar</button>
                                     <button type="input" class="buttonCancel">Cancelar</button>
                                 </footer>
                             </div>
                         </div>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Maria</td>
-                        <td>maria@gmail.com</td>
-                        <td>Feminino</td>
-                        <td>
-                            <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
-                                <div class="modal" id="modal">
-                                    <div class="modal-content">
-                                        <header class="modal-header">
-                                            <h2 class="tituloModal">Adicione os dados do aluno</h2>
-                                            <span class="modal-close" id="modalClose">&#10006;</span>
-                                        </header>
-                                        <form class="modal-form">
-                                            <input type="text" class="modal-field" placeholder="Nome">
-                                            <input type="text" class="modal-field" placeholder="Sobrenome">
-                                            <input type="email" class="modal-field" placeholder="E-mail">
-                                            <input type="password" class="modal-field" placeholder="Senha">
-                                            <input type="password" class="modal-field" placeholder="Confirmação de Senha">
-                                            <select name="sexo" id="genero" class="genero">
-                                                <option value="0">Gênero</option>
-                                                <option value="1">Masculino</option>
-                                                <option value="2">Feminino</option>
-                                            </select>
-                                            <div class="termos"> 
-                                                <input type="checkbox" name="agreement" id="agreement">
-                                                <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
-                                            </div>
-                                        </form>
-                                        <footer class="modal-footer">
-                                            <button type="input" class="buttonSave">Salvar</button>
-                                            <button type="input" class="buttonCancel">Cancelar</button>
-                                        </footer>
-                                    </div>
-                                </div>
-                            <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>João Pedro</td>
-                        <td>joao@gmail.com</td>
-                        <td>Masculino</td>
-                        <td>
-                            <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
-                            <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Jose da Silva</td>
-                        <td>jose@gmail.com</td>
-                        <td>Masculino</td>
-                        <td>
-                            <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
-                            <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                        </td>
-                    </tr>
+                <tbody id="mostrar">
+                   
                 </tbody>
             </table>
         </section>
+
+        <!-- <table id="mostrar"></table> -->
 </main>
-<script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>   
+    <script src="../../requisicoes/usuario/usuario.js"></script>
 </body>
 </html>

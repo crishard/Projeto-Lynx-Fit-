@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
-
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <script src="./assets/js/treino.js" defer></script>
     <title>Personalização de Treino - LYNX FIT</title>
 </head>
@@ -52,7 +52,7 @@
                         <div class="informacoes"> 
                             <div class="aluno">
                                 <p>Para qual aluno deseja personalizar um treino?</p>
-                                <input type="text" class="modal-field" placeholder="Nome do Aluno">
+                                <input type="text" class="modal-field" placeholder="Nome do Aluno" id="nome_usuario">
                             </div>
                             <form class="modal-form">
                                 <p>Personalize o treino para o aluno desejado</p>
@@ -65,16 +65,15 @@
                                     <option value="5">Sexta-feira</option>
                                     <option value="6">Sábado</option>
                                 </select>
-                                <input type="text" class="modal-field" placeholder="Exercício">
-                                <input type="text" class="modal-field" placeholder="Aparelho">
-                                <input type="text" class="modal-field" placeholder="Séries">
-                                <input type="text" class="modal-field" placeholder="Repetições">
+                                <input type="text" class="modal-field" placeholder="Exercício" id="treino">
+                                <input type="text" class="modal-field" placeholder="Séries" id="series">
+                                <input type="text" class="modal-field" placeholder="Repetições" id="repeticoes">
                                 
-                                <input type="text" class="modal-field" placeholder="Nome do Equipamento">
+                                <input type="text" class="modal-field" placeholder="Nome do Equipamento" id="nome_equipamento">
                             </form>
                         </div>
                             <footer class="modal-footer">
-                                <button type="input" class="buttonSave">Salvar</button>
+                                <button type="input" class="buttonSave" id="salvar">Salvar</button>
                                 <button type="input" class="buttonCancel">Cancelar</button>
                             </footer>
                     </div>
@@ -92,44 +91,11 @@
                               <th>Séries</th>
                               <th>Repetições</th>
                               <th>Aparelho</th>
+                              <th>Usuário</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Posterior da Coxa</td>
-                              <td>3 séries </td>
-                              <td>15 repetições</td>
-                              <td>Mesa Flexora</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>Puxada de Triceps</td>
-                              <td>3 séries</td>
-                              <td>12 repetições</td>
-                              <td>Carretilha</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Supino com Barra</td>
-                              <td>3 séries</td>
-                              <td>15 repetições</td>
-                              <td>Prancha</td>
-                            </tr>
-                            <tr>
-                              <td>4</td>
-                              <td>Cárdio</td>
-                              <td>1500m</td>
-                              <td>10km/h</td>
-                              <td>Esteira</td>
-                            </tr>
-                            <tr>
-                              <td>5</td>
-                              <td>Adutor</td>
-                              <td>3 séries</td>
-                              <td>15 repetições</td>
-                              <td>Cadeira Adutora</td>
-                            </tr>
+                          <tbody id="mostrar">
+                            
                           </tbody>
                         </table>
                       </section>
@@ -137,5 +103,6 @@
         </div>
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+    <script src="../../requisicoes/treino/treino.js"></script>
 </body>
 </html>

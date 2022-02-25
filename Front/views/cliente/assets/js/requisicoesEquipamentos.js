@@ -59,7 +59,6 @@
 // }
 
 const lim = localStorage.getItem('token');
-// const bola = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjEyMyIsImlhdCI6MTY0NTcxNTgwMywiZXhwIjoxNjQ1ODAyMjAzLCJzdWIiOiIzZWZhNjc0YS00NTgyLTQ3Y2EtYjNhYi0wMWI0NDNjZGVlYTAifQ.ohfuVjvP5L6dc6jYPmcQG_4rbCFtCurpnVkpGeOjK9E";
 const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
 
 
