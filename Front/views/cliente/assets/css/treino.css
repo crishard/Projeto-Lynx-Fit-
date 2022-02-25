@@ -11,12 +11,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
-input{
-    border: none;
-    background: var(--cor_teciaria);
-    outline: none;
-}
 select:focus{
     border: 1px solid var(--cor_secundaria);
 }
@@ -58,18 +52,41 @@ label #sidebar_btn:hover{
 #check{
     display: none;
 }
+input{
+    padding: 5px;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 2px solid #323232;
+}
+input:focus {
+    border-bottom: 2px solid rgb(0,0,190);
+}
+a{
+    color: rgba(0, 0, 170, 0.800);
+    text-decoration: none;
+}
 
 /* parte da direita da pagina */
-#check:checked ~ .treino{
+#check:checked ~ .conteudo{
     display: block;
-    margin-top: -85vh;
-    margin-left: 100px;
+    margin-left: -150px;
 }
-.treino{
-    color: var(--cor_textos);
-    margin-top: -85vh;
-    margin-right: 40px;
-    margin-left: 270px;
+#check:checked ~ .conteudo .button{
+    margin-left: 730px;
+}
+.titulo{
+    margin-top: 1.5rem;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--cor_principal);
+    background-color: rgba(0, 0, 170, 0.800);
+}
+
+.personalizar{
+  margin-left: 260px;
+  margin-top: -550px;
 }
 .personalizar p{
     font-size: 23px;
@@ -81,28 +98,14 @@ label #sidebar_btn:hover{
 }
 .form{
     text-align: center;
-
+    width: 75%;
+    
 }
 .enter{
     margin-top: 1.4rem;
     display: flex;
     gap: 2.6rem;
-}
-.aluno input{
-    width: 260px;
-    font-size: 17px;
-    height: 20px;
-    border-bottom: 1px solid var(--cor_textos);
-    margin-top: 1rem;
-}
-.aluno input:focus{
-    border-bottom: 1px solid var(--cor_secundaria);
-}
-.aluno input:focus::placeholder{
-    color: var(--cor_textos);
-}
-.enter{
-    width: 100%;
+    width: 75%;
 }
 .enter input{
     font-size: 17px;
@@ -126,12 +129,54 @@ label #sidebar_btn:hover{
 }
 .button{
     margin-top: 1.5rem;
-    font-size: 16px;
-    background: var(--cor_principal);
-    color: var(--cor_secundaria);
+    margin-left: 595px;
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
     cursor: pointer;
-    width: 50px;
+    width: 400px;
     height: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+/*.button1{
+    margin-top: 1.5rem;
+    margin-left: 595px;
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}*/
+.buttonSave{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.buttonCancel{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
     display: inline-block;
     text-align: center;
     border-radius: 3px;
@@ -147,12 +192,181 @@ label #sidebar_btn:hover{
     margin-bottom: 0.5rem;
 }
 .rotina{
-    margin-top: 1.5rem;
+    background: var(--cor_principal);
+    margin-top: 1rem;
+    width: 90%;
 }
-.rotina table{
+/*MODAL DO FORMULÁRIO*/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.informacoes{
+    margin-top: 1rem;
+    width: 90%;
+}
+.tituloModal{
+    font-size: 1.5rem;
+    margin-top: -1.5rem;
+    padding: 5px 0px;
+}
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
     width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
 }
-.rotina table th, td{
-    border: 1px solid var(--cor_textos);
-    font-size: 18px;
+.modalEditar{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #00000090;
+    opacity: 0;
+    z-index: -1;
 }
+.inc{
+    align-items: center;
+    margin-left: 200px;
+}
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-content{
+    display: fixed;
+    flex-direction: column;
+    gap:20px;
+    width: 50%;
+    height: 80%;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modal-header{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    margin-top: -1.25rem;
+    padding: 0px 0px 10px 0px;
+}
+.modal-close:hover{
+    background-color: #FF4949;
+    color: white;
+}
+.modal-form{
+    margin-top: auto;
+    margin-left: 2rem;
+
+}
+.modal-field{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    padding: 0 2px;
+    font-size:16px;
+}
+.modal-field:focus{
+    border: 2px solid rgba(0, 0, 170, 0.500);
+    box-shadow: 0 0 3px rgba(0, 0, 170, 0.500);
+}
+.modal-footer{
+    background-color: inherit;
+    text-align: center;
+    padding: 0 50px;
+    margin-top: -0.7rem;
+}
+.termos{
+    align-items: center;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+.dias{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    font-size: 16px;
+    width: 200px;
+    height: 35px;
+}
+.modal-field .dias:focus{
+    border: 2px solid rgba(0, 0, 170, 0.500);
+    box-shadow: 0 0 3px rgba(0, 0, 170, 0.500);
+}
+.aluno{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+.aluno input:focus{
+    border-bottom: 1px solid var(--cor_secundaria);
+}
+.aluno input:focus::placeholder{
+    color: var(--cor_textos);
+}
+
+@media screen and (min-width: 1400px) {
+    #check:checked ~ .conteudo{
+        margin-left: 8px;
+        width: 100%;
+    }
+    #check:checked ~ .conteudo .button{
+        margin-left: 1080px;
+    }
+    .conteudo{
+      width: 85%;
+      height: 210px;
+      margin-top: -55rem;
+      margin-left: 200px;
+    }
+    .button{
+        margin-left: 835px;
+     }
+
+     @media (max-width:480px){
+         .modal{
+             top:100%;
+             transition: all 1s ease;
+         }
+         .modal.active{
+             top:0;
+         }
+         .modal-content{
+             margin:0;
+             width:100%;
+             position:fixed;
+         }
+         .modal-field{
+             width:100%;
+         }
+     }
+     
+  }
