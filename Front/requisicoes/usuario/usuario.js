@@ -1,42 +1,23 @@
-// const openModal = () => document.getElementById('modal')
-//     .classList.add('active')
+//capturando token
+const lim = localStorage.getItem('token');
+const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
+const config = {
+    headers: { Authorization: `Bearer ${bola}` }
+}
 
-// const closeModal = () => document.getElementById('modal')
-//     .classList.remove('active')
-
-// document.getElementById('cadastrarCliente')
-//     .addEventListener('click', openModal)
-
-// document.getElementById('editar')
-//     .addEventListener('click', openModal)
-
-// document.getElementById('modalClose')
-//     .addEventListener('click', closeModal)
-
-
-
+//capturando campos de input
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
 const senhaInput = document.getElementById("senha");
 const salvar = document.getElementById("salvar");
-console.log("baiano");
-//criar usuario
-const lim = localStorage.getItem('token');
-const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
 
 
-const config = {
-    headers: { Authorization: `Bearer ${bola}` }
-}
-console.log(config);
 salvar.addEventListener("click", ()=>{
+    //pegando os valores
     const nome = nomeInput.value;
     const email = emailInput.value;
     const senha = senhaInput.value;
-    
-
-
-    console.log(nome, email, senha)
+    //realizando o cadastro
     axios.post("http://localhost:3000/cliente/criar_usuario",
     {
         nome: nome, 
@@ -44,13 +25,6 @@ salvar.addEventListener("click", ()=>{
         email: email
     }, 
     config);
-
-
-
-
-    
-    
-    
 });
 
 
@@ -60,19 +34,10 @@ function getUsuarios() {
     config)
       .then(response => {
         const data = response.data;
-        // main.textContent = JSON.stringify(data);
-        // console.log(data.nome);
-        // for (let index = 0; index < data.length; index++) {
-            //     const element = data[index];    
-            //     console.log(element.nome);
-            // }
-            
-            show(data);
+        show(data);
       })
-    //   .catch(error => console.log(error))
   }
 getUsuarios();
-
 
 function show(users){
     for (use of users){
@@ -88,24 +53,6 @@ function show(users){
                 document.getElementById('mostrar').appendChild(newRow);
     }
 }
-
-
-// const createRow = () => {
-//     const newRow = document.createElement('tr')
-//     newRow.innerHTML = `
-//         <td>${use.nome}</td>
-//         <td>${use.email}</td>
-//         <td>
-//             <button type="button" class="button green" id="${response.data.id}">Editar</button>
-//             <button type="button" class="button red" id="delete-" >Excluir</button>
-//         </td>
-//     `
-//     tabelaGet.appendChild(newRow)
-// }
-// createRow();
-
-
-
 
 // //apagar usuario
 // const deletar = document.getElementById('deletar');
@@ -132,6 +79,3 @@ function show(users){
 //     })
 //     .catch(error => console.error(error));
 // });
-
-
-//
