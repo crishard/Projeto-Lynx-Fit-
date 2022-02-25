@@ -26,11 +26,3 @@ login.addEventListener("click", async function login(){
         vnne.classList.add("usuarioLogado");
     }
 });
-// export default function salvaTOken(){
-
-//     const token = {
-//         headers: {Authorization: `Bearer ${response.data.token}`}  
-//     }
-//     return token;
-// };
-
