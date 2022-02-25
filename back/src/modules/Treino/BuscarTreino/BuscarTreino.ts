@@ -1,9 +1,10 @@
 import { prisma } from "../../../dataBase/prismaCliente";
 
 export class BuscarTreino {
-  async execute() {
-    const buscarTreino = await prisma.treino.findMany();
-
-    return buscarTreino;
-  }
-}
+  async execute(id_client:string) {
+    const buscarTreino= await prisma.usuario.findMany({
+        where:{id_client: id_client},
+        });
+        return buscarTreino;
+      }
+    }
