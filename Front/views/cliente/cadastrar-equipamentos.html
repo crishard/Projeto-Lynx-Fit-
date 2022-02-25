@@ -28,7 +28,7 @@
             <div>
                 <center>
                     <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
-                    <h2>Maria</h2>
+                    <h2 id="teste"></h2>
                 </center>
             </div>
             <div class="links">
@@ -45,15 +45,8 @@
                 <div class="cadastrar">
                     <p>Cadastrar um novo equipamento:</p>
                     <div>
-                        <input type="text" placeholder="Inserir nome do equipamento">
-                        <button class="button"><i class="far fa-save"></i></button>
-                    </div>
-                </div>
-                <div class="apagar-editar">
-                    <p>Buscar um equipamento:</p>
-                    <div class="busca">
-                        <input type="text" placeholder="Buscar por equipamento">
-                        <button class="button"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Inserir nome do equipamento" id="equipamento">
+                        <button class="button" type="submit" id="salvar"><i class="far fa-save"></i></button>
                     </div>
                 </div>
                 
@@ -68,44 +61,8 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Mesa Adutora</td>
-                                    <td>
-                                        <button type="button" class="button" id="editar"><i id="editar" class="far fa-edit"></i></button>
-                                        <button class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                                    </td>
-                                    <div class="modal" id="modal">
-                                        <div class="modal-content">
-                                            <header class="modal-header">
-                                                <h2 class="tituloModal">Alterar Equipamento Cadastrado</h2>
-                                                <span class="modal-close" id="modalClose">&#10006;</span>
-                                            </header>
-                                            <form class="modal-form">
-                                                <input type="text" class="modal-field" placeholder="Nome do Equipamento">
-                                            </form>
-                                            <footer class="modal-footer">
-                                                <button type="input" class="buttonSave">Salvar</button>
-                                                <button type="input" class="buttonCancel">Cancelar</button>
-                                            </footer>
-                                        </div>
-                                    </div>
-                                </tr>
-                                
-                                <tr>
-                                    <td>Mesa Flexora</td>
-                                    <td>
-                                        <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
-                                        <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Esteira</td>
-                                    <td>
-                                        <button type="button" class="button"><i id="editar" class="far fa-edit"></i></button>
-                                        <button type="button" class="button"><i id="deletar" class="far fa-window-close"></i></button>
-                                    </td>
-                                </tr>
+                            <tbody id="mostrar">
+                            
                             </tbody>
                         </table>
                         
@@ -116,6 +73,6 @@
         </div>
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/requisicoesEquipamentos.js"></script>
+    <script src="../../requisicoes/equipamentos/equipamentos.js"></script>
 </body>
 </html>

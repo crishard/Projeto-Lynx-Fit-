@@ -6,9 +6,9 @@ const openModal = () => document.getElementById('modal')
 const closeModal = () => document.getElementById('modal')
     .classList.remove('active')
 
-document.getElementById('editar')
-    .addEventListener('click', openModal)
+// document.getElementById('editar')
+//     .addEventListener('click', openModal)
 
-document.getElementById('modalClose')
-    .addEventListener('click', closeModal)
+// document.getElementById('modalClose')
+//     .addEventListener('click', closeModal)
 
