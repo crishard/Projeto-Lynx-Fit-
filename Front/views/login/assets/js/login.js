@@ -14,8 +14,10 @@ login.addEventListener("click", async function login(){
     localStorage.setItem("token", JSON.stringify(response.data.token));
     const tipo = JSON.stringify(response.data.tipo);
     console.log(tipo);
+
+
     
-    const jubileu = document.querySelector(".cliente")
+    const jubileu = document.querySelector(".cliente");
     const vnne = document.querySelector(".usuario");
     if(tipo == 1){
         jubileu.classList.add("clienteLogado");       
@@ -24,3 +26,11 @@ login.addEventListener("click", async function login(){
         vnne.classList.add("usuarioLogado");
     }
 });
+// export default function salvaTOken(){
+
+//     const token = {
+//         headers: {Authorization: `Bearer ${response.data.token}`}  
+//     }
+//     return token;
+// };
+

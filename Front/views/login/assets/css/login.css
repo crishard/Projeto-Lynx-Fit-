@@ -112,7 +112,6 @@ main{
 .sem-cadastro h3{
     font-size: 1.5rem;
 }
-
 .email::placeholder, .senha::placeholder{
     font-size: 1rem;
     color: var(--cor_textos);
@@ -122,7 +121,6 @@ main{
 .email:focus::placeholder, .senha:focus::placeholder{
     color: transparent;
 }
-
 /* modal para cliente */
 .cliente{
     display: none;
@@ -160,7 +158,6 @@ main{
 .clienteLogado{
     display: block;
 }
-
 @media screen and (max-width:1100px){
     main{
         margin-left: 0;
@@ -235,7 +232,6 @@ main{
         border-left: 1px solid black;
     }
 }
-
 @media screen and (max-width: 500px){
     .back{
         width: 90%;
@@ -284,7 +280,6 @@ main{
         font-size: 1.4rem;
     }
 }
-
 @media screen and (max-width: 380px){
     .back{
         margin-left: 0.8rem;
@@ -323,7 +318,6 @@ main{
         font-size: 1.3rem;
     }
 }
-
 @media screen and (max-width: 280px){
     .login-completo input{
         width: 10rem;
