@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./assets/css/treino.css">
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
+    <link rel="stylesheet" href="./assets/css/modal/records.css">
+
+    <script src="./assets/js/treino.js" defer></script>
     <title>Personalização de Treino - LYNX FIT</title>
 </head>
 <body>
@@ -37,65 +40,100 @@
         </div>
         <div class="movimento"></div>
         <!-- formulario de treino -->
-        <div class="treino">
+        <div class="conteudo">
             <div class="personalizar">
-                <div class="aluno">
-                    <p>Para qual aluno deseja personalizar um treino?</p>
-                    <input type="text" placeholder="Ex: Joãozinho123">
-                </div>
-                <div class="form">
-                    <p class="pp">Personalize agora o treino:</p>
-                    <div class="enter">
-                        <div class="dia">
-                            <h3>Dia</h3>
-                                <select name="" id="">
-                                    <option value="0">Selecione</option>
-                                    <option value="1">Segunda</option>
-                                    <option value="2">Terça</option>
-                                    <option value="3">Quarta</option>
-                                    <option value="4">Quinta</option>
-                                    <option value="5">Sexta</option>
+                <button type="button" class="button" id="personalizacao"><i id="personalizacao" class="far fa-edit"></i> Personalizar treino do aluno</button>
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <h2 class="tituloModal">Alterar Equipamento Cadastrado</h2>
+                            <span class="modal-close" id="modalClose">&#10006;</span>
+                        </header>
+                        <div class="informacoes"> 
+                            <div class="aluno">
+                                <p>Para qual aluno deseja personalizar um treino?</p>
+                                <input type="text" class="modal-field" placeholder="Nome do Aluno">
+                            </div>
+                            <form class="modal-form">
+                                <p>Personalize o treino para o aluno desejado</p>
+                                <select class="dias" id="dia">
+                                    <option value="0">Dia</option>
+                                    <option value="1">Segunda-feira</option>
+                                    <option value="2">Terça-feira</option>
+                                    <option value="3">Quarta-feira</option>
+                                    <option value="4">Quinta-feira</option>
+                                    <option value="5">Sexta-feira</option>
                                     <option value="6">Sábado</option>
                                 </select>
+                                <input type="text" class="modal-field" placeholder="Exercício">
+                                <input type="text" class="modal-field" placeholder="Aparelho">
+                                <input type="text" class="modal-field" placeholder="Séries">
+                                <input type="text" class="modal-field" placeholder="Repetições">
+                                
+                                <input type="text" class="modal-field" placeholder="Nome do Equipamento">
+                            </form>
                         </div>
-                        <div class="nome-treino">
-                            <h3>Treino</h3>
-                                <input type="text" placeholder="Ex: Treino de pernas">
-                        </div>
-                        <div class="equipamento">
-                            <h3>Equipamento</h3>
-                                <input type="text" placeholder="Ex: Alters">
-                        </div>
-                        <div class="series">
-                            <h3>Series</h3>
-                                <input type="text" placeholder="Ex: 4">
-                        </div>
-                        <div class="repeticoes">
-                            <h3>Repetições</h3>
-                                <input type="text" placeholder="Ex: 12">
-                        </div>
-                        <div class="salvar">
-                        </div>
-                    </div>
-                    <div class="buttons">
-
-                        <button class="button"><i class="far fa-save"></i></button>
-                        <button class="button"><i class="far fa-window-close"></i></button>
+                            <footer class="modal-footer">
+                                <button type="input" class="buttonSave">Salvar</button>
+                                <button type="input" class="buttonCancel">Cancelar</button>
+                            </footer>
                     </div>
                 </div>
-
+            
                 <div class="rotina">
-                    <p>Essa é a rotina dele</p>
-                    <table>
-                        <tr>
-                            <th>Dia</th>
-                            <th>Treino</th>
-                            <th>Equipamentos</th>
-                            <th>Séries</th>
-                            <th>Repetições</th>
-                        </tr>
-                    </table>
-                </div>
+                    <section class="exercicios">
+                        <div>
+                        <table class="records">
+                          <h3 class="titulo">SUA ROTINA DE TREINOS</h3>
+                          <thead>
+                            <tr>
+                              <th class="dia">Dia</th>
+                              <th>Exercício</th>
+                              <th>Séries</th>
+                              <th>Repetições</th>
+                              <th>Aparelho</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Posterior da Coxa</td>
+                              <td>3 séries </td>
+                              <td>15 repetições</td>
+                              <td>Mesa Flexora</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Puxada de Triceps</td>
+                              <td>3 séries</td>
+                              <td>12 repetições</td>
+                              <td>Carretilha</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Supino com Barra</td>
+                              <td>3 séries</td>
+                              <td>15 repetições</td>
+                              <td>Prancha</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Cárdio</td>
+                              <td>1500m</td>
+                              <td>10km/h</td>
+                              <td>Esteira</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Adutor</td>
+                              <td>3 séries</td>
+                              <td>15 repetições</td>
+                              <td>Cadeira Adutora</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+             </div>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
