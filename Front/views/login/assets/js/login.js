@@ -15,10 +15,14 @@ login.addEventListener("click", async function login(){
     const tipo = JSON.stringify(response.data.tipo);
     console.log(tipo);
 
+
+    
+    const jubileu = document.querySelector(".cliente");
+    const vnne = document.querySelector(".usuario");
     if(tipo == 1){
-        
+        jubileu.classList.add("clienteLogado");       
     }
     if(tipo == 2){
-
+        vnne.classList.add("usuarioLogado");
     }
 });

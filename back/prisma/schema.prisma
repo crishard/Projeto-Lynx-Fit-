@@ -54,7 +54,6 @@ model Cliente{
   equipamentos Equipamento[]
   usuario Usuario[]
   treino Treino[]
-
   @@map("cliente")
 }
 model Medidas{
