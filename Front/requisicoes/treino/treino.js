@@ -1,12 +1,13 @@
 //capturando token
-const lim = localStorage.getItem('token');
-const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
+const pegaToken = localStorage.getItem('token');
+const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
-    headers: { Authorization: `Bearer ${bola}` }
+    headers: { Authorization: `Bearer ${token}` }
 }
 
 //capturando campos de input
-const nomeInput = document.getElementById("treino");
+const diaInput = document.getElementById("dia");
+const treinoInput = document.getElementById("treino");
 const seriesInput = document.getElementById("series");
 const repeticoesInput = document.getElementById("repeticoes");
 const nome_equipamentoInput = document.getElementById("nome_equipamento");
@@ -18,15 +19,22 @@ const cadastrar = document.getElementById("salvar");
 // criar treino
 cadastrar.addEventListener("click", ()=>{
   //capturando os valores
-  const nome = nomeInput.value;
-  const series = seriesInput.value;
-  const repeticoes = repeticoesInput.value;
-  const nome_equipamento = nome_equipamentoInput.value;
-  const nome_usuario = nome_usuarioInput.value;
+    const diaString =  diaInput.value;
+    const treino = treinoInput.value;
+    const seriesString = seriesInput.value;
+    const repeticoesString = repeticoesInput.value;
+    const nome_equipamento = nome_equipamentoInput.value;
+    const nome_usuario = nome_usuarioInput.value;
 
+    const dia = parseInt(diaString);
+    const series = parseInt(seriesString);
+    const repeticoes = parseInt(repeticoesString);
+
+    console.log(typeof(dia, series, repeticoes))
   //realizando os cadastro
     axios.post("http://localhost:3000/cliente/criar_treino", {
-        nome: nome, 
+        dia: dia,
+        treino: treino, 
         series: series,
         repeticoes: repeticoes,
         nome_equipamento: nome_equipamento,
@@ -36,9 +44,8 @@ cadastrar.addEventListener("click", ()=>{
     );    
 });
 
-
 //buscar treinos
-function getUsuarios() {
+function getTreino() {
     axios.get("http://localhost:3000/cliente/buscar_treino",
     config)
     .then(response => {
@@ -46,10 +53,12 @@ function getUsuarios() {
         show(data);
       })
 }
-getUsuarios();
+getTreino();
   
 function show(users){
+    console.log("mamao")
     for (use of users){
+        console.log(use)
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
             <td>${use.dia}</td>
