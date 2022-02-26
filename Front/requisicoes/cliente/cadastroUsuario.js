@@ -79,3 +79,24 @@ function show(users){
 //     })
 //     .catch(error => console.error(error));
 // });
+
+
+//pegando as informações do cliente
+function nomePerfil(){
+    axios.get("http://localhost:3000/buscar_cliente",
+    config)
+      .then(response => {
+        const data = response.data
+        mostraNome(data);
+      })
+}
+nomePerfil()
+
+//mostrando o nome na tela
+function mostraNome(user) {
+    let nome = '';
+
+    nome+= `${user.nome}`
+
+    document.getElementById("nome-perfil").innerHTML = nome;
+}
