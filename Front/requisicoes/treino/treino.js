@@ -4,17 +4,16 @@ const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
     headers: { Authorization: `Bearer ${token}` }
 }
-
 //capturando campos de input
 const diaInput = document.getElementById("dia");
 const treinoInput = document.getElementById("treino");
 const seriesInput = document.getElementById("series");
 const repeticoesInput = document.getElementById("repeticoes");
-const nome_equipamentoInput = document.getElementById("nome_equipamento");
-const nome_usuarioInput = document.getElementById("nome_usuario");
-
-
+const nome_equipamentoInput = document.getElementById("get-equipamentos");
+const nome_usuarioInput = document.getElementById("get-usuarios");
 const cadastrar = document.getElementById("salvar");
+const nome_usuario = nome_usuarioInput.value;
+console.log(nome_usuario);
 
 // criar treino
 cadastrar.addEventListener("click", ()=>{
@@ -25,12 +24,9 @@ cadastrar.addEventListener("click", ()=>{
     const repeticoesString = repeticoesInput.value;
     const nome_equipamento = nome_equipamentoInput.value;
     const nome_usuario = nome_usuarioInput.value;
-
     const dia = parseInt(diaString);
     const series = parseInt(seriesString);
     const repeticoes = parseInt(repeticoesString);
-
-    console.log(typeof(dia, series, repeticoes))
   //realizando os cadastro
     axios.post("http://localhost:3000/cliente/criar_treino", {
         dia: dia,
@@ -42,8 +38,8 @@ cadastrar.addEventListener("click", ()=>{
     }, 
     config
     );    
+    console.log(nome_usuario);
 });
-
 //buscar treinos
 function getTreino() {
     axios.get("http://localhost:3000/cliente/buscar_treino",
@@ -51,12 +47,12 @@ function getTreino() {
     .then(response => {
         const data = response.data
         show(data);
+        mostraOpcoes(data);
       })
 }
 getTreino();
-  
+//função pra imprimir a tabela
 function show(users){
-    console.log("mamao")
     for (use of users){
         console.log(use)
         const newRow = document.createElement('tr')
@@ -70,35 +66,71 @@ function show(users){
             `
             document.getElementById('mostrar').appendChild(newRow);
 }}
+//mostrar os usuarios na opition
+function mostraOpcoes(users2){
+  let usuario = "";
+
+  for(use2 of users2){
+      usuario += `<option value="${use2.id}">Dia: ${use2.dia}, Exercício: ${use2.treino}, Usuário: ${use2.nome_usuario}</option>`;
+  }
+  document.getElementById("excluirOp").innerHTML = usuario;
+}
+//apagar treino
+const deletar = document.getElementById('comfirmar-excluir');
+const treinoEscolhido = document.getElementById('excluirOp')
+
+deletar.addEventListener('click', ()=>{
+    const elemento = treinoEscolhido.value;
+
+    axios.delete("http://localhost:3000/cliente/deletar_treino/"+`${elemento}`, 
+    config)
+    .then(response => {
+        alert(JSON.stringify("Você apagou o Treino!"))
+    })
+    .catch(error => console.error(error));
+})
+
+//imprimindo select de usuarios
+function getUsuarios() {
+  axios.get("http://localhost:3000/cliente/buscar_usuario",
+  config)
+  .then(response => {
+      const data = response.data
+      mostrarUsuarios(data);
+    })
+}
+getUsuarios();
+
+function mostrarUsuarios(users2){
+  let usuario = "";
+
+  for(use2 of users2){
+      usuario += `<option value="${use2.nome}">${use2.nome}</option>`;
+  }
+  document.getElementById("get-usuarios").innerHTML = usuario;
+}
+//imprimindo select de equipamentos
+function getEquipamentos() {
+  axios.get("http://localhost:3000/cliente/buscar_equipamento",
+  config)
+  .then(response => {
+      const data = response.data
+      mostrarEquipamentos(data);
+    })
+}
+getEquipamentos();
+
+function mostrarEquipamentos(users3){
+  let usuario = "";
+
+  for(use3 of users3){
+      usuario += `<option value="${use3.nome_equipamento}">${use3.nome_equipamento}</option>`;
+  }
+  document.getElementById("get-equipamentos").innerHTML = usuario;
+}
 
 
-// //apagar treino
-// const deletar = document.getElementById('deletar');
-// deletar.addEventListener('click', ()=>{
-//     console.log('deu certo');
-//     axios.delete("http://localhost:3000/cliente/deletar_treino/:id")
-//     .then(response => {
-//         alert(JSON.stringify("Você apagou o equipamento!"))
-//     })
-//     .catch(error => console.error(error));
-// })
 
-// //atualizar treino
-// const atualizar = document.getElementById("editar"); 
-// atualizar.addEventListener('click', ()=> {
-//     axios.put("http://localhost:3000/cliente/atualizar_treino", {
-//         nome: nome, 
-//         series: series,
-//         repeticoes: repeticoes,
-//         nome_equipamento: nome_equipamento,
-//         nome_usuario: nome_usuario
-//     })
-//     .then(response => {
-//     alert(JSON.stringify(response.data))
-//     getUsers()
-//     })
-//     .catch(error => console.error(error));
-// });
 
 //pegando as informações do cliente
 function nomePerfil(){
@@ -110,7 +142,6 @@ function nomePerfil(){
     })
 }
 nomePerfil()
-
 //mostrando o nome na tela
 function mostraNome(user) {
   let nome = '';

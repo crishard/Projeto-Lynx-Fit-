@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
+    <link rel="stylesheet" href="./assets/css/personalizarTreinoModal/modal-excluir-treino.css">
     <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <script src="./assets/js/treino.js" defer></script>
     <title>Personalização de Treino - LYNX FIT</title>
@@ -43,6 +44,19 @@
         <div class="conteudo">
             <div class="personalizar">
                 <button type="button" class="button" id="personalizacao"><i id="personalizacao" class="far fa-edit"></i> Personalizar treino do aluno</button>
+
+                <button id="excluir-treino" class="button">Excluir treino</button>
+
+                <!-- modal de escluir -->
+            <div class="modal-excluir" id="excluir-modal">
+                <select id="excluirOp">
+
+                </select>
+                
+                <button id="comfirmar-excluir">Comfirmar</button>
+            </div>
+
+
                 <div class="modal" id="modal">
                     <div class="modal-content">
                         <header class="modal-header">
@@ -52,7 +66,9 @@
                         <div class="informacoes"> 
                             <div class="aluno">
                                 <p>Para qual aluno deseja personalizar um treino?</p>
-                                <input type="text" class="modal-field" placeholder="Nome do Aluno" id="nome_usuario">
+                                <select id="get-usuarios">
+
+                                </select>
                             </div>
                             <form class="modal-form">
                                 <p>Personalize o treino para o aluno desejado</p>
@@ -69,7 +85,9 @@
                                 <input type="text" class="modal-field" placeholder="Séries" id="series">
                                 <input type="text" class="modal-field" placeholder="Repetições" id="repeticoes">
                                 
-                                <input type="text" class="modal-field" placeholder="Nome do Equipamento" id="nome_equipamento">
+                                <select id="get-equipamentos">
+                                    
+                                </select>
                             </form>
                         </div>
                             <footer class="modal-footer">
@@ -104,5 +122,6 @@
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
     <script src="../../requisicoes/treino/treino.js"></script>
+    <script src="../../requisicoes/treino/modalTreino.js"></script>
 </body>
 </html>

@@ -35,6 +35,7 @@ function getUsuarios() {
       .then(response => {
         const data = response.data;
         show(data);
+        mostrarUsuarios(data);
       })
   }
 getUsuarios();
@@ -45,40 +46,64 @@ function show(users){
             newRow.innerHTML = `
                 <td>${use.nome}</td>
                 <td>${use.email}</td>
-                <td>
-                    <button type="button" class="button green" id="${use.id}">Editar</button>
-                    <button type="button" class="button red" id="${use.id}" >Excluir</button>
-                </td>
                 `
                 document.getElementById('mostrar').appendChild(newRow);
     }
 }
 
-// //apagar usuario
-// const deletar = document.getElementById('deletar');
-// deletar.addEventListener('click', ()=>{
-//     console.log('deu certo');
-//     axios.delete("http://localhost:3000/cliente/deletar_usuario/:id")
-//     .then(response => {
-//         alert(JSON.stringify("Você apagou o equipamento!"))
-//     })
-//     .catch(error => console.error(error));
-// })
+function mostrarUsuarios(users2){
+    console.log("balde");
+    let usuario = "";
 
-// //atualizar usuario
-// const atualizar = document.getElementById("editar"); 
-// atualizar.addEventListener('click', ()=> {
-//     axios.put("http://localhost:3000/cliente/atualizar_usuario", {
-//         nome: nome, 
-//         senha: senha,
-//         email: email
-//     })
-//     .then(response => {
-//     alert(JSON.stringify(response.data))
-//     getUsers()
-//     })
-//     .catch(error => console.error(error));
-// });
+    for(use2 of users2){
+        usuario += `<option value="${use2.id}">${use2.nome}</option>`;
+    }
+    document.getElementById("editarOp").innerHTML = usuario;
+    document.getElementById("excluirOp").innerHTML = usuario;
+}
+
+//apagar usuario
+const deletar = document.getElementById('comfirmar-excluir');
+const usuarioEscolhido = document.getElementById('excluirOp')
+
+deletar.addEventListener('click', ()=>{
+    const elemento = usuarioEscolhido.value;
+    console.log(elemento);
+    
+    axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`)
+    .then(response => {
+        alert(JSON.stringify("Usuário apagado, recarregue a página"))
+    })
+    .catch(error => console.error(error));
+
+})
+
+//atualizar usuario
+const atualizar = document.getElementById("comfirmar-editar");
+const usuarioatualiza = document.getElementById("editarOp");
+
+const novoNomeInput = document.getElementById("novo-nome");
+const novoEmailInput = document.getElementById("novo-email");
+const novaSenhaInput = document.getElementById("nova-senha");
+
+atualizar.addEventListener('click', ()=> {
+
+    const elemento = usuarioatualiza.value;
+    const novoNome = novoNomeInput.value;
+    const novoEmail = novoEmailInput.value;
+    const novaSenha = novaSenhaInput.value;
+
+    axios.put("http://localhost:3000/cliente/atualizar_usuario",{
+        id: elemento,
+        nome: novoNome, 
+        senha: novaSenha,
+        email: novoEmail
+    })
+    .then(response => {
+    alert(JSON.stringify("Usuário atualizado, recarregue a página"))
+    })
+    .catch(error => console.error(error));
+});
 
 
 //pegando as informações do cliente
