@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
+    <link rel="stylesheet" href="./assets/css/cadastroUsuario/modal-editar-excluir.css">
     <script src="./assets/js/cadastro.js" defer></script>
     <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <title>Cadastro de Alunos - LYNX FIT</title>
@@ -29,7 +30,7 @@
             <div>
                 <center>
                     <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
-                    <h2>JoãoLuiz</h2>
+                    <h2 id="nome-perfil"></h2>
                 </center>
             </div>
             <div class="links">
@@ -42,13 +43,39 @@
         </div>
         <div class="movimento"></div>
         <section class="cadastros">
+            <button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button>
+            <button id="editar">Editar</button>
+            <button id="excluir">Excluir</button>
+
+            <!-- modal de editar -->
+            <div class="modal-editar" id="editar-modal">
+                <select class="escolha" id="editarOp">
+
+                </select>
+
+                <input type="text" id="novo-nome">
+                <input type="text" id="novo-email">
+                <input type="text" id="nova-senha">
+                <button id="comfirmar-editar">Comfirmar</button>
+            </div>
+
+            <!-- modal de escluir -->
+            <div class="modal-excluir" id="excluir-modal">
+                <select class="escolha" id="excluirOp">
+
+                </select>
+                <button id="comfirmar-excluir">Comfirmar</button>
+            </div>
+            
+
+
+
             <h3 class="titulo">ALUNOS CADASTRADOS</h3>    
             <table class="records">
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th><button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button></th>
                         <div class="modal" id="modal">
                             <div class="modal-content">
                                 <header class="modal-header">
@@ -83,6 +110,7 @@
         <!-- <table id="mostrar"></table> -->
 </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>   
-    <script src="../../requisicoes/usuario/usuario.js"></script>
+    <script src="../../requisicoes/cliente/cadastroUsuario.js"></script>
+    <script src="../../requisicoes/cliente/modaisUsuario.js"></script>
 </body>
 </html>

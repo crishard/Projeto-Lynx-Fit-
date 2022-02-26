@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/modal/records.css">
 
     <!--ESTILIZAÇÃO JS-->
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d0399.js"></script>
     <script src="./assets/js/evolucao.js" defer></script>
 
@@ -68,116 +69,16 @@
                 <th>Aparelho</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Posterior da Coxa</td>
-                <td>3 séries </td>
-                <td>15 repetições</td>
-                <td>Mesa Flexora</td>
-              </tr>
-              <tr>
-                <td>Puxada de Triceps</td>
-                <td>3 séries</td>
-                <td>12 repetições</td>
-                <td>Carretilha</td>
-              </tr>
-              <tr>
-                <td>Supino com Barra</td>
-                <td>3 séries</td>
-                <td>15 repetições</td>
-                <td>Prancha</td>
-              </tr>
-              <tr>
-                <td>Cárdio</td>
-                <td>1500m</td>
-                <td>10km/h</td>
-                <td>Esteira</td>
-              </tr>
-              <tr>
-                <td>Adutor</td>
-                <td>3 séries</td>
-                <td>15 repetições</td>
-                <td>Cadeira Adutora</td>
-              </tr>
+            <tbody id="mostrar">
+             
             </tbody>
           </table>
         </section>
 
-    <!--CALENDARIO-->
-        <section class="calendario">
-          <div class="toolbar">
-             <div class="toggle">
-               <div class="toggle__option">Semana</div>
-               <div class="toggle__option toggle__option--selected">Mês</div>
-             </div>
-             <div class="current-month">Janeiro 2022</div>
-             <div class="search-input">
-               <input type="text" placeholder="Pesquisar">
-               <i class="fa fa-search"></i>
-             </div>
-           </div>
-           <div class="calendar">
-             <div class="calendar__header">
-               <div>Dom</div>
-               <div>Seg</div>
-               <div>Ter</div>
-               <div>Qua</div>
-               <div>Qui</div>
-               <div>Sex</div>
-               <div>Sab</div>
-             </div>
-             <div class="calendar__week">
-               <div class="calendar__day day">1</div>
-               <div class="calendar__day day">2</div>
-               <div class="calendar__day day">3</div>
-               <div class="calendar__day day">4</div>
-               <div class="calendar__day day">5</div>
-               <div class="calendar__day day">6</div>
-               <div class="calendar__day day">7</div>
-             </div>
-             <div class="calendar__week">
-               <div class="calendar__day day">8</div>
-               <div class="calendar__day day">9</div>
-               <div class="calendar__day day">10</div>
-               <div class="calendar__day day">11</div>
-               <div class="calendar__day day">12</div>
-               <div class="calendar__day day">13</div>
-               <div class="calendar__day day">14</div>
-             </div>
-             <div class="calendar__week">
-               <div class="calendar__day day">15</div>
-               <div class="calendar__day day">16</div>
-               <div class="calendar__day day">17</div>
-               <div class="calendar__day day">18</div>
-               <div class="calendar__day day">19</div>
-               <div class="calendar__day day">20</div>
-               <div class="calendar__day day">21</div>
-             </div>
-             <div class="calendar__week">
-               <div class="calendar__day day">22</div>
-               <div class="calendar__day day">23</div>
-               <div class="calendar__day day">24</div>
-               <div class="calendar__day day">25</div>
-               <div class="calendar__day day">26</div>
-               <div class="calendar__day day">27</div>
-               <div class="calendar__day day">28</div>
-             </div>
-             <div class="calendar__week">
-               <div class="calendar__day day">29</div>
-               <div class="calendar__day day">30</div>
-               <div class="calendar__day day">31</div>
-               <div class="calendar__day day">1</div>
-               <div class="calendar__day day">2</div>
-               <div class="calendar__day day">3</div>
-               <div class="calendar__day day">4</div>
-             </div>
-           </div>
-         </section>
-
     <!--CARDS-->
       <section class="informacoes">
         <div class="container01">
-          <h2 class="titulo-nivel-dois">Prévia dos próximos dias</h2>
+          <h2 class="titulo-nivel-dois">Dicas de dieta</h2>
           <div class="articulo-container">
             <div class="articulo">
               <i class="fas fa-heartbeat"></i>
@@ -202,5 +103,6 @@
     <!--RODAPE-->
     <!--JAVA SCRIPT-->
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+    <script src="../../requisicoes/usuario/rotinaUsuario.js"></script>
 </body>
 </html>

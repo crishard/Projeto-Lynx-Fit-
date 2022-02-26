@@ -1,14 +1,14 @@
 // capturando o token de autenticação
-const lim = localStorage.getItem('token');
-const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
+const pegaToken = localStorage.getItem('token');
+const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
-    headers: { Authorization: `Bearer ${bola}` }
+    headers: { Authorization: `Bearer ${token}` }
 }
 
 
 
-function getCliente() {
-    axios.get("http://localhost:3000/buscar_cliente",
+function getUsuario() {
+    axios.get("http://localhost:3000/usuario/dados",
     config)
       .then(response => {
         const data = response.data
@@ -17,18 +17,15 @@ function getCliente() {
       })
 }
 
-getCliente();
+getUsuario();
 
 function show(user) {
-    let cnpj = '';
     let nome = '';
     let email = '';
 
-    cnpj+= `${user.cnpj}`
     nome+= `${user.nome}`
     email+= `${user.email}`
 
-    document.getElementById("cnpj").innerHTML = cnpj;
     document.getElementById("nome").innerHTML = nome;
     document.getElementById("email").innerHTML = email;
 

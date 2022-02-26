@@ -1,8 +1,8 @@
 // capturando o token de autenticação
-const lim = localStorage.getItem('token');
-const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
+const pegaToken = localStorage.getItem('token');
+const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
-    headers: { Authorization: `Bearer ${bola}` }
+    headers: { Authorization: `Bearer ${token}` }
 }
 
 console.log(config);
@@ -12,8 +12,8 @@ function getEquipamentos() {
     config)
       .then(response => {
         const data = response.data
-        console.log(data);
         show(data);
+        // mostrarEquipamentos(data);
       })
 }
 getEquipamentos();
@@ -23,10 +23,6 @@ function show(users){
         const newRow = document.createElement('tr')
         newRow.innerHTML = `
             <td>${use.nome_equipamento}</td>
-            <td>
-                    <button type="button" class="button green" id="${use.id_equipamento}">Editar</button>
-                    <button type="button" class="button red" id="${use.id_equipamento}" >Excluir</button>
-            </td>
             `
             console.log(users)
         document.getElementById('mostrar').appendChild(newRow);
@@ -45,3 +41,49 @@ cadastrar.addEventListener("click", ()=>{
     config
     );    
 });
+
+//apagar equipamento
+const deletar = document.getElementById('comfirmar-excluir');
+const treinoEscolhido = document.getElementById('get-equipamentos')
+
+// deletar.addEventListener('click', ()=>{
+//     const elemento = treinoEscolhido.value;
+
+//     axios.delete("http://localhost:3000/cliente/deletar_equipamento/"+`${elemento}`, 
+//     config)
+//     .then(response => {
+//         alert(JSON.stringify("Você apagou o Equipamento!"))
+//     })
+//     .catch(error => console.error(error));
+// })
+
+//opitions do equipamentos para apagar
+function mostrarEquipamentos(users2){
+  let equipamentos = "";
+
+  for(use2 of users2){
+    equipamentos += `<option value="${use2.id_equipamento}">${use2.nome_equipamento}</option>`;
+  }
+  document.getElementById("get-equipamentos").innerHTML = equipamentos;
+}
+
+
+//pegando as informações do cliente
+function nomePerfil(){
+    axios.get("http://localhost:3000/buscar_cliente",
+    config)
+      .then(response => {
+        const data = response.data
+        mostraNome(data);
+      })
+}
+nomePerfil()
+
+//mostrando o nome na tela
+function mostraNome(user) {
+    let nome = '';
+
+    nome+= `${user.nome}`
+
+    document.getElementById("nome-perfil").innerHTML = nome;
+}
