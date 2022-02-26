@@ -13,7 +13,6 @@ const repeticoesInput = document.getElementById("repeticoes");
 const nome_equipamentoInput = document.getElementById("nome_equipamento");
 const nome_usuarioInput = document.getElementById("nome_usuario");
 
-
 const cadastrar = document.getElementById("salvar");
 
 // criar treino
@@ -25,7 +24,6 @@ cadastrar.addEventListener("click", ()=>{
     const repeticoesString = repeticoesInput.value;
     const nome_equipamento = nome_equipamentoInput.value;
     const nome_usuario = nome_usuarioInput.value;
-
     const dia = parseInt(diaString);
     const series = parseInt(seriesString);
     const repeticoes = parseInt(repeticoesString);
@@ -51,10 +49,12 @@ function getTreino() {
     .then(response => {
         const data = response.data
         show(data);
+        mostrarUsuarios(data);
       })
 }
 getTreino();
-  
+
+//função pra imprimir a tabela
 function show(users){
     console.log("mamao")
     for (use of users){
@@ -71,34 +71,33 @@ function show(users){
             document.getElementById('mostrar').appendChild(newRow);
 }}
 
+//mostrar os usuarios na opition
+function mostrarUsuarios(users2){
+  console.log("balde");
+  let usuario = "";
+
+  for(use2 of users2){
+      usuario += `<option value="${use2.id}">Dia: ${use2.dia}, Exercício: ${use2.treino}, Usuário: ${use2.nome_usuario}</option>`;
+  }
+  document.getElementById("excluirOp").innerHTML = usuario;
+}
+
 
 // //apagar treino
-// const deletar = document.getElementById('deletar');
-// deletar.addEventListener('click', ()=>{
-//     console.log('deu certo');
-//     axios.delete("http://localhost:3000/cliente/deletar_treino/:id")
-//     .then(response => {
-//         alert(JSON.stringify("Você apagou o equipamento!"))
-//     })
-//     .catch(error => console.error(error));
-// })
+const deletar = document.getElementById('comfirmar-excluir');
+const treinoEscolhido = document.getElementById('excluirOp')
 
-// //atualizar treino
-// const atualizar = document.getElementById("editar"); 
-// atualizar.addEventListener('click', ()=> {
-//     axios.put("http://localhost:3000/cliente/atualizar_treino", {
-//         nome: nome, 
-//         series: series,
-//         repeticoes: repeticoes,
-//         nome_equipamento: nome_equipamento,
-//         nome_usuario: nome_usuario
-//     })
-//     .then(response => {
-//     alert(JSON.stringify(response.data))
-//     getUsers()
-//     })
-//     .catch(error => console.error(error));
-// });
+deletar.addEventListener('click', ()=>{
+    const elemento = treinoEscolhido.value;
+
+    axios.delete("http://localhost:3000/cliente/deletar_treino/"+`${elemento}`, 
+    config)
+    .then(response => {
+        alert(JSON.stringify("Você apagou o Treino!"))
+    })
+    .catch(error => console.error(error));
+})
+
 
 //pegando as informações do cliente
 function nomePerfil(){

@@ -12,7 +12,6 @@ import { BuscarDadosUsuarioController} from "./modules/Usuario/BuscarDadosUsuari
 //treino
 import { CriarTreinoController } from "./modules/Treino/CriarTreino/CriarTreinoController";
 import { BuscarTreinoController } from "./modules/Treino/BuscarTreino/BuscarTreinoController";
-import { AtualizarTreinoController } from "./modules/Treino/AtualizarTreino/AtualizarTreinoController";
 import { DeletarTreinoController } from "./modules/Treino/DeletarTreino/DeletarTreinoController";
 import { BuscarTreinoUsuarioController } from "./modules/Treino/BuscarTreinoUsuario/BuscarTreinoUsuarioController";
 
@@ -27,7 +26,6 @@ import { ValidacaoClienteController } from "./modules/Login/LoginCliente/LoginCl
 //Equipamentos
 import { CriarEquipamentoController } from "./modules/Equipamentos/CriarEquipmento/CriarEquipamentController";
 import { BuscarEquipamentoController } from "./modules/Equipamentos/BuscarEquipamento/BuscarEquipamentoController";
-import { AtualizarEquipamentoController } from "./modules/Equipamentos/AtualizarEquipamento/AtualizarEquipamentoController";
 import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEquipamento/DeletarEquipamentoController";
 
 //Medidas
@@ -53,7 +51,6 @@ const buscarDadosUsuarioController = new BuscarDadosUsuarioController();
 //treino
 const createTreinoController = new CriarTreinoController();
 const findTeinoController = new BuscarTreinoController();
-const updateTreinoController = new AtualizarTreinoController();
 const deleteTreinoController = new DeletarTreinoController();
 const buscarTreinoUsuarioController = new BuscarTreinoUsuarioController();
 
@@ -67,7 +64,6 @@ const validacaoClienteController = new ValidacaoClienteController();
 //Equipamento
 const criarEquipamentoController = new CriarEquipamentoController();
 const buscarEquipamentoController = new BuscarEquipamentoController();
-const atualizarEquipamentoController = new AtualizarEquipamentoController();
 const deletarEquipamentoController = new DeletarEquipamentoController();
 
 //Medidas
@@ -92,7 +88,6 @@ routes.get("/usuario/dados", buscarDadosUsuarioController.handle);
 //treino
 routes.post("/cliente/criar_treino",AutenticacaoCliente,createTreinoController.handle);
 routes.get("/cliente/buscar_treino",AutenticacaoCliente ,findTeinoController.handle);
-routes.put("/cliente/atualizar_treino", AutenticacaoCliente, updateTreinoController.handle);
 routes.delete("/cliente/deletar_treino/:id",AutenticacaoCliente, deleteTreinoController.handle);
 routes.get("/treino_usuario/",AutenticacaoUsuario, buscarTreinoUsuarioController.handle);
 
@@ -106,7 +101,6 @@ routes.delete("/deletar_cliente/:id", deletarClienteController.handle);
 //Equipamentos
 routes.post("/cliente/criar_equipamento",AutenticacaoCliente,criarEquipamentoController.handle);
 routes.get("/cliente/buscar_equipamento",AutenticacaoCliente,buscarEquipamentoController.handle);
-routes.put("/cliente/atualizar_equipamento",AutenticacaoCliente,atualizarEquipamentoController.handle);
 routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente,deletarEquipamentoController.handle);
 
 //Medidas
