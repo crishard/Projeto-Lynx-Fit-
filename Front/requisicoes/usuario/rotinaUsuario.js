@@ -1,9 +1,9 @@
 // capturando o token de autenticação
 const pegaToken = localStorage.getItem('token');
-const RemoveAspas = lim.replace(/^"(.+(?="$))"$/, '$1');
+const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 
 const config = {
-    headers: { Authorization: `Bearer ${bola}` }
+    headers: { Authorization: `Bearer ${token}` }
 }
 
 function getRotina() {

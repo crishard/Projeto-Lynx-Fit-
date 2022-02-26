@@ -1,8 +1,8 @@
 // capturando o token de autenticação
-const lim = localStorage.getItem('token');
-const bola = lim.replace(/^"(.+(?="$))"$/, '$1');
+const pegaToken = localStorage.getItem('token');
+const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
-    headers: { Authorization: `Bearer ${bola}` }
+    headers: { Authorization: `Bearer ${token}` }
 }
 
 console.log(config);
