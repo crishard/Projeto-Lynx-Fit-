@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
-
     <!--ESTILIZAÇÃO JS-->
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d0399.js"></script>
     <script src="./assets/js/evolucao.js" defer></script>
 
@@ -61,16 +61,12 @@
             <table class="records">
                 <thead>
                     <tr>
-                        <th>Matricula:</th>
-                        <td>FIT12345</td>
-                    </tr>
-                    <tr>
                         <th>Nome:</th>
-                        <td>Alírio Scott Dygeras</td>
+                        <td id="nome"></td>
                     </tr>
                     <tr>
                         <th>E-mail:</th>
-                        <td>scotinbombado@linxfit.com.br</td>
+                        <td id="email"></td>
                     </tr>
                 </thead>
             </table>
@@ -84,31 +80,31 @@
             <thead>
                 <tr>
                     <th>Altura (cm):</th>
-                    <td>1,65cm</td>
+                    <td id="altura"></td>
                 </tr>
                 <tr>
                   <th>Busto (cm):</th>
-                  <td>cm</td>
+                  <td id="busto"></td>
                 </tr>
                 <tr>
                     <th>Cintura (cm):</th>
-                    <td>cm</td>
+                    <td id="cintura"></td>
                 </tr>
                 <tr>
                     <th>Gordura (%):</th>
-                    <td>25 %</td>
+                    <td id="gordura"></td>
                 </tr>
                 <tr>
                     <th>Peso (kg):</th>
-                    <td>68kg</td>
+                    <td id="peso"></td>
                 </tr>
                 <tr>
                     <th>Tórax (cm):</th>
-                    <td>cm</td>
+                    <td id="torax"></td>
                 </tr>
                 <tr>
                     <th>Quadril (cm):</th>
-                    <td>cm</td>
+                    <td id="quadril"></td>
                 </tr>
             </thead>
         </table>
@@ -140,5 +136,6 @@
     <footer></footer>
     <!--JAVA SCRIPT-->
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+    <script src="../../requisicoes/usuario/dadosUsuario.js"></script>
 </body>
 </html>
