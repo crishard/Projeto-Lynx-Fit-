@@ -1,0 +1,21 @@
+.modal-excluir{
+    display: none;
+}
+.modal-excluir select{
+    width: 500px;
+    height: 50px;
+    font-size: 1.4rem;
+}
+.excluir-ativado{
+    display: block;
+    position: absolute;
+    width: 700px;
+    margin-left: -500px;
+    height: 300px;
+    background: silver;
+    color: black;
+}
+.btn{
+    margin-left: 1100px;
+    margin-top: -450px;
+}
