@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
   <title>LYNX Fit</title>
 </head>
-<body>
+<body onload='document.cadastrarCliente.email.focus()'>
   <main class="principal">
     <div class="back">
       <div class="info">
@@ -21,10 +21,10 @@
       <h1 id="h1">Cadastre sua Empresa</h1>
       <div class="show">
         <div class="forms">
-          <form id="register-form" action="">
+          <form id="register-form" name= "cadastrarCliente" action="#">
             <div class="full-box">
               <label for="email">E-mail</label> <br>
-              <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate class="email">
+              <input type="text" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate class="email">
             </div>
             <div class="half-box spacing">
                 <label for="name">Nome</label> <br>
@@ -47,7 +47,7 @@
               <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
             </div> 
             <div class="full-box">
-              <input class="inc" id="cadastrar" type="submit">
+              <input class="inc" id="cadastrar" type="submit" onclick="ValidateEmail(document.cadastrarCliente.email)">
               <!-- <button class="inc"><a href="../login/login.html" style="color: white;">Realizar Login</a></button> -->
             </div>
           </form>
@@ -58,5 +58,6 @@
   </main>
   <!-- <script src="./assets/js/cadastro-cliente.js"></script> -->
   <script src="./assets/js/criarCliente.js"></script>
+  <script src="./assets/js/validarEmail.js"></script>
 </body>
 </html>
