@@ -8,14 +8,13 @@
     <!--ESTILIZAÇÃO CSS-->
     <link rel="stylesheet" href="./assets/css/dados.css" content="width-device-width, initial-scale-1.0">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
-    <link rel="stylesheet" href="./assets/css/modal/button.css">
+    <!-- <link rel="stylesheet" href="./assets/css/modal/button.css"> -->
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
     <!--ESTILIZAÇÃO JS-->
     <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d0399.js"></script>
-    <script src="./assets/js/evolucao.js" defer></script>
+    <script src="./assets/js/rotina.js" defer></script>
 
     <!--TITULO DA PAGINA-->
     <title>Dados Pessoais LYNX FIT</title>
@@ -40,7 +39,7 @@
             <div>
                 <center>
                     <img src="https://images.pexels.com/photos/7319297/pexels-photo-7319297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="imagem" alt="">
-                    <h2>Alírio Scott</h2>
+                    <h2 id="nome-perfil"></h2>
                 </center>
             </div>
             <div class="links">
@@ -48,7 +47,7 @@
                 <a href="./evolucao.html" class="home"><i class="fas fa-database"></i><span>Evolução</span></a>
                 <a href="./rotina.html" class="home"><i class="fas fa-dumbbell"></i><span>Rotina</span></a>
                 <a href="./dados.html" class="home"><i class="fas fa-user"></i><span>Meus Dados</span></a>
-                <a href="../login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+                <a href="../login/login.html" class="home" id="sair"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
             </div>
         </div>
 
@@ -92,7 +91,7 @@
                 </tr>
                 <tr>
                     <th>Gordura (%):</th>
-                    <td id="gordura"></td>
+                    <td id="p_gordura"></td>
                 </tr>
                 <tr>
                     <th>Peso (kg):</th>
@@ -116,16 +115,16 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form class="modal-form">
-                    <input type="text" class="modal-field" placeholder="Altura (cm)">
-                    <input type="text" class="modal-field" placeholder="Busto (cm)">
-                    <input type="text" class="modal-field" placeholder="Cintura (cm)">
-                    <input type="number" class="modal-field" placeholder="Gordura (cm)">
-                    <input type="text" class="modal-field" placeholder="Peso (cm)">
-                    <input type="text" class="modal-field" placeholder="Tórax (cm)">
-                    <input type="text" class="modal-field" placeholder="Quadril (cm)">
+                    <input type="text" class="modal-field" placeholder="Altura (cm)" id="alturaInput">
+                    <input type="text" class="modal-field" placeholder="Busto (cm)" id="bustoInput">
+                    <input type="text" class="modal-field" placeholder="Cintura (cm)" id="cinturaInput">
+                    <input type="text" class="modal-field" placeholder="Gordura (cm)" id="p_gorduraInput">
+                    <input type="text" class="modal-field" placeholder="Peso (cm)" id="pesoInput">
+                    <input type="text" class="modal-field" placeholder="Tórax (cm)" id="toraxInput">
+                    <input type="text" class="modal-field" placeholder="Quadril (cm)" id="quadrilInput">
                 </form>
                 <footer class="modal-footer">
-                    <button type="input" class="buttonSave">Salvar</button>
+                    <button type="input" class="buttonSave" id="salvar">Salvar</button>
                     <button type="input" class="buttonCancel">Cancelar</button>
                 </footer>
             </div>
@@ -137,5 +136,8 @@
     <!--JAVA SCRIPT-->
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
     <script src="../../requisicoes/usuario/dadosUsuario.js"></script>
+    <script src="../../requisicoes/mostraNome/mostraNome.js"></script>
+    <script src="../../requisicoes/usuario/medidasUsuario.js"></script>
+    <script src="../../requisicoes/logoff/logoff.js"></script>
 </body>
 </html>

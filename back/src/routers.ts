@@ -79,7 +79,6 @@ routes.get("/busca", buscarclientee.handle);
 
 //usuario
 routes.post("/cliente/criar_usuario",AutenticacaoCliente,criarUsuarioController.handle);
-// routes.post("/usuario/autenticar", validacaoUsuarioController.handle);
 routes.get("/cliente/buscar_usuario", AutenticacaoCliente, buscarUsuarioController.handle);
 routes.put("/cliente/atualizar_usuario", AutenticacaoCliente, atualizarUsuarioController.handle);
 routes.delete("/cliente/deletar_usuario/:id", AutenticacaoCliente, deletarUsuarioController.handle);
@@ -96,7 +95,6 @@ routes.post("/criar_cliente",createClienteController.handle);
 routes.get("/buscar_cliente",AutenticacaoCliente,buscarClienteController.handle);
 routes.put("/atualizar_cliente/:id", AutenticacaoCliente,atualizarClienteController.handle);
 routes.delete("/deletar_cliente/:id", AutenticacaoCliente,deletarClienteController.handle);
-// routes.post("/cliente/autenticar", validacaoClienteController.handle);
 
 //Equipamentos
 routes.post("/cliente/criar_equipamento",AutenticacaoCliente,criarEquipamentoController.handle);
