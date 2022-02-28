@@ -12,24 +12,53 @@ function getUsuario() {
     config)
       .then(response => {
         const data = response.data
-        const nomeElemento = data.nome;
-        console.log(nomeElemento);
+        mostrarUsuarios(data)
     })
-    axios.get("http://localhost:3000/treino_usuario/", 
-    config,
-    {nome_usuaio: nomeElemento}
-    )
-    .then(response, ()=>{
-        const data = response.data
-        console.log("bola")
-        // show(data);
-        console.log(data);
-    }
-    )
 
 }
-
 getUsuario();
+
+
+
+function mostrarUsuarios(users2){
+    let usuario = "";
+    usuario += `<option value="${users2.nome}" id="nomeUser">Mostrar Rotina</option> 
+    <option value="esconder" id="esconder">Esconder Rotina</option>`
+    document.getElementById("usuarioOp").innerHTML = usuario;
+}
+
+
+
+const vizualizar = document.getElementById('comfirmar');
+const usuarioEscolhido = document.getElementById('usuarioOp')
+
+vizualizar.addEventListener('click', ()=>{
+    const elemento = usuarioEscolhido.value;
+    const nome_usuario = elemento
+    
+    if(elemento != "esconder"){
+        console.log(nome_usuario);
+         
+        axios.get("http://localhost:3000/treino_usuario/"+`${nome_usuario}`)
+        .then(response => {
+            const data = response.data;
+            console.log(data);
+            // alert(JSON.stringify("Usuário apagado, recarregue a página"))
+        })
+        .catch(error => console.error(error));
+    }
+
+    if(elemento == "esconder"){
+        document.getElementById("mostrar").classList.add("tabela-desativada")
+    }
+
+})
+
+
+
+
+
+
 
 // function opitionEscondida(nome){
 //     let usuario = "";

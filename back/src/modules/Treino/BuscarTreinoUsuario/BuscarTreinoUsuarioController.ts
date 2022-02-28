@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 
 export class BuscarTreinoUsuarioController{
     async handle(req: Request, res: Response){
-        const {nome_usuario} = req.body;
+        const {nome_usuario} = req.params;
 
         const buscarTreinoUsuario = new BuscarTreinoUsuario();
 

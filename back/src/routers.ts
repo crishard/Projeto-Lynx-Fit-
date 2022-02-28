@@ -88,7 +88,7 @@ routes.get("/usuario/dados", AutenticacaoUsuario,buscarDadosUsuarioController.ha
 routes.post("/cliente/criar_treino",AutenticacaoCliente,createTreinoController.handle);
 routes.get("/cliente/buscar_treino",AutenticacaoCliente ,findTeinoController.handle);
 routes.delete("/cliente/deletar_treino/:id",AutenticacaoCliente, deleteTreinoController.handle);
-routes.get("/treino_usuario/",AutenticacaoUsuario, buscarTreinoUsuarioController.handle);
+routes.get("/treino_usuario/:nome_usuario", buscarTreinoUsuarioController.handle);
 
 // Cliente
 routes.post("/criar_cliente",createClienteController.handle);
