@@ -12,3 +12,7 @@ document.getElementById('cadastrarCliente')
 
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)
+const a = document.getElementById("modalClose");
+a.addEventListener('click', ()=>{
+    location.reload();
+})

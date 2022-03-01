@@ -52,9 +52,8 @@ deletar.addEventListener('click', ()=>{
     axios.delete("http://localhost:3000/cliente/deletar_equipamento/"+`${elemento}`, 
     config)
     .then(response => {
-        alert(JSON.stringify("Você apagou o Equipamento!"))
+      location.reload()
     })
-    .catch(error => console.error(error));
 })
 
 //opitions do equipamentos para apagar
