@@ -13,7 +13,6 @@ const nome_equipamentoInput = document.getElementById("get-equipamentos");
 const nome_usuarioInput = document.getElementById("get-usuarios");
 const cadastrar = document.getElementById("salvar");
 const nome_usuario = nome_usuarioInput.value;
-console.log(nome_usuario);
 
 // criar treino
 cadastrar.addEventListener("click", ()=>{
@@ -27,6 +26,9 @@ cadastrar.addEventListener("click", ()=>{
     const dia = parseInt(diaString);
     const series = parseInt(seriesString);
     const repeticoes = parseInt(repeticoesString);
+
+
+    console.log(dia, series, repeticoes, nome_usuario, nome_equipamento, treino);
   //realizando os cadastro
     axios.post("http://localhost:3000/cliente/criar_treino", {
         dia: dia,
@@ -40,6 +42,7 @@ cadastrar.addEventListener("click", ()=>{
     );    
     console.log(nome_usuario);
 });
+
 //buscar treinos
 function getTreino() {
     axios.get("http://localhost:3000/cliente/buscar_treino",
