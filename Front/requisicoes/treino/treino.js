@@ -39,8 +39,7 @@ cadastrar.addEventListener("click", ()=>{
         nome_usuario: nome_usuario
     }, 
     config
-    );    
-    console.log(nome_usuario);
+    );
 });
 
 //buscar treinos
@@ -87,10 +86,7 @@ deletar.addEventListener('click', ()=>{
 
     axios.delete("http://localhost:3000/cliente/deletar_treino/"+`${elemento}`, 
     config)
-    .then(response => {
-        alert(JSON.stringify("Você apagou o Treino!"))
-    })
-    .catch(error => console.error(error));
+    location.reload();
 })
 
 //imprimindo select de usuarios
