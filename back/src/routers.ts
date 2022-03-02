@@ -18,7 +18,6 @@ import { BuscarTreinoUsuarioController } from "./modules/Treino/BuscarTreinoUsua
 import { CriarClienteController } from "./modules/Cliente/CriarCliente/CriarClienteController";
 import { BuscarClienteController } from "./modules/Cliente/BuscarCliente/BuscarClienteController";
 import { AtualizarClienteController } from "./modules/Cliente/AtualizarCliente/AtualizarClienteController";
-import { DeletarClienteController } from "./modules/Cliente/DeletarCliente/DeletarClienteController";
 import { AutenticacaoCliente } from "./middleware/AutenticacaoCliente";
 
 //Equipamentos
@@ -30,7 +29,7 @@ import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEqui
 import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas/AdicionarMedidasController";
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
-
+import {AtualizarMedidasController} from "./modules/Medidas/AtualizarMedidas/AtualizarMedidasController"
 //login
 import {LoginController} from "./modules/Login/LoginController"
 
@@ -54,7 +53,6 @@ const buscarTreinoUsuarioController = new BuscarTreinoUsuarioController();
 const createClienteController = new CriarClienteController();
 const buscarClienteController = new BuscarClienteController();
 const atualizarClienteController = new AtualizarClienteController();
-const deletarClienteController = new DeletarClienteController();
 
 //Equipamento
 const criarEquipamentoController = new CriarEquipamentoController();
@@ -64,12 +62,11 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 //Medidas
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
-
+const atualizarMedidasController = new AtualizarMedidasController();
 // login
 const login = new LoginController();
 
 //rotas
-
 //usuario
 routes.post("/cliente/criar_usuario",AutenticacaoCliente,criarUsuarioController.handle);
 routes.get("/cliente/buscar_usuario", AutenticacaoCliente, buscarUsuarioController.handle);
@@ -87,7 +84,6 @@ routes.get("/treino_usuario/:nome_usuario", buscarTreinoUsuarioController.handle
 routes.post("/criar_cliente",createClienteController.handle);
 routes.get("/buscar_cliente",AutenticacaoCliente,buscarClienteController.handle);
 routes.put("/atualizar_cliente/:id", AutenticacaoCliente,atualizarClienteController.handle);
-routes.delete("/deletar_cliente/:id", AutenticacaoCliente,deletarClienteController.handle);
 
 //Equipamentos
 routes.post("/cliente/criar_equipamento",AutenticacaoCliente,criarEquipamentoController.handle);
@@ -97,7 +93,9 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 //Medidas
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
 routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
-
+routes.put("/usuario/atualizar_medidas/:id", AutenticacaoUsuario,atualizarMedidasController.handle);
 //login 
 routes.post("/login", login.handle);
+
+
 export {routes};
