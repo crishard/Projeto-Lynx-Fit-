@@ -4,6 +4,8 @@ const emailinput = document.getElementById("email");
 const cnpjinput = document.getElementById("cnpj");
 const senhainput = document.getElementById("senha");
 const cadastrar = document.getElementById("cadastrar");
+const checkboxInput = document.getElementById("checkbox");
+
 
 //realizando o cadastro
 cadastrar.addEventListener('click', ()=> {
