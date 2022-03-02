@@ -29,7 +29,7 @@ import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEqui
 import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas/AdicionarMedidasController";
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
-
+import {AtualizarMedidasController} from "./modules/Medidas/AtualizarMedidas/AtualizarMedidasController"
 //login
 import {LoginController} from "./modules/Login/LoginController"
 
@@ -62,7 +62,7 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 //Medidas
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
-
+const atualizarMedidasController = new AtualizarMedidasController();
 // login
 const login = new LoginController();
 
@@ -93,7 +93,7 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 //Medidas
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
 routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
-
+routes.put("/usuario/atualizar_medidas/:id", AutenticacaoUsuario,atualizarMedidasController.handle);
 //login 
 routes.post("/login", login.handle);
 
