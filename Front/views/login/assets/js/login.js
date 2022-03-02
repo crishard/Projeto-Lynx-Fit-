@@ -9,20 +9,15 @@ login.addEventListener("click", async function login(){
         email: email,
         senha: senha
     });
-
-    console.log(response.data);
     localStorage.setItem("token", JSON.stringify(response.data.token));
     const tipo = JSON.stringify(response.data.tipo);
-    console.log(tipo);
 
-
-    
-    const jubileu = document.querySelector(".cliente");
-    const vnne = document.querySelector(".usuario");
+    const cliente = document.querySelector(".cliente");
+    const usuario = document.querySelector(".usuario");
     if(tipo == 1){
-        jubileu.classList.add("clienteLogado");       
+        cliente.classList.add("clienteLogado");       
     }
     if(tipo == 2){
-        vnne.classList.add("usuarioLogado");
+        usuario.classList.add("usuarioLogado");
     }
 });

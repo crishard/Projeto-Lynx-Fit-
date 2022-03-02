@@ -4,8 +4,6 @@ const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
 const config = {
     headers: { Authorization: `Bearer ${token}` }
 }
-console.log(config);
-
 function getUsuario() {
     axios.get("http://localhost:3000/usuario/dados",
     config)
