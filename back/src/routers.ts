@@ -31,7 +31,12 @@ import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
 
+
+//login
 import {LoginController} from "./modules/Login/LoginController"
+
+
+
 //metodos
 const routes = Router();
 
