@@ -69,7 +69,6 @@ const buscarMedidasController = new BuscarMedidasController();
 const login = new LoginController();
 
 //rotas
-
 //usuario
 routes.post("/cliente/criar_usuario",AutenticacaoCliente,criarUsuarioController.handle);
 routes.get("/cliente/buscar_usuario", AutenticacaoCliente, buscarUsuarioController.handle);
@@ -100,4 +99,6 @@ routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.
 
 //login 
 routes.post("/login", login.handle);
+
+
 export {routes};
