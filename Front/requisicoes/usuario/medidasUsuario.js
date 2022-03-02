@@ -71,6 +71,7 @@ salvar.addEventListener("click", ()=>{
     const altura = parseFloat(alturaStr);
 
     const a = document.getElementById('p_gordura').textContent;
+    const id_medida = document.getElementById('id_medida').textContent;
     if (a == ''){
     
     axios.post("http://localhost:3000/usuario/adicionar_medidas",
@@ -87,7 +88,7 @@ salvar.addEventListener("click", ()=>{
     location.reload();
   }
   else{
-    axios.put("http://localhost:3000/usuario/atualizar_medidas", 
+    axios.put("http://localhost:3000/usuario/atualizar_medidas/"+`${id_medida}`, 
     {
       torax: torax,
       busto: busto, 
