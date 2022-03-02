@@ -31,11 +31,8 @@ import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
 
-
 //login
 import {LoginController} from "./modules/Login/LoginController"
-
-
 
 //metodos
 const routes = Router();
@@ -68,9 +65,11 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
 
-
+// login
 const login = new LoginController();
-routes.post("/login", login.handle);
+
+
+
 //rotas
 
 //usuario
@@ -101,4 +100,6 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
 routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
 
+//login 
+routes.post("/login", login.handle);
 export {routes};
