@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
+    <link rel="stylesheet" href="./assets/css/modalEquipamento/modal-equipamento.css">
     <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
-    <script src="./assets/js/equipamentos.js" defer></script>
     <title>Cadastro de Equipamentos - LYNX FIT</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
                 <a href="./cadastrar-usuarios.html" class="home"><i class="fas fa-users"></i><span>Cadastro Usuários</span></a>
                 <a href="./personalizar-treino.html" class="home"><i class="fas fa-list-ul"></i></i><span>Treinos</span></a>
                 <a href="./dados-cliente.html" class="home"><i class="fas fa-database"></i><span>Meus Dados</span></a>
-                <a href="/src/views/login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+                <a href="../login/login.html" class="home" id="sair"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
             </div>
         </div>
         <div class="movimento"></div>
@@ -49,7 +49,9 @@
                         <button class="button" type="submit" id="salvar"><i class="far fa-save"></i></button>
                     </div>
                 </div>
-                
+                <div>
+                    
+                </div>
                 <div class="read">
                     <section class="cadastros">
                         <h3 class="titulo">EQUIPAMENTOS CADASTRADOS</h3>    
@@ -57,8 +59,6 @@
                             <thead>
                                 <tr>
                                     <th>Nome do Equipamento</th>
-                                    <th>Ação</th>
-
                                 </tr>
                             </thead>
                             <tbody id="mostrar">
@@ -72,7 +72,21 @@
         </div>
         </div>
     </main>
+
+    <div class="btn">
+        <button id="excluir-equipamento" class="button bip">Excluir equipamento</button>
+
+        <!-- modal de escluir -->
+        <div class="modal-excluir" id="excluir-modal">
+            <select id="excluirOp">
+
+            </select>
+            
+            <button id="comfirmar-excluir">Comfirmar</button>
+    </div>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
     <script src="../../requisicoes/equipamentos/equipamentos.js"></script>
+    <script src="../../requisicoes/equipamentos/modalEquipamentos.js"></script>
+    <script src="../../requisicoes/logoff/logoff.js"></script>
 </body>
 </html>

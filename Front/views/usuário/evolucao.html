@@ -8,15 +8,15 @@
     <!--ESTILIZAÇÃO CSS-->
     <link rel="stylesheet" href="./assets/css/evolucao.css" content="width-device-width, initial-scale-1.0">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
-    <link rel="stylesheet" href="./assets/css/modal/button.css">
+    <!-- <link rel="stylesheet" href="./assets/css/modal/button.css"> -->
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/modal.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
 
     <!--ESTILIZAÇÃO JS-->
-    <script src="https://kit.fontawesome.com/a076d0399.js"></script>
     <script src="./assets/js/evolucao.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+    <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script> 
     <!--TITULO DA PAGINA-->
     <title>Evolução LYNX FIT</title>
 </head>
@@ -40,7 +40,7 @@
             <div>
                 <center>
                     <img src="https://picsum.photos/70" class="imagem" alt="">
-                    <h2>Alírio Scott</h2>
+                    <h2 id="nome-perfil"></h2>
                 </center>
             </div>
             <div class="links">
@@ -48,7 +48,7 @@
                 <a href="./evolucao.html" class="home"><i class="fas fa-database"></i><span>Evolução</span></a>
                 <a href="./rotina.html" class="home"><i class="fas fa-dumbbell"></i><span>Rotina</span></a>
                 <a href="./dados.html" class="home"><i class="fas fa-user"></i><span>Meus Dados</span></a>
-                <a href="../login/login.html" class="home"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+                <a href="../login/login.html" class="home" id="sair"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
             </div>
         </div>
         <div class="movimento"></div>
@@ -100,5 +100,7 @@
         <!--RODAPE-->
         <!--JAVA SCRIPT-->
         <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
+        <script src="../../requisicoes/mostraNome/mostraNome.js"></script>
+        <script src="../../requisicoes/logoff/logoff.js"></script>
 </body>
 </html>
