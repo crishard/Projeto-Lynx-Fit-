@@ -13,14 +13,12 @@ function getCliente() {
         show(data);
       })
 }
-
 getCliente();
 
 function show(user) {
     let cnpj = '';
     let nome = '';
     let email = '';
-
     cnpj+= `${user.cnpj}`
     nome+= `${user.nome}`
     email+= `${user.email}`
@@ -29,7 +27,6 @@ function show(user) {
     document.getElementById("nome").innerHTML = nome;
     document.getElementById("email").innerHTML = email;
 }
-
 //pegando as informações do cliente
 function nomePerfil(){
   axios.get("http://localhost:3000/buscar_cliente",
@@ -40,12 +37,9 @@ function nomePerfil(){
     })
 }
 nomePerfil()
-
 //mostrando o nome na tela
 function mostraNome(user) {
   let nome = '';
-
   nome+= `${user.nome}`
-
   document.getElementById("nome-perfil").innerHTML = nome;
 }
