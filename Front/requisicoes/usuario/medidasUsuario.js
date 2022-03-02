@@ -24,8 +24,10 @@ function show5(use5) {
   let peso = '';
   let altura = '';
   let p_gordura = '';
+  let id_medida = '';
   
   for (use of use5){
+    id_medida +=`${use.id}`
     torax += `${use.torax}`
     busto+= `${use.busto}`
     cintura+= `${use.cintura}`
