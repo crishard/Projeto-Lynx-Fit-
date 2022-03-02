@@ -6,7 +6,6 @@ import { CriarUsuarioController } from "./modules/Usuario/CriarUsuario/CriarUsua
 import { BuscarUsuarioController } from "./modules/Usuario/BuscarUsuario/BuscarUsuarioController";
 import { AtualizarUsuarioController } from "./modules/Usuario/AtualizarUsuario/AtualizarUsuarioController";
 import { DeletarUsuarioController } from "./modules/Usuario/DeletarUsuario/DeletarUsuarioController";
-import { LoginUsuarioController} from "./modules/Login/LoginUsuario/LoginUsuarioController";
 import { BuscarDadosUsuarioController} from "./modules/Usuario/BuscarDadosUsuario/BuscarDadosUsuarioController";
 
 //treino
@@ -21,7 +20,6 @@ import { BuscarClienteController } from "./modules/Cliente/BuscarCliente/BuscarC
 import { AtualizarClienteController } from "./modules/Cliente/AtualizarCliente/AtualizarClienteController";
 import { DeletarClienteController } from "./modules/Cliente/DeletarCliente/DeletarClienteController";
 import { AutenticacaoCliente } from "./middleware/AutenticacaoCliente";
-import { ValidacaoClienteController } from "./modules/Login/LoginCliente/LoginClienteController";
 
 //Equipamentos
 import { CriarEquipamentoController } from "./modules/Equipamentos/CriarEquipmento/CriarEquipamentController";
@@ -33,10 +31,9 @@ import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
 
-
-
-import { BuscarClienteeController } from "./modules/Cliente/teste/verControl";
+//login
 import {LoginController} from "./modules/Login/LoginController"
+
 //metodos
 const routes = Router();
 
@@ -45,7 +42,6 @@ const criarUsuarioController = new CriarUsuarioController();
 const buscarUsuarioController = new BuscarUsuarioController();
 const atualizarUsuarioController = new AtualizarUsuarioController();
 const deletarUsuarioController = new DeletarUsuarioController();
-const validacaoUsuarioController = new LoginUsuarioController();
 const buscarDadosUsuarioController = new BuscarDadosUsuarioController();
 
 //treino
@@ -59,7 +55,6 @@ const createClienteController = new CriarClienteController();
 const buscarClienteController = new BuscarClienteController();
 const atualizarClienteController = new AtualizarClienteController();
 const deletarClienteController = new DeletarClienteController();
-const validacaoClienteController = new ValidacaoClienteController();
 
 //Equipamento
 const criarEquipamentoController = new CriarEquipamentoController();
@@ -70,11 +65,9 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
 
-
+// login
 const login = new LoginController();
-routes.post("/login", login.handle);
-const buscarclientee = new BuscarClienteeController();
-routes.get("/busca", buscarclientee.handle);
+
 //rotas
 
 //usuario
@@ -105,4 +98,6 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
 routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
 
+//login 
+routes.post("/login", login.handle);
 export {routes};

@@ -1,16 +1,14 @@
 //capturando token
-const pegaToken = localStorage.getItem('token');
-const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
-const config = {
-    headers: { Authorization: `Bearer ${token}` }
+const buscaToken = localStorage.getItem('token');
+const tokenn = buscaToken.replace(/^"(.+(?="$))"$/, '$1');
+const configu = {
+    headers: { Authorization: `Bearer ${tokenn}` }
 }
-
 //capturando campos de input
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
 const senhaInput = document.getElementById("senha");
 const salvar = document.getElementById("salvar");
-
 
 salvar.addEventListener("click", ()=>{
     //pegando os valores
@@ -24,19 +22,22 @@ salvar.addEventListener("click", ()=>{
         senha: senha,
         email: email
     }, 
-    config);
+    // location.reload();
+    configu)
+    .catch(function(error){
+        alert(JSON.stringify("Email ou Usuário já existente"))
+    })
+    
 });
-
-
 //buscar usuarios
 function getUsuarios() {
     axios.get("http://localhost:3000/cliente/buscar_usuario",
-    config)
-      .then(response => {
+    configu)
+    .then(response => {
         const data = response.data;
         show(data);
         mostrarUsuarios(data);
-      })
+    })
   }
 getUsuarios();
 
@@ -52,7 +53,6 @@ function show(users){
 }
 
 function mostrarUsuarios(users2){
-    console.log("balde");
     let usuario = "";
 
     for(use2 of users2){
@@ -68,13 +68,12 @@ const usuarioEscolhido = document.getElementById('excluirOp')
 
 deletar.addEventListener('click', ()=>{
     const elemento = usuarioEscolhido.value;
-    console.log(elemento);
     
-    axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`)
+    axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`, configu)
     .then(response => {
-        alert(JSON.stringify("Usuário apagado, recarregue a página"))
+        alert(JSON.stringify("Usuário apagado"))
     })
-    .catch(error => console.error(error));
+    location.reload();
 
 })
 
@@ -87,7 +86,6 @@ const novoEmailInput = document.getElementById("novo-email");
 const novaSenhaInput = document.getElementById("nova-senha");
 
 atualizar.addEventListener('click', ()=> {
-
     const elemento = usuarioatualiza.value;
     const novoNome = novoNomeInput.value;
     const novoEmail = novoEmailInput.value;
@@ -98,30 +96,23 @@ atualizar.addEventListener('click', ()=> {
         nome: novoNome, 
         senha: novaSenha,
         email: novoEmail
-    })
-    .then(response => {
-    alert(JSON.stringify("Usuário atualizado, recarregue a página"))
-    })
+    }, configu)
     .catch(error => console.error(error));
+    location.reload();
 });
-
-
 //pegando as informações do cliente
 function nomePerfil(){
     axios.get("http://localhost:3000/buscar_cliente",
-    config)
+    configu)
       .then(response => {
         const data = response.data
         mostraNome(data);
       })
 }
 nomePerfil()
-
 //mostrando o nome na tela
 function mostraNome(user) {
     let nome = '';
-
     nome+= `${user.nome}`
-
     document.getElementById("nome-perfil").innerHTML = nome;
 }

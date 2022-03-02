@@ -17,7 +17,6 @@ function getMedidas() {
 getMedidas();
 
 function show5(use5) {
-
   let torax = '';
   let busto = '';
   let cintura = '';
@@ -44,8 +43,6 @@ function show5(use5) {
   document.getElementById("p_gordura").innerHTML = p_gordura;
   document.getElementById("altura").innerHTML = altura;
 }
-
-
 //capturando campos de input
 const toraxInput = document.getElementById("toraxInput");
 const bustoInput = document.getElementById("bustoInput");
@@ -54,9 +51,7 @@ const p_gorduraInput = document.getElementById("p_gorduraInput");
 const quadrilInput = document.getElementById("quadrilInput");
 const pesoInput = document.getElementById("pesoInput");
 const alturaInput = document.getElementById("alturaInput");
-
 const salvar = document.getElementById("salvar");
-
 
 salvar.addEventListener("click", ()=>{
     //pegando os valores
@@ -75,7 +70,9 @@ salvar.addEventListener("click", ()=>{
     const peso = parseFloat(pesoStr);
     const altura = parseFloat(alturaStr);
 
-    // realizando o cadastro
+    const a = document.getElementById('p_gordura').textContent;
+    if (a == ''){
+    
     axios.post("http://localhost:3000/usuario/adicionar_medidas",
     {
       torax: torax, 
@@ -87,4 +84,19 @@ salvar.addEventListener("click", ()=>{
       altura: altura
     }, 
     permissao);
+    location.reload();
+  }
+  else{
+    axios.put("http://localhost:3000/usuario/atualizar_medidas", 
+    {
+      torax: torax,
+      busto: busto, 
+      cintura: cintura,
+      quadril: quadril,
+      peso: peso,
+      p_gordura: p_gordura,
+      altura: altura
+    }, permissao)
+    location.reload();
+  }
 });

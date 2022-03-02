@@ -12,6 +12,17 @@ interface ICriarUsuario {
     async execute({id_client,nome,senha ,email}: ICriarUsuario) {
       // validar o usuario existnte
       console.log(nome);
+      const NomeExiste = await prisma.usuario.findFirst({
+        where: {
+            nome: {
+            equals: nome,
+            mode: "insensitive",
+          },
+        },
+      });
+      if (NomeExiste) {
+        return new Error("Usuario já existe");
+      }
       const UsuarioExiste = await prisma.usuario.findFirst({
         where: {
             email: {
@@ -23,6 +34,7 @@ interface ICriarUsuario {
       if (UsuarioExiste) {
         return new Error("Usuario já existe");
       }
+    
       // criptografar a senha
       const hashPassword = await hash(senha, 10);
   
