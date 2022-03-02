@@ -13,7 +13,7 @@ function getEquipamentos() {
       .then(response => {
         const data = response.data
         show(data);
-        // mostrarEquipamentos(data);
+        mostrarEquipamentos(data);
       })
 }
 getEquipamentos();
@@ -44,18 +44,17 @@ cadastrar.addEventListener("click", ()=>{
 
 //apagar equipamento
 const deletar = document.getElementById('comfirmar-excluir');
-const treinoEscolhido = document.getElementById('get-equipamentos')
+const treinoEscolhido = document.getElementById('excluirOp')
 
-// deletar.addEventListener('click', ()=>{
-//     const elemento = treinoEscolhido.value;
+deletar.addEventListener('click', ()=>{
+    const elemento = treinoEscolhido.value;
 
-//     axios.delete("http://localhost:3000/cliente/deletar_equipamento/"+`${elemento}`, 
-//     config)
-//     .then(response => {
-//         alert(JSON.stringify("Você apagou o Equipamento!"))
-//     })
-//     .catch(error => console.error(error));
-// })
+    axios.delete("http://localhost:3000/cliente/deletar_equipamento/"+`${elemento}`, 
+    config)
+    .then(response => {
+      location.reload()
+    })
+})
 
 //opitions do equipamentos para apagar
 function mostrarEquipamentos(users2){
@@ -64,7 +63,7 @@ function mostrarEquipamentos(users2){
   for(use2 of users2){
     equipamentos += `<option value="${use2.id_equipamento}">${use2.nome_equipamento}</option>`;
   }
-  document.getElementById("get-equipamentos").innerHTML = equipamentos;
+  document.getElementById("excluirOp").innerHTML = equipamentos;
 }
 
 

@@ -1,8 +1,8 @@
 //capturando token
-const pegaToken = localStorage.getItem('token');
-const token = pegaToken.replace(/^"(.+(?="$))"$/, '$1');
-const config = {
-    headers: { Authorization: `Bearer ${token}` }
+const buscaToken = localStorage.getItem('token');
+const tokenn = buscaToken.replace(/^"(.+(?="$))"$/, '$1');
+const configu = {
+    headers: { Authorization: `Bearer ${tokenn}` }
 }
 
 //capturando campos de input
@@ -24,19 +24,24 @@ salvar.addEventListener("click", ()=>{
         senha: senha,
         email: email
     }, 
-    config);
+    // location.reload();
+    configu)
+    .catch(function(error){
+        alert(JSON.stringify("Email ou Usuário já existente"))
+    })
+    
 });
 
 
 //buscar usuarios
 function getUsuarios() {
     axios.get("http://localhost:3000/cliente/buscar_usuario",
-    config)
-      .then(response => {
+    configu)
+    .then(response => {
         const data = response.data;
         show(data);
         mostrarUsuarios(data);
-      })
+    })
   }
 getUsuarios();
 
@@ -52,7 +57,6 @@ function show(users){
 }
 
 function mostrarUsuarios(users2){
-    console.log("balde");
     let usuario = "";
 
     for(use2 of users2){
@@ -70,11 +74,12 @@ deletar.addEventListener('click', ()=>{
     const elemento = usuarioEscolhido.value;
     console.log(elemento);
     
-    axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`)
+    axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`, configu)
     .then(response => {
         alert(JSON.stringify("Usuário apagado, recarregue a página"))
     })
-    .catch(error => console.error(error));
+    // .catch(error => console.error(error));
+    location.reload();
 
 })
 
@@ -98,18 +103,16 @@ atualizar.addEventListener('click', ()=> {
         nome: novoNome, 
         senha: novaSenha,
         email: novoEmail
-    })
-    .then(response => {
-    alert(JSON.stringify("Usuário atualizado, recarregue a página"))
-    })
+    }, configu)
     .catch(error => console.error(error));
+    location.reload();
 });
 
 
 //pegando as informações do cliente
 function nomePerfil(){
     axios.get("http://localhost:3000/buscar_cliente",
-    config)
+    configu)
       .then(response => {
         const data = response.data
         mostraNome(data);

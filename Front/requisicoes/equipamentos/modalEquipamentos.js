@@ -1,4 +1,4 @@
-const excluir = document.getElementById("excluir-treino");
+const excluir = document.getElementById("excluir-equipamento");
 
 excluir.addEventListener('click', ()=>{
     document.getElementById("excluir-modal").classList.add("excluir-ativado")
@@ -7,10 +7,5 @@ excluir.addEventListener('click', ()=>{
 
 const closeExcluir = document.getElementById("comfirmar-excluir");
 closeExcluir.addEventListener('click', ()=>{
-    document.getElementById("excluir-modal").classList.remove("excluir-ativado");
-})
-
-const a = document.getElementById("salvar")
-a.addEventListener("click", ()=>{
-    location.reload();
+    document.getElementById("excluir-modal").classList.remove("excluir-ativado")
 })
