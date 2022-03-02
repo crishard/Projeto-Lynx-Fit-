@@ -22,7 +22,6 @@ function show(users){
         newRow.innerHTML = `
             <td>${use.nome_equipamento}</td>
             `
-            console.log(users)
         document.getElementById('mostrar').appendChild(newRow);
 }}
 //criar equipamento

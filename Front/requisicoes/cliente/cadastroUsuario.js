@@ -71,7 +71,7 @@ deletar.addEventListener('click', ()=>{
     
     axios.delete("http://localhost:3000/cliente/deletar_usuario/"+`${elemento}`, configu)
     .then(response => {
-        alert(JSON.stringify("Usuário apagado, recarregue a página"))
+        alert(JSON.stringify("Usuário apagado"))
     })
     location.reload();
 
