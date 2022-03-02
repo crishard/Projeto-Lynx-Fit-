@@ -1,16 +1,15 @@
 
-function ValidateEmail(inputText){
+function validarEmail(inputTexto){
 
-    console.log("Validate")
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(inputText.value.match(mailformat)){
-        alert("Endereço de email válido!");
-        document.cadastrarCliente.email.focus();
+    var emailFormato = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(inputTexto.value.match(emailFormato)){
+        
+        cadastrarCliente.email.focus();
         return true;
     }
     else{
-        alert("Endereço de email inválido");
-        document.cadastrarCliente.email.focus();
+        
+        cadastrarCliente.email.focus();
         return false;
     }
 }
