@@ -9,6 +9,7 @@ const cadastrar = document.getElementById("cadastrar");
 cadastrar.addEventListener('click', ()=> {
   const nome = nomeinput.value;
   const email = emailinput.value;
+  const nome = nomeinput.value;
   const cnpj = cnpjinput.value;
   const senha = senhainput.value;
 
