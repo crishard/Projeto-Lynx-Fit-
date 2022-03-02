@@ -64,7 +64,7 @@ const deletarEquipamentoController = new DeletarEquipamentoController();
 //Medidas
 const adicionarMedidasController = new AdicionarMedidasController();
 const buscarMedidasController = new BuscarMedidasController();
-
+const atualizarMedidasController = new AtualizarMedidasController();
 // login
 const login = new LoginController();
 
