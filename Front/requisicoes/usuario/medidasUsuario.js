@@ -42,6 +42,7 @@ function show5(use5) {
   document.getElementById("peso").innerHTML = peso;
   document.getElementById("p_gordura").innerHTML = p_gordura;
   document.getElementById("altura").innerHTML = altura;
+  document.getElementById("id_medida").innerHTML = id_medida;
 }
 //capturando campos de input
 const toraxInput = document.getElementById("toraxInput");
