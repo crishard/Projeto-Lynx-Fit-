@@ -13,7 +13,6 @@ const nome_equipamentoInput = document.getElementById("get-equipamentos");
 const nome_usuarioInput = document.getElementById("get-usuarios");
 const cadastrar = document.getElementById("salvar");
 const nome_usuario = nome_usuarioInput.value;
-
 // criar treino
 cadastrar.addEventListener("click", ()=>{
   //capturando os valores
@@ -27,8 +26,6 @@ cadastrar.addEventListener("click", ()=>{
     const series = parseInt(seriesString);
     const repeticoes = parseInt(repeticoesString);
 
-
-    console.log(dia, series, repeticoes, nome_usuario, nome_equipamento, treino);
   //realizando os cadastro
     axios.post("http://localhost:3000/cliente/criar_treino", {
         dia: dia,
@@ -41,7 +38,6 @@ cadastrar.addEventListener("click", ()=>{
     config
     );
 });
-
 //buscar treinos
 function getTreino() {
     axios.get("http://localhost:3000/cliente/buscar_treino",
@@ -56,22 +52,20 @@ getTreino();
 //função pra imprimir a tabela
 function show(users){
     for (use of users){
-        console.log(use)
-        const newRow = document.createElement('tr')
-        newRow.innerHTML = `
-            <td>${use.dia}</td>
-            <td>${use.treino}</td>
-            <td>${use.series}</td>
-            <td>${use.repeticoes}</td>
-            <td>${use.nome_equipamento}</td>
-            <td>${use.nome_usuario}</td>
-            `
-            document.getElementById('mostrar').appendChild(newRow);
+      const newRow = document.createElement('tr')
+      newRow.innerHTML = `
+          <td>${use.dia}</td>
+          <td>${use.treino}</td>
+          <td>${use.series}</td>
+          <td>${use.repeticoes}</td>
+          <td>${use.nome_equipamento}</td>
+          <td>${use.nome_usuario}</td>
+          `
+          document.getElementById('mostrar').appendChild(newRow);
 }}
 //mostrar os usuarios na opition
 function mostraOpcoes(users2){
   let usuario = "";
-
   for(use2 of users2){
       usuario += `<option value="${use2.id}">Dia: ${use2.dia}, Exercício: ${use2.treino}, Usuário: ${use2.nome_usuario}</option>`;
   }
@@ -83,12 +77,10 @@ const treinoEscolhido = document.getElementById('excluirOp')
 
 deletar.addEventListener('click', ()=>{
     const elemento = treinoEscolhido.value;
-
     axios.delete("http://localhost:3000/cliente/deletar_treino/"+`${elemento}`, 
     config)
     location.reload();
 })
-
 //imprimindo select de usuarios
 function getUsuarios() {
   axios.get("http://localhost:3000/cliente/buscar_usuario",
@@ -102,7 +94,6 @@ getUsuarios();
 
 function mostrarUsuarios(users2){
   let usuario = "";
-
   for(use2 of users2){
       usuario += `<option value="${use2.nome}">${use2.nome}</option>`;
   }
@@ -121,16 +112,11 @@ getEquipamentos();
 
 function mostrarEquipamentos(users3){
   let usuario = "";
-
   for(use3 of users3){
       usuario += `<option value="${use3.nome_equipamento}">${use3.nome_equipamento}</option>`;
   }
   document.getElementById("get-equipamentos").innerHTML = usuario;
 }
-
-
-
-
 //pegando as informações do cliente
 function nomePerfil(){
   axios.get("http://localhost:3000/buscar_cliente",
@@ -144,8 +130,6 @@ nomePerfil()
 //mostrando o nome na tela
 function mostraNome(user) {
   let nome = '';
-
   nome+= `${user.nome}`
-
   document.getElementById("nome-perfil").innerHTML = nome;
 }
