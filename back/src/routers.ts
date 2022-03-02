@@ -97,7 +97,7 @@ routes.delete("/cliente/deletar_equipamento/:id_equipamento",AutenticacaoCliente
 //Medidas
 routes.post("/usuario/adicionar_medidas", AutenticacaoUsuario, adicionarMedidasController.handle);
 routes.get("/usuario/ver_medidas", AutenticacaoUsuario, buscarMedidasController.handle);
-
+routes.put("/usuario/atualizar_medidas/:id", AutenticacaoUsuario,atualizarMedidasController.handle);
 //login 
 routes.post("/login", login.handle);
 export {routes};
