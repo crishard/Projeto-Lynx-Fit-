@@ -165,6 +165,23 @@
     transition: color 0.2s;
   }
   
+  /*botões*/
+  .button{
+    margin-left: 10rem;
+    margin-top: -500px;
+    font-size: 20px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+  }
+
   @media screen and (min-width: 1400px) {
     .exercicios{
       background: var(--cor_principal);
