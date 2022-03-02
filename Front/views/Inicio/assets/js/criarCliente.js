@@ -23,3 +23,28 @@ cadastrar.addEventListener('click', ()=> {
     console.log(response);
   });
 });
+
+
+function validarNome(){
+
+  const nome = nomeinput.value;
+
+  if (nome == "") {
+    
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
+function validarCheckbox(){
+
+  if (checkboxInput.checked) {
+    
+    return true;
+  }
+  else{
+    return false;
+  }
+}
