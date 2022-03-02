@@ -30,7 +30,7 @@ import { DeletarEquipamentoController } from "./modules/Equipamentos/DeletarEqui
 import { AdicionarMedidasController } from "./modules/Medidas/AdicionarMedidadas/AdicionarMedidasController";
 import { BuscarMedidasController } from "./modules/Medidas/BuscarMedidas/BuscarMedidasController"
 import { AutenticacaoUsuario } from "./middleware/AutenticacaoUsuario";
-
+import {AtualizarMedidasController} from "./modules/Medidas/AtualizarMedidas/AtualizarMedidasController"
 //login
 import {LoginController} from "./modules/Login/LoginController"
 
