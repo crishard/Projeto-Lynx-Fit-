@@ -24,8 +24,10 @@ function show5(use5) {
   let peso = '';
   let altura = '';
   let p_gordura = '';
+  let id_medida = '';
   
   for (use of use5){
+    id_medida +=`${use.id}`
     torax += `${use.torax}`
     busto+= `${use.busto}`
     cintura+= `${use.cintura}`
@@ -42,6 +44,7 @@ function show5(use5) {
   document.getElementById("peso").innerHTML = peso;
   document.getElementById("p_gordura").innerHTML = p_gordura;
   document.getElementById("altura").innerHTML = altura;
+  document.getElementById("id_medida").innerHTML = id_medida;
 }
 //capturando campos de input
 const toraxInput = document.getElementById("toraxInput");
@@ -71,6 +74,7 @@ salvar.addEventListener("click", ()=>{
     const altura = parseFloat(alturaStr);
 
     const a = document.getElementById('p_gordura').textContent;
+    const id_medida = document.getElementById('id_medida').textContent;
     if (a == ''){
     
     axios.post("http://localhost:3000/usuario/adicionar_medidas",
@@ -87,7 +91,7 @@ salvar.addEventListener("click", ()=>{
     location.reload();
   }
   else{
-    axios.put("http://localhost:3000/usuario/atualizar_medidas", 
+    axios.put("http://localhost:3000/usuario/atualizar_medidas/"+`${id_medida}`, 
     {
       torax: torax,
       busto: busto, 
