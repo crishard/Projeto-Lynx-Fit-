@@ -50,15 +50,18 @@ cadastrar.addEventListener('click', ()=> {
   else{
     
     console.log(nome, email, cnpj, senha);
-  axios.post("http://localhost:3000/criar_cliente", {
-    nome: nome,
-    email: email,
-    cnpj: cnpj,
-    senha: senha
-  })
-  .then((response) => {
-    console.log(response);
-  });
+    axios.post("http://localhost:3000/criar_cliente", {
+      nome: nome,
+      email: email,
+      cnpj: cnpj,
+      senha: senha
+    })
+    .then((response) => {
+      console.log(response);
+    });
+  }
+
+
 });
 
 
