@@ -13,4 +13,3 @@ function validarEmail(inputTexto){
         return false;
     }
 }
-

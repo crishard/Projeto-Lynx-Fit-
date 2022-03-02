@@ -9,7 +9,6 @@ const checkboxInput = document.getElementById("checkbox");
 
 //realizando o cadastro
 cadastrar.addEventListener('click', ()=> {
-  const nome = nomeinput.value;
   const email = emailinput.value;
   const nome = nomeinput.value;
   const cnpj = cnpjinput.value;
