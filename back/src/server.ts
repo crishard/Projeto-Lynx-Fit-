@@ -8,16 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(routes);
-app.get("/", (req, res) => {
-  res.json([
-    {name: 'Paulo'},
-    {name: 'José'},
-    {name: 'José'},
-    {name: 'José'},
-    {name: 'José'},
-    {name: 'José'} 
-]);
-});
+app.get("/", (req, res) => {console.log("rodando")});
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {
       return res.status(400).json({ message: err.message });

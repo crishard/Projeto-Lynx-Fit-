@@ -68,8 +68,6 @@ const buscarMedidasController = new BuscarMedidasController();
 // login
 const login = new LoginController();
 
-
-
 //rotas
 
 //usuario
