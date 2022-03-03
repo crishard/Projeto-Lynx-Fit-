@@ -48,6 +48,7 @@ table{
 }
 @media(max-width:800px){
     .records{
+        width: 100%;
         border-spacing: 5px;
     }
     .records thead{
