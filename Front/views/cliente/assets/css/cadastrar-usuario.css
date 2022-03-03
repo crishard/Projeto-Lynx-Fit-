@@ -131,7 +131,7 @@ label #sidebar_btn1{
     box-shadow: 0px 0.8px 3px var(--cor_textos);
 }
 #editar{
-    color: var(--cor_textos);
+    color: var(--cor_principal);
 }
 #deletar{
     color: var(--cor_textos);
