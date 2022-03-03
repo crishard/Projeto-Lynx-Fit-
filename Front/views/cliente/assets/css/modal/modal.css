@@ -36,7 +36,7 @@
     display: fixed;
     flex-direction: column;
     gap:20px;
-    width: 65%;
+    width: 55%;
     height: 60%;
     margin: 15vh auto;
     padding-bottom: 20px;
@@ -70,6 +70,7 @@
     color: white;
 }
 .modal-form{
+    align-items: center;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -78,9 +79,8 @@
 }
 .modal-field{
     margin-top: 1rem;
-    margin-left: 4.5rem;
-    align-items: center;
-    width: 150px;
+    margin-left: 13rem;
+    width: 100px;
     height: 40px;
     outline-style: none;
     border-style: none;
