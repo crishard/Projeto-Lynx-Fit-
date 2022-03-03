@@ -290,6 +290,14 @@
     .exercicios{
       align-items: center;
       margin-top: -500px;
+      margin-left: 70px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 70px;
+      width: 70%;
+    }
+    .button{
       margin-left: 200px;
       width: 60%;
     }
