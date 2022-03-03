@@ -134,7 +134,7 @@ label #sidebar_btn1{
     color: var(--cor_principal);
 }
 #deletar{
-    color: var(--cor_textos);
+    color: var(--cor_principal);
 }
 .button{
     margin-top: auto;
