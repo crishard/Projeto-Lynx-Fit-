@@ -18,6 +18,7 @@ table{
 }
 .records{
     width: 100%;
+    margin-left: auto;
     user-select: none;
     text-align: center;
     color: black;
