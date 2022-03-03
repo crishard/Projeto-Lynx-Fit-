@@ -288,8 +288,8 @@
         width: 110%;
         margin-left: 100px;
       }
-      .dadosMedidas {
-        margin-left: 100px;
+      .button{
+        margin-left: -600px;
       }
     }
     @media screen and (max-width: 600px) {
