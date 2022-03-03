@@ -13,9 +13,12 @@
     background: silver;
     color: black;
 }
-
-.modal-editar button, .modal-excluir button{
-    width: 60px;
+.buttonSave{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 150px;
     height: 30px;
     display: inline-block;
     text-align: center;
