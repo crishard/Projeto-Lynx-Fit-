@@ -152,8 +152,8 @@ select:focus{
     background: rgba(0, 0, 170, 0.800);
     color: var(--cor_principal);
     cursor: pointer;
-    width: 80px;
-    height: 30px;
+    width: 300px;
+    height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 3px;
