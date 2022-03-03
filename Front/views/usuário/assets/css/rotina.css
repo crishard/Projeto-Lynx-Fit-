@@ -330,7 +330,7 @@
   @media screen and (max-width: 390px) {
     #check:checked ~ .conteudo .button{
       margin-left: 150px;
-  }
+    }
   @media screen and (max-width: 380px) {
     .calendar{
       margin-left: 100px;
