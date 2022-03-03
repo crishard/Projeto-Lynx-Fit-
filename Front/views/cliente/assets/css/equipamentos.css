@@ -181,7 +181,7 @@ select:focus{
 @media screen and (max-width:600px){
     .read{
         width: 90%;
-    }
+}
     .equipamentos input{
         width: 200px;
         font-size: 16px;
