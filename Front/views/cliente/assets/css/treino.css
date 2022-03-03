@@ -278,6 +278,7 @@ form{
     color: white;
 }
 .modal-form{
+    align-items: center;
     margin-top: auto;
     margin-left: 2rem;
 
