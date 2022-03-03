@@ -31,6 +31,10 @@ footer{
   display: block;
   margin-left: -150px;
   }
+  #check:checked ~ .conteudo .buttonAdd{
+    display: block;
+    margin-left: 74rem;
+    }
  .dados{
   background: var(--cor_principal);
   width: 75%;
