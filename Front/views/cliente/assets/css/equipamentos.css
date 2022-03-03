@@ -297,7 +297,7 @@ select:focus{
     .btn .button {
         margin-top: 2rem;
         margin-left: -27rem;
-}
+    }
 @media screen and (max-width: 410px){
   
     .equipamentos input{
