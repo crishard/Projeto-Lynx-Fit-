@@ -340,6 +340,8 @@
       margin-left: 50px;
       width: 70%;
     }
-.tabela-desativada{
-  display: none;
-}
+    .button{
+      margin-left: 150px;
+      position: relative;
+    }
+  }
