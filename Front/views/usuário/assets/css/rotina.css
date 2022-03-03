@@ -313,9 +313,8 @@
       width: 80%;
     }
     .informacoes{
-      align-items: center;
-      margin-left: 200px;
-      width: 60%;
+      margin-left: 50px;
+      width: 70%;
     }
   }
   @media screen and (max-width: 450px) {
