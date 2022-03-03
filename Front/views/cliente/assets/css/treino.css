@@ -132,9 +132,8 @@ a{
     margin-left: 325px;
 }
 .button{
-    margin-top: 1.5rem;
-    margin-left: 595px;
-    font-size: 22px;
+    margin-left: 2rem;
+    font-size: 25px;
     background: rgba(0, 0, 170, 0.800);
     color: var(--cor_principal);
     cursor: pointer;
