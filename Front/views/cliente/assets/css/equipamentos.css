@@ -177,7 +177,7 @@ select:focus{
     }
     .btn .button{
         margin-left: 30rem;
-}
+    }
 @media screen and (max-width:600px){
     .read{
         width: 90%;
