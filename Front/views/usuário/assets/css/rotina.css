@@ -23,6 +23,8 @@
   margin-left: 260px;
   margin-top: -550px;
   width: 75%;
+  height: 300px;
+  overflow-y: scroll;
 }
 .titulo{
   margin-top: 1.5rem;
