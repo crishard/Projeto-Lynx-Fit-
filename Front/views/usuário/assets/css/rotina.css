@@ -319,7 +319,7 @@
     .button{
       margin-left: 150px;
       position: relative;
-  }
+    }
   @media screen and (max-width: 450px) {
     .calendar{
       margin-left: 120px;
