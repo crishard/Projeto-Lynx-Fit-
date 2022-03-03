@@ -27,7 +27,7 @@
   overflow-y: scroll;
 }
 .titulo{
-  margin-top: 1.5rem;
+  margin-top: auto;
   padding: 5px 0px 5px 0px;
   text-align: center;
   font-size: 2rem;
