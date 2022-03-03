@@ -270,7 +270,8 @@ form{
     align-items: center;
     margin-top: auto;
     margin-left: 2rem;
-
+    font-size: 20px;
+    width: 100%;
 }
 .modal-field{
     margin-top: 1rem;
