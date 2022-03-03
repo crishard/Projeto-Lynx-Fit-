@@ -186,9 +186,21 @@ footer{
       margin-top: 5rem;
       width: 100%;
       }
-    .dadosMedidas {
-      margin-left: 150px;
-      margin-top: 3rem;
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -150px;
+      width: 100%;
+    }
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 500px;
+    }
+    .titulo{
+      font-size: 24px;
+    }
+    .titulodois{
+      font-size: 24px;
     }
   }
   @media screen and (max-width: 600px) {
