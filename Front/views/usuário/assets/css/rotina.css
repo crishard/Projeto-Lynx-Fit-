@@ -137,6 +137,9 @@
       margin-left: 230px;
       width: 85%;
     }
+    .button{
+      margin-left: 108rem;
+    }
     .articulo{
       background: var(--cor_principal);
       margin-bottom: 3rem;
