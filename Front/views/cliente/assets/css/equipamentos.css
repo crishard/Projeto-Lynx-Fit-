@@ -256,11 +256,35 @@ select:focus{
         margin-left: -30rem;
     }
     
-    .read{
-        width: 100%;
-        margin-left: 5px;
-        margin-right: 20px;
+}
+@media screen and (max-width: 673px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 150%;
     }
+    .conteudo{
+        margin-left: -290px;
+        width: 150%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 625px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 160%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 160%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
+    }
+}
     .equipamentos input{
         width: 200px;
         font-size: 16px;
