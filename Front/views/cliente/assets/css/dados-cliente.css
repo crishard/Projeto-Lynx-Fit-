@@ -320,11 +320,28 @@
       }
     }
     @media(max-width:440px){
-      .dados{
-        text-align: center;
-          align-items: center;
-          width: 65%;
+      .dados {
+        width: 180%;
+        margin-left: 100px;
       }
+      .button{
+        margin-left: -600px;
+      }
+  }
+  @media(max-width:390px){
+    .dados {
+      width: 210%;
+      margin-left: 100px;
+    }
+    .button{
+      margin-left: -600px;
+    }
+}
+@media(max-width:360px){
+  .dados {
+    width: 240%;
+    margin-left: 50px;
+  }
       .dadosMedidas{
         text-align: center;
           align-items: center;
