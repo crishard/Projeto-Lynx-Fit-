@@ -342,9 +342,7 @@
     width: 240%;
     margin-left: 50px;
   }
-      .dadosMedidas{
-        text-align: center;
-          align-items: center;
-          width: 65%;
-      }
+  .button{
+    margin-left: -600px;
   }
+}
