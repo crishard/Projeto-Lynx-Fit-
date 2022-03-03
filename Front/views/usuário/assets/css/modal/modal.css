@@ -128,6 +128,15 @@
         height: 80%;
     }
     .modal-field{
-        width:100%;
+        width: 80%;
+        margin-left: 2rem;
+        font-size: 10px;
+    }
+    .modal-header{
+        font-size: 0.5px;
+    }
+    .modal-footer{
+        margin-top: -0.5rem;
+        font-size: 10px;
     }
 }
