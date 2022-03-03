@@ -227,6 +227,17 @@
       margin-left: 180px;
       width: 70%;
     }
+    .button{
+      margin-left: 680px;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 881px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 120px;
+      width: 80%;
+    }
     .informacoes{
       margin-left: 150px;
       width: 70%;
