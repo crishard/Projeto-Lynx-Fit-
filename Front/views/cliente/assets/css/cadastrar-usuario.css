@@ -92,8 +92,9 @@ label #sidebar_btn1{
 .buttonAdd{
     margin-top: auto;
     margin-left: 800;
-    font-size: 20px;
-    background: var(--cor_principal);
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
     cursor: pointer;
     width: 170px;
     height: 35px;
