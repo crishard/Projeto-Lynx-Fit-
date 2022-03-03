@@ -245,7 +245,7 @@
     .button{
       margin-left: 590px;
       position: relative;
-  }
+    }
   @media screen and (max-width: 800px) {
     .exercicios{
       margin-top: -400px;
