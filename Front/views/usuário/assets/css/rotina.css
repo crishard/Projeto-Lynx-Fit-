@@ -216,7 +216,10 @@
       margin-left: 680px;
       position: relative;
     }
-    .calendar{
+  }
+  @media screen and (max-width: 900px) {
+    .exercicios{
+      margin-top: -500px;
       margin-left: 150px;
       width: 70%;
     }
