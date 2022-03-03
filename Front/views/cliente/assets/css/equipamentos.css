@@ -188,8 +188,56 @@ select:focus{
         margin-left: -100px;
         width: 100%;
     }
-    label #sidebar_btn{
-        display: none;
+     .conteudo{
+        display: block;
+        margin-left: -100px;
+        width: 100%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -15rem;
+    }
+}
+@media screen and (max-width:1081px){
+    #check:checked ~ .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -20rem;
+    }
+}
+@media screen and (max-width:1000px){
+    #check:checked ~ .conteudo{
+        margin-left: -180px;
+        width: 110%;
+    }
+    .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
+    }
+}
+@media screen and (max-width:830px){
+    #check:checked ~ .conteudo{
+        margin-left: -180px;
+        width: 115%;
+    }
+    .conteudo{
+        margin-left: -180px;
+        width: 115%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
     }
     
 }
