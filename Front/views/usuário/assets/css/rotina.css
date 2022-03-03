@@ -256,9 +256,23 @@
       margin-left: 100px;
       width: 80%;
     }
-    .calendar{
-      margin-left: 200px;
-      width: 65%;
+    .informacoes{
+      margin-left: 110px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 500px;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 690px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 400px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 80px;
+      width: 80%;
     }
     .informacoes{
       margin-left: 200px;
