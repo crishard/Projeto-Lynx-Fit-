@@ -331,11 +331,10 @@
     #check:checked ~ .conteudo .button{
       margin-left: 150px;
     }
-  @media screen and (max-width: 380px) {
-    .calendar{
-      margin-left: 100px;
-      width: 400px;
-      height: 550px;
+    .exercicios{
+      margin-top: -750px;
+      margin-left: 50px;
+      width: 80%;
     }
   }
 .tabela-desativada{
