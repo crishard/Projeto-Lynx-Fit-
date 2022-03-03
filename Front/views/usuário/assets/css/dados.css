@@ -152,12 +152,33 @@ footer{
     margin-top: 5rem;
     width: 100%;
     }
-  .dadosMedidas {
-    margin-left: 250px;
-    margin-top: -450px;
-    grid-template-columns: 200px 5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar content";
+    #check:checked ~ .conteudo .button{
+      margin-top: 2rem;
+    margin-left: 1000px;
+      }
+  .conteudo{
+    margin-top: 5rem;
+    width: 90%;
+  }
+  .buttonAdd{
+    margin-top: 2rem;
+    margin-left: 800px;
+  }
+}
+@media screen and (max-width: 860px) {
+  #check:checked ~ .conteudo{
+    margin-top: 5rem;
+    width: 100%;
+    }
+
+  .conteudo{
+    margin-top: 5rem;
+    margin-left: -150px;
+    width: 100%;
+  }
+  .buttonAdd{
+    margin-top: 2rem;
+    margin-left: 600px;
   }
 }
   @media screen and (max-width: 700px) {
