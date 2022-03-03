@@ -211,9 +211,9 @@
   color: var(--cor_principal);
 }
 .button{
-  margin-top: 1rem;
-  margin-left: 1rem;
-  font-size: 30px;
+  margin-top: auto;
+  margin-left: 2rem;
+  font-size: 25px;
   background: rgba(0, 0, 170, 0.800);
   color: var(--cor_secundaria);
   cursor: pointer;
