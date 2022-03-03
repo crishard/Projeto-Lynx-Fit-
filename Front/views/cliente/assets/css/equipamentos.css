@@ -299,7 +299,7 @@ select:focus{
         margin-left: -27rem;
     }
 @media screen and (max-width: 410px){
-  
+    
     .equipamentos input{
         width: 160px;
         font-size: 14px;
