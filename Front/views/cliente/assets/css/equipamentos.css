@@ -372,8 +372,10 @@ select:focus{
         margin-left: -30rem;
     }
 }
-    .equipamentos .cadastrar p, .equipamentos .apagar-editar p{
-        margin-bottom: 20px;
+@media screen and (max-width: 360px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 270%;
     }
     .equipamentos .apagar-editar p{
         margin-top: 15px;
