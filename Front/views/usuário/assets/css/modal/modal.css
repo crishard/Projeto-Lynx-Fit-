@@ -124,9 +124,8 @@
         width: 100%;
     }
     .modal-content{
-        margin:0;
-        width:100%;
-        position:fixed;
+        width: 80%;
+        height: 80%;
     }
     .modal-field{
         width:100%;
