@@ -147,14 +147,11 @@ footer{
     margin-left: 1680px;
   }
 }
- @media screen and (max-width: 1100px) {
-  .dados {
-    margin-left: 150px;
-    margin-top: -450px;
-    grid-template-columns: 200px 5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar content";
-  }
+ @media screen and (max-width: 1082px) {
+  #check:checked ~ .conteudo{
+    margin-top: 5rem;
+    width: 100%;
+    }
   .dadosMedidas {
     margin-left: 250px;
     margin-top: -450px;
