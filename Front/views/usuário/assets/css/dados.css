@@ -267,9 +267,7 @@ footer{
     .titulo{
       font-size: 22px;
     }
-    .dadosMedidas{
-      text-align: center;
-        align-items: center;
-        width: 65%;
+    .titulodois{
+      font-size: 22px;
     }
 }
