@@ -72,8 +72,8 @@ a{
     display: block;
     margin-left: -150px;
 }
-#check:checked ~ .conteudo .button{
-    margin-left: 730px;
+#check:checked ~ .conteudo .botoes{
+    margin-left: 460px;
 }
 .titulo{
     margin-top: 1.5rem;
