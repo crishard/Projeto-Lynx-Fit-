@@ -282,7 +282,11 @@
       margin-left: 400px;
       position: relative;
     }
-  @media screen and (max-width: 560px) {
+  }
+  @media screen and (max-width: 583px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 200px;
+    }
     .exercicios{
       align-items: center;
       margin-top: -500px;
