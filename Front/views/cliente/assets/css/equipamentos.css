@@ -285,10 +285,10 @@ select:focus{
         margin-left: -25rem;
     }
 }
-    .equipamentos input{
-        width: 200px;
-        font-size: 16px;
-        height: 18px;
+@media screen and (max-width: 580px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 170%;
     }
     .equipamentos p{
         font-size: 20px;
