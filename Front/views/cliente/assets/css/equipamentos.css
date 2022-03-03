@@ -241,8 +241,21 @@ select:focus{
     }
     
 }
-@media screen and (max-width: 480px){
-  
+@media screen and (max-width:785px){
+    #check:checked ~ .conteudo{
+        margin-left: -250px;
+        width: 150%;
+        height: 70%;
+    }
+    .conteudo{
+        margin-left: -250px;
+        width: 150%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+    
     .read{
         width: 100%;
         margin-left: 5px;
