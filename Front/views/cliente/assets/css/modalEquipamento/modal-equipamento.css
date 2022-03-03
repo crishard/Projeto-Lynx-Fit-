@@ -11,12 +11,48 @@
 }
 .excluir-ativado{
     display: block;
-    position: absolute;
-    width: 700px;
-    margin-left: -500px;
-    height: 300px;
-    background: silver;
-    color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: -14rem;
+    margin-left: auto;
+    background: #00000090;
+}
+.modal-contentt{
+    display: fixed;
+    flex-direction: column;
+    gap:20px;
+    width: 55%;
+    height: 50%;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+.buttonSave{
+    margin-top: auto;
+    font-size: 20px;
+    background: rgba(0, 0, 170,0.500);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+}
+.informacoesExcluir{
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-left: 9rem;
+    width: 100%;
+}
+.modal-footeer{
+    background-color: inherit;
+    text-align: center;
+    padding: 0 50px;
+    margin-top: 5rem;
 }
 .btn{
     margin-left: 1100px;
