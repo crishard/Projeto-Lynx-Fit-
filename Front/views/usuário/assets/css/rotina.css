@@ -212,10 +212,9 @@
       margin-left: 180px;
       width: 70%;
     }
-    .toggle{
-      align-items: center;
-      margin-left: -150px;
-      width: 150px;
+    .button{
+      margin-left: 680px;
+      position: relative;
     }
     .calendar{
       margin-left: 150px;
