@@ -107,6 +107,9 @@
   }
 
   @media screen and (min-width: 1400px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 111rem;
+    }
     .exercicios{
       background: var(--cor_principal);
       margin-left: 260px;
