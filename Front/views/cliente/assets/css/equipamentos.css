@@ -316,12 +316,62 @@ select:focus{
     }
     
 }
-@media screen and (max-width: 410px){
-  
-    .equipamentos .cadastrar, .equipamentos .apagar-editar{
-        align-items: center;
-        text-align: center;
+@media screen and (max-width: 485px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 200%;
     }
+    .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 485px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 450px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 210%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 210%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 400px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 230%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 230%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
     .equipamentos .cadastrar p, .equipamentos .apagar-editar p{
         margin-bottom: 20px;
     }
