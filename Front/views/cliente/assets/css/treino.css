@@ -127,6 +127,10 @@ a{
 .enter select option{
     font-size: 17px;
 }
+.botoes{
+    width: 700px;
+    margin-left: 325px;
+}
 .button{
     margin-top: 1.5rem;
     margin-left: 595px;
