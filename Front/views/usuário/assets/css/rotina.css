@@ -299,7 +299,7 @@
     }
     .button{
       margin-left: 200px;
-      width: 60%;
+      position: relative;
     }
     .calendar{
       margin-left: 150px;
