@@ -169,9 +169,11 @@ select:focus{
 }
 
 /* Responsividade */
-@media screen and (max-width:800px){
-    .read{
-        width: 80%;
+@media screen and (min-width:1400px){
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-left: -100px;
+        width: 100%;
     }
 }
 @media screen and (max-width:600px){
