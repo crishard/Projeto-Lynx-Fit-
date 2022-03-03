@@ -84,6 +84,11 @@ label #sidebar_btn1{
   }
 
 /*Botões*/
+.botoes{
+    width: 500px;
+    margin-left: 785px;
+    margin-top: -550px;
+}
 .buttonAdd{
     margin-top: auto;
     margin-left: 800;
