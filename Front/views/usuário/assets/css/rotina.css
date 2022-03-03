@@ -154,7 +154,57 @@
 
   @media screen and (max-width: 1082px) {
     .exercicios{
-      margin-top: -400px;
+      margin-top: -500px;
+      margin-left: 280px;
+      width: 70%;
+    }
+    .informacoes{
+      margin-left: 280px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 890px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 260px;
+      width: 70%;
+    }
+    .informacoes{
+      margin-left: 260px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 840px;
+    }
+  }
+
+  @media screen and (max-width: 1002px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 280px;
+      width: 70%;
+    }
+    .informacoes{
+      margin-left: 280px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 790px;
+    }
+  }
+  @media screen and (max-width: 999px) {
+    #check:checked ~ .conteudo{
+      display: block;
+      margin-left: auto;
+    }
+    #check:checked ~ .conteudo .button{
+      margin-left: 700px;
+    }
+    .exercicios{
+      margin-top: -500px;
       margin-left: 150px;
       width: 70%;
     }
