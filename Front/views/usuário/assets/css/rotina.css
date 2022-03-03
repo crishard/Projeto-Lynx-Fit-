@@ -169,8 +169,8 @@
   
   /*botões*/
   .button{
-    margin-left: 10rem;
-    margin-top: -500px;
+    margin-left: 70rem;
+    margin-top: 1rem;
     font-size: 20px;
     background: rgba(0, 0, 170, 0.800);
     color: var(--cor_principal);
