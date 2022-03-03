@@ -301,7 +301,10 @@
       margin-left: 200px;
       position: relative;
     }
-    .calendar{
+  }
+  
+  @media screen and (max-width: 430px) {
+    #check:checked ~ .conteudo .button{
       margin-left: 150px;
       width: 400px;
       height: 550px;
