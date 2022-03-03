@@ -204,8 +204,45 @@ footer{
     }
   }
   @media screen and (max-width: 600px) {
-    .dados {
-      margin-left: 100px;
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -150px;
+      width: 100%;
+    }
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 450px;
+    }
+    .titulo{
+      font-size: 22px;
+    }
+    .titulodois{
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      margin-left: -180px;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -180px;
+      width: 100%;
+    }
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 400px;
+    }
+    .titulo{
+      font-size: 22px;
     }
     .dadosMedidas {
       margin-left: 100px;
