@@ -306,8 +306,11 @@
   @media screen and (max-width: 430px) {
     #check:checked ~ .conteudo .button{
       margin-left: 150px;
-      width: 400px;
-      height: 550px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 50px;
+      width: 80%;
     }
     .informacoes{
       align-items: center;
