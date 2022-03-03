@@ -46,7 +46,7 @@ label #sidebar_btn1{
 .cadastros{
     background: var(--cor_principal);
     margin-left: 260px;
-    margin-top: -550px;
+    margin-top: 1rem;
     width: 75%;
 }
 .read{
