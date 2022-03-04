@@ -17,101 +17,25 @@
   display: block;
   margin-left: -150px;
 }
-
+#check:checked ~ .conteudo .button{
+  margin-left: 77rem;
+}
 .exercicios{
   background: var(--cor_principal);
   margin-left: 260px;
   margin-top: -550px;
   width: 75%;
+  height: 300px;
+  overflow-y: scroll;
 }
 .titulo{
-  margin-top: 1.5rem;
+  margin-top: auto;
   padding: 5px 0px 5px 0px;
   text-align: center;
   font-size: 2rem;
   color: var(--cor_principal);
   background-color: rgba(0, 0, 170, 0.800);
 }
- 
-/*Calendário*/
-
-.toolbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    margin-top: 3rem;
-    width: 75%;
-    margin-left: 260px;
-  }
-  .calendar{
-    margin-top: 1rem;
-    margin-left: 260px;
-    width: 75%;
-    background-color: white;
-    border: 1px solid #e1e1e1;
-  }
-  .calendar__week,.calendar__header {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);  
-  }
-  .calendar__week {
-    grid-auto-rows: 100px;
-    text-align: right;
-  }
-  .calendar__header {
-    grid-auto-rows: 50px;
-    align-items: center;
-    text-align: center;
-  }
-  .calendar__day {
-    padding: 16px;
-  }
-  
-  .calendar__header  div {
-    text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: bold;
-  }
-  
-  .calendar__day {
-    border-right: 1px solid #e1e1e1;
-    border-top: 1px solid #e1e1e1;
-  }
-  
-  .calendar__day:last-child {
-    border-right: 0;
-  }
-  
-  .toggle{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    font-size: 0.9em;
-  }
-  .toggle__option{
-    padding: 16px;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    text-transform: capitalize; 
-    cursor: pointer;
-  }
-  .toggle__option:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-  }
-  .toggle__option:last-child {
-      border-left: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-  }
-  .toggle__option--selected{
-    border-color: white;
-    background-color: white;
-    color: var(--red);
-    font-weight: 500;
-    box-shadow: 1px 2px 30px -5px var(--red);
-  }
 
   /*Cards*/ 
   .informacoes{
@@ -165,33 +89,41 @@
     transition: color 0.2s;
   }
   
+  /*botões*/
+  .button{
+    margin-left: 70rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0.8px 3px var(--cor_textos);
+  }
+
+/*Responsividade*/
   @media screen and (min-width: 1400px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 111rem;
+    }
     .exercicios{
       background: var(--cor_principal);
       margin-left: 260px;
       margin-top: -850px;
       width: 85%;
     }
-    .toolbar{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      margin-top: 3rem;
-      width: 85%;
-      margin-left: 260px;
-    }
-    .calendar{
-      margin-top: 1rem;
-      margin-left: 260px;
-      width: 85%;
-      background-color: white;
-      border: 1px solid #e1e1e1;
-    }
     .informacoes{
       margin-top: 3rem;
       margin-left: 230px;
       width: 85%;
+    }
+    .button{
+      margin-left: 108rem;
     }
     .articulo{
       background: var(--cor_principal);
@@ -207,71 +139,188 @@
 
   @media screen and (max-width: 1082px) {
     .exercicios{
-      margin-top: -400px;
-      margin-left: 150px;
-      width: 70%;
-    }
-    .toggle{
-      align-items: center;
-      margin-left: -150px;
-      width: 150px;
-    }
-    .calendar{
-      margin-left: 150px;
-      width: 70%;
-    }
-    .informacoes{
-      margin-left: 150px;
-      width: 70%;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    .exercicios{
-      margin-top: -400px;
-      margin-left: 200px;
-      width: 65%;
-    }
-    .calendar{
-      margin-left: 200px;
-      width: 65%;
-    }
-    .informacoes{
-      margin-left: 200px;
-      width: 65%;
-    }
-  }
-  @media screen and (max-width: 560px) {
-    .exercicios{
-      align-items: center;
       margin-top: -500px;
-      margin-left: 200px;
-      width: 60%;
-    }
-    .calendar{
-      margin-left: 150px;
-      width: 400px;
-      height: 550px;
+      margin-left: 280px;
+      width: 70%;
     }
     .informacoes{
-      align-items: center;
-      margin-left: 200px;
-      width: 60%;
+      margin-left: 280px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 890px;
     }
   }
-  @media screen and (max-width: 450px) {
-    .calendar{
+  @media screen and (max-width: 1050px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 260px;
+      width: 70%;
+    }
+    .informacoes{
+      margin-left: 260px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 840px;
+    }
+  }
+
+  @media screen and (max-width: 1002px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 280px;
+      width: 70%;
+    }
+    .informacoes{
+      margin-left: 280px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 790px;
+    }
+  }
+  @media screen and (max-width: 999px) {
+    #check:checked ~ .conteudo{
+      display: block;
+      margin-left: auto;
+    }
+    #check:checked ~ .conteudo .button{
+      margin-left: 700px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 150px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 180px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 680px;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 150px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 180px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 680px;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 881px) {
+    .exercicios{
+      margin-top: -500px;
       margin-left: 120px;
-      width: 400px;
-      height: 550px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 120px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 590px;
+      position: relative;
     }
   }
-  @media screen and (max-width: 380px) {
-    .calendar{
+  @media screen and (max-width: 740px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 500px;
+    }
+    .exercicios{
+      margin-top: -500px;
       margin-left: 100px;
-      width: 400px;
-      height: 550px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 110px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 500px;
+      position: relative;
     }
   }
-.tabela-desativada{
-  display: none;
-}
+  @media screen and (max-width: 690px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 400px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 80px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 90px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 400px;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 583px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 200px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 70px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 70px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 200px;
+      position: relative;
+    }
+  }
+  
+  @media screen and (max-width: 430px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 150px;
+    }
+    .exercicios{
+      margin-top: -500px;
+      margin-left: 50px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 50px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 150px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    #check:checked ~ .conteudo .button{
+      margin-left: 150px;
+    }
+    .exercicios{
+      margin-top: -750px;
+      margin-left: 50px;
+      width: 80%;
+    }
+    .informacoes{
+      margin-left: 50px;
+      width: 70%;
+    }
+    .button{
+      margin-left: 150px;
+      position: relative;
+    }
+  }

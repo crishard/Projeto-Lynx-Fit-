@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/treino.css">
     <link rel="stylesheet" href="./assets/css/modal/main.css">
     <link rel="stylesheet" href="./assets/css/modal/menu.css">
     <link rel="stylesheet" href="./assets/css/modal/records.css">
     <link rel="stylesheet" href="./assets/css/personalizarTreinoModal/modal-excluir-treino.css">
+    
+    <!-- JAVA SCRIPT -->
     <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
     <script src="./assets/js/treino.js" defer></script>
+
     <title>Personalização de Treino - LYNX FIT</title>
 </head>
 <body>
@@ -40,85 +45,94 @@
             </div>
         </div>
         <div class="movimento"></div>
-        <!-- formulario de treino -->
+    <!-- Formulario de treino -->
         <div class="conteudo">
             <div class="personalizar">
-                <button type="button" class="button" id="personalizacao"><i id="personalizacao" class="far fa-edit"></i> Personalizar treino do aluno</button>
-
-                <button id="excluir-treino" class="button">Excluir treino</button>
-
-                <!-- modal de escluir -->
+                <div class="botoes">
+                <button type="button" class="button" id="personalizacao"><i id="personalizacao" class="far fa-edit"></i> Personalizar treino</button>
+                <button class="button" id="excluir-treino"><i id="deletar" class="far fa-window-close"></i> Excluir treino</button>
+                </div>
+            <!-- Modal Excluir -->
             <div class="modal-excluir" id="excluir-modal">
-                <select id="excluirOp">
-
-                </select>
-                
-                <button id="comfirmar-excluir">Comfirmar</button>
+                <div class="modal-contentt">
+                    <header class="modal-header">
+                        <h2 class="tituloModal">Excluir Treino</h2>
+                        <span class="modal-close" id="modalClose2">&#10006;</span>
+                    </header>
+                    <div class="informacoesExcluir"> 
+                        <p>Selecione o treino que deseja excluir</p>
+                        <select class="modal-field" id="excluirOp">
+                            <option value="0">Selecionar treino</option>
+                        </select>
+                    </div>
+                    <footer class="modal-footeer">
+                        <button class="buttonSave" id="comfirmar-excluir">Confirmar</button>
+                    </footer>
+                </div>
             </div>
 
-
-                <div class="modal" id="modal">
-                    <div class="modal-content">
-                        <header class="modal-header">
-                            <h2 class="tituloModal">Alterar Equipamento Cadastrado</h2>
-                            <span class="modal-close" id="modalClose">&#10006;</span>
-                        </header>
-                        <div class="informacoes"> 
-                            <div class="aluno">
-                                <p>Para qual aluno deseja personalizar um treino?</p>
-                                <select id="get-usuarios">
-
-                                </select>
-                            </div>
-                            <form class="modal-form">
-                                <p>Personalize o treino para o aluno desejado</p>
-                                <select class="dias" id="dia">
-                                    <option value="0">Dia</option>
-                                    <option value="1">Segunda-feira</option>
-                                    <option value="2">Terça-feira</option>
-                                    <option value="3">Quarta-feira</option>
-                                    <option value="4">Quinta-feira</option>
-                                    <option value="5">Sexta-feira</option>
-                                    <option value="6">Sábado</option>
-                                </select>
-                                <input type="text" class="modal-field" placeholder="Exercício" id="treino">
-                                <input type="text" class="modal-field" placeholder="Séries" id="series">
-                                <input type="text" class="modal-field" placeholder="Repetições" id="repeticoes">
-                                
-                                <select id="get-equipamentos">
-                                    
-                                </select>
-                            </form>
+            <!--Modal Personalizar-->
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2 class="tituloModal">Alterar Equipamento Cadastrado</h2>
+                        <span class="modal-close" id="modalClose">&#10006;</span>
+                    </header>
+                    <div class="informacoes"> 
+                        <div class="aluno">
+                            <p>Para qual aluno deseja personalizar um treino?</p>
+                            <select class="selecoes modal-field" id="get-usuarios">
+                                <option value="0">Aluno</option>
+                            </select>
                         </div>
-                            <footer class="modal-footer">
-                                <button type="input" class="buttonSave" id="salvar">Salvar</button>
-                                <button type="input" class="buttonCancel">Cancelar</button>
-                            </footer>
+                        <form class="modal-form">
+                            <p>Personalize o treino para o aluno desejado</p>
+                            <select class="modal-field" id="dia">
+                                <option value="0">Dia</option>
+                                <option value="1">Segunda-feira</option>
+                                <option value="2">Terça-feira</option>
+                                <option value="3">Quarta-feira</option>
+                                <option value="4">Quinta-feira</option>
+                                <option value="5">Sexta-feira</option>
+                                <option value="6">Sábado</option>
+                            </select>
+                        
+                            <input type="text" class="modal-field" placeholder="Exercício" id="treino">
+                            <input type="text" class="modal-field" placeholder="Séries" id="series">
+                            <input type="text" class="modal-field" placeholder="Repetições" id="repeticoes">
+
+                            <select class="modal-field" id="get-equipamentos">
+                                <option value="0">Equipamento</option>
+                            </select>
+                        </form>
                     </div>
+                    <footer class="modal-footer">
+                        <button type="input" class="buttonSave" id="salvar">Salvar</button>
+                        <button type="input" class="buttonCancel">Cancelar</button>
+                    </footer>
                 </div>
-            
-                <div class="rotina">
-                    <section class="exercicios">
-                        <div>
-                        <table class="records">
-                          <h3 class="titulo">SUA ROTINA DE TREINOS</h3>
-                          <thead>
+            </div>
+
+            <div class="rotina">
+                <section class="exercicios">
+                    <table class="records">
+                        <h3 class="titulo">ROTINAS DE TREINOS DOS ALUNOS</h3>
+                        <thead>
                             <tr>
-                              <th class="dia">Dia</th>
-                              <th>Exercício</th>
-                              <th>Séries</th>
-                              <th>Repetições</th>
-                              <th>Aparelho</th>
-                              <th>Usuário</th>
+                                <th class="dia">Dia</th>
+                                <th>Exercício</th>
+                                <th>Séries</th>
+                                <th>Repetições</th>
+                                <th>Aparelho</th>
+                                <th>Usuário</th>
                             </tr>
-                          </thead>
-                          <tbody id="mostrar">
-                            
-                          </tbody>
-                        </table>
-                      </section>
-             </div>
-        </div>
+                        </thead>
+                        <tbody id="mostrar">
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>    
     </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>
     <script src="../../requisicoes/treino/treino.js"></script>

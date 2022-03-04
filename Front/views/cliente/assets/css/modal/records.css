@@ -14,10 +14,10 @@
   
 table{
     border: 1px solid rgb(0, 0, 170);
-    
 }
 .records{
     width: 100%;
+    margin-left: auto;
     user-select: none;
     text-align: center;
     color: black;
@@ -49,68 +49,22 @@ table{
 }
 @media(max-width:800px){
     .records{
+        width: 100%;
         border-spacing: 5px;
     }
-    .records thead{
-        display:none;
-    }
-    .records tr{
-        box-shadow: 0 1px 3px var(--cor_teciaria);
-    }
-    .records td:not(:first-child){
-        display:flex;
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-    .records td{
-        margin:10px 0;
-    }
-    .records tr:hover{
-        background-color: inherit;
-    }
-    .records th{
-        height: 30px;
-        background-color: #f2f2f2;
-        padding-left: 20px;
-        font-size: 1.2rem;    
-    }
+
 }
 
 @media(max-width:500px){
     .records{
+        width: 100%;
         border-spacing: 5px;
-    }
-    .records thead{
-        display:none;
-    }
-    .records tr{
-        box-shadow: 0 1px 3px var(--shadow-color);
-    }
-    .records td:not(:first-child){
-        display:flex;
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-    .records td{
-        margin:10px 0;
-        font-size: 12px;
-    }
-    .records tr:hover{
-        background-color: inherit;
-    }
-    .records th{
-        font-size: 12px;
     }
 }
 @media(max-width:400px){
-    .records th{
+    .records{
+        width: 100%;
+        border-spacing: 5px;
         font-size: 12px;
-        height: 20px;
-        background-color: #f2f2f2;
-        padding-left: 20px;
-        font-size: 1.2rem;    
-    }
-    .records td{
-        font-size: 10px;
     }
 }

@@ -31,6 +31,10 @@ footer{
   display: block;
   margin-left: -150px;
   }
+  #check:checked ~ .conteudo .buttonAdd{
+    display: block;
+    margin-left: 74rem;
+    }
  .dados{
   background: var(--cor_principal);
   width: 75%;
@@ -147,49 +151,127 @@ footer{
     margin-left: 1680px;
   }
 }
- @media screen and (max-width: 1100px) {
-  .dados {
-    margin-left: 150px;
-    margin-top: -450px;
-    grid-template-columns: 200px 5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar content";
+ @media screen and (max-width: 1082px) {
+  #check:checked ~ .conteudo{
+    margin-top: 5rem;
+    width: 100%;
+    }
+    #check:checked ~ .conteudo .button{
+      margin-top: 2rem;
+    margin-left: 1000px;
+      }
+  .conteudo{
+    margin-top: 5rem;
+    width: 90%;
   }
-  .dadosMedidas {
-    margin-left: 250px;
-    margin-top: -450px;
-    grid-template-columns: 200px 5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar content";
+  .buttonAdd{
+    margin-top: 2rem;
+    margin-left: 800px;
+  }
+}
+@media screen and (max-width: 860px) {
+  #check:checked ~ .conteudo{
+    margin-top: 5rem;
+    width: 100%;
+    }
+
+  .conteudo{
+    margin-top: 5rem;
+    margin-left: -150px;
+    width: 100%;
+  }
+  .buttonAdd{
+    margin-top: 2rem;
+    margin-left: 600px;
   }
 }
   @media screen and (max-width: 700px) {
-    .dados {
-      margin-left: 150px;
-      margin-top: -35rem;
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -150px;
+      width: 100%;
     }
-    .dadosMedidas {
-      margin-left: 150px;
-      margin-top: 3rem;
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 500px;
+    }
+    .titulo{
+      font-size: 24px;
+    }
+    .titulodois{
+      font-size: 24px;
     }
   }
   @media screen and (max-width: 600px) {
-    .dados {
-      margin-left: 100px;
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -150px;
+      width: 100%;
     }
-    .dadosMedidas {
-      margin-left: 100px;
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 450px;
+    }
+    .titulo{
+      font-size: 22px;
+    }
+    .titulodois{
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      margin-left: -180px;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -180px;
+      width: 100%;
+    }
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 400px;
+    }
+    .titulo{
+      font-size: 22px;
+    }
+    .titulodois{
+      font-size: 22px;
     }
   }
   @media(max-width:440px){
-    .dados{
-      text-align: center;
-        align-items: center;
-        width: 65%;
+    #check:checked ~ .conteudo{
+      margin-top: 5rem;
+      margin-left: -200px;
+      width: 100%;
+      }
+    
+    .conteudo{
+      margin-top: 5rem;
+      margin-left: -200px;
+      width: 100%;
     }
-    .dadosMedidas{
-      text-align: center;
-        align-items: center;
-        width: 65%;
+    .buttonAdd{
+      margin-top: 2rem;
+      margin-left: 300px;
+    }
+    .titulo{
+      font-size: 22px;
+    }
+    .titulodois{
+      font-size: 22px;
     }
 }
