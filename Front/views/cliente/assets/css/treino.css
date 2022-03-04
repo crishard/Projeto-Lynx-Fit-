@@ -346,7 +346,7 @@ form{
         width: 100%;
     }
     #check:checked ~ .conteudo .button{
-        margin-left: 1080px;
+        margin-left: 2rem;
     }
     .conteudo{
       width: 85%;
