@@ -106,6 +106,7 @@
     box-shadow: 0px 0.8px 3px var(--cor_textos);
   }
 
+/*Responsividade*/
   @media screen and (min-width: 1400px) {
     #check:checked ~ .conteudo .button{
       margin-left: 111rem;

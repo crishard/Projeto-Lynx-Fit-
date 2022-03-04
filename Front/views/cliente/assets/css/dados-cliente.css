@@ -164,7 +164,6 @@
 }
 
   /*BOTÕES*/
-  
 .buttonAdd{
   margin-top: auto;
   margin-left: 800;
@@ -236,7 +235,6 @@
     .dados{
       background: var(--cor_principal);
       width: 85%;
-      height: 210px;
       margin-top: -55rem;
       margin-left: 260px;
      }

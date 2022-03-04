@@ -224,8 +224,6 @@
         margin-left: 6rem;
         margin-top: 1rem;
     }
-    .modal.active{
-        top:0;
 }
 @media (max-width:390px){
     .modal-content{

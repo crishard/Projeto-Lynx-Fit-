@@ -178,9 +178,6 @@ select:focus{
     .btn .button{
         margin-left: 30rem;
     }
-@media screen and (max-width:600px){
-    .read{
-        width: 90%;
 }
 @media screen and (min-width:1082px){
     #check:checked ~ .conteudo{
@@ -298,7 +295,6 @@ select:focus{
         margin-top: 2rem;
         margin-left: -27rem;
     }
-@media screen and (max-width: 410px){
     
 }
 @media screen and (max-width: 510px){
