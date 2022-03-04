@@ -41,7 +41,7 @@ select:focus{
 .equipamentos{
     color: var(--cor_textos);
     margin-top: -85vh;
-    margin-left: 260px;
+    margin-left: 270px;
 }
 .cadastrar{
     margin-top: -500px;
