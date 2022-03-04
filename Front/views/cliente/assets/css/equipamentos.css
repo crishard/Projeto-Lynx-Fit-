@@ -33,7 +33,7 @@ select:focus{
 }
 
 /* parte da direita da pagina */
-#check:checked ~ .equipamentos{
+#check:checked ~ .conteudo{
     display: block;
     margin-top: -85vh;
     margin-left: 100px;
