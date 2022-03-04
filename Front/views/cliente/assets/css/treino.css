@@ -875,12 +875,10 @@ form{
             width: 85%;
             height: 70%;
         }
-
-     @media (max-width:480px){
-         .modal{
-             top:100%;
-             transition: all 1s ease;
-         }
+        .modal .modal-content{
+            width: 85%;
+            height: 90%;
+        }
          .modal.active{
              top:0;
          }
