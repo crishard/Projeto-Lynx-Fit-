@@ -36,7 +36,7 @@ select:focus{
 #check:checked ~ .conteudo{
     display: block;
     margin-top: -85vh;
-    margin-left: 100px;
+    margin-left: -10px;
 }
 .equipamentos{
     color: var(--cor_textos);
