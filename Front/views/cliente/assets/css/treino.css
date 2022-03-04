@@ -895,5 +895,15 @@ form{
         .modal-footer{
             margin-top: 1rem;
         }
-     
-  }
+        .modal-footer .buttonCancel{
+            font-size: 14px;
+            width: 80px;
+        }
+        .modal-footer .buttonSave{
+            font-size: 14px;
+            width: 80px;
+        }
+        .modal-header .tituloModal{
+            font-size: 15px;
+        }
+    }
