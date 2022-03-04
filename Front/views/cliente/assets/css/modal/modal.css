@@ -226,7 +226,7 @@
     }
     .modal.active{
         top:0;
-    }
+}
     .modal-content{
         margin:0;
         width:100%;
