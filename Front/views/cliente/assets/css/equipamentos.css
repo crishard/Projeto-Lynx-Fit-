@@ -33,15 +33,15 @@ select:focus{
 }
 
 /* parte da direita da pagina */
-#check:checked ~ .equipamentos{
+#check:checked ~ .conteudo{
     display: block;
     margin-top: -85vh;
-    margin-left: 100px;
+    margin-left: -10px;
 }
 .equipamentos{
     color: var(--cor_textos);
     margin-top: -85vh;
-    margin-left: 260px;
+    margin-left: 270px;
 }
 .cadastrar{
     margin-top: -500px;
@@ -53,7 +53,7 @@ select:focus{
 }
 .read{
     margin-top: 1rem;
-    width: 60%;
+    width: 86%;
     text-align: center;
 }
 
@@ -75,10 +75,12 @@ select:focus{
     background: var(--cor_principal);
     margin-left: 90px;
     margin-top: 2rem;
-    width: 950px;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
 }
 .titulo{
-    margin-top: 1.5rem;
+    margin-top: auto;
     padding: 5px 0px 5px 0px;
     text-align: center;
     font-size: 1.5rem;
@@ -143,16 +145,17 @@ select:focus{
     color: var(--cor_textos);
 }
 #deletar{
-    color: var(--cor_textos);
+    color: var(--cor_principal);
 }
+
 .button{
     margin-top: auto;
-    font-size: 16px;
-    background: var(--cor_principal);
-    color: var(--cor_secundaria);
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
     cursor: pointer;
-    width: 80px;
-    height: 30px;
+    width: 300px;
+    height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 3px;
@@ -166,64 +169,216 @@ select:focus{
 }
 
 /* Responsividade */
-@media screen and (max-width:800px){
-    .read{
-        width: 80%;
-    }
-}
-@media screen and (max-width:600px){
-    .read{
-        width: 90%;
-    }
-    .equipamentos input{
-        width: 200px;
-        font-size: 16px;
-        height: 18px;
-    }
-    label #sidebar_btn{
-        display: none;
-    }
-    
-}
-@media screen and (max-width: 480px){
-  
-    .read{
+@media screen and (min-width:1400px){
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-left: -100px;
         width: 100%;
-        margin-left: 5px;
-        margin-right: 20px;
     }
-    .equipamentos input{
-        width: 200px;
-        font-size: 16px;
-        height: 18px;
-    }
-    .equipamentos p{
-        font-size: 20px;
+    .btn .button{
+        margin-left: 30rem;
     }
 }
-@media screen and (max-width: 410px){
-  
-    .equipamentos input{
-        width: 160px;
-        font-size: 14px;
-        height: 16px;
-        margin-right: 10px;
+@media screen and (min-width:1082px){
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-left: -100px;
+        width: 100%;
+    }
+     .conteudo{
+        display: block;
+        margin-left: -100px;
+        width: 100%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -15rem;
+    }
+}
+@media screen and (max-width:1081px){
+    #check:checked ~ .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -20rem;
+    }
+}
+@media screen and (max-width:1000px){
+    #check:checked ~ .conteudo{
+        margin-left: -180px;
+        width: 110%;
+    }
+    .conteudo{
+        margin-left: -150px;
+        width: 110%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
+    }
+}
+@media screen and (max-width:830px){
+    #check:checked ~ .conteudo{
+        margin-left: -180px;
+        width: 115%;
+    }
+    .conteudo{
+        margin-left: -180px;
+        width: 115%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
     }
     
 }
-@media screen and (max-width: 410px){
-  
-    .equipamentos .cadastrar, .equipamentos .apagar-editar{
-        align-items: center;
-        text-align: center;
+@media screen and (max-width:785px){
+    #check:checked ~ .conteudo{
+        margin-left: -250px;
+        width: 150%;
+        height: 70%;
     }
-    .equipamentos .cadastrar p, .equipamentos .apagar-editar p{
-        margin-bottom: 20px;
+    .conteudo{
+        margin-left: -250px;
+        width: 150%;
     }
-    .equipamentos .apagar-editar p{
-        margin-top: 15px;
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
     }
-    .equipamentos input{
-        margin-bottom: 10px;
+    
+}
+@media screen and (max-width: 673px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 150%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 150%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 625px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 160%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 160%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -25rem;
+    }
+}
+@media screen and (max-width: 580px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 170%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 170%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -27rem;
+    }
+    
+}
+@media screen and (max-width: 510px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 195%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 180%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+    
+}
+@media screen and (max-width: 485px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 485px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 200%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 450px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 210%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 210%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 400px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 230%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 230%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
+    }
+}
+@media screen and (max-width: 360px){
+    #check:checked ~ .conteudo{
+        margin-left: -290px;
+        width: 270%;
+    }
+    .conteudo{
+        margin-left: -290px;
+        width: 270%;
+    }
+    .btn .button {
+        margin-top: 2rem;
+        margin-left: -30rem;
     }
 }

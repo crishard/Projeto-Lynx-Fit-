@@ -42,72 +42,88 @@
             </div>
         </div>
         <div class="movimento"></div>
-        <section class="cadastros">
-            <button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button>
-            <button id="editar">Editar</button>
-            <button id="excluir">Excluir</button>
-
-            <!-- modal de editar -->
-            <div class="modal-editar" id="editar-modal">
-                <select class="escolha" id="editarOp">
-
-                </select>
-
-                <input type="text" id="novo-nome">
-                <input type="text" id="novo-email">
-                <input type="text" id="nova-senha">
-                <button id="comfirmar-editar">Comfirmar</button>
+        <div class="conteudo">
+            <div class="botoes">
+                <button type="button" class="buttonAdd" id="cadastrarCliente">+ Adicionar Aluno</button>
+                <button class="button" id="editar">Editar</button>
+                <button class="button" id="excluir">Excluir</button>
             </div>
-
-            <!-- modal de escluir -->
-            <div class="modal-excluir" id="excluir-modal">
-                <select class="escolha" id="excluirOp">
-
-                </select>
-                <button id="comfirmar-excluir">Comfirmar</button>
-            </div>
-            
-
-
-
-            <h3 class="titulo">ALUNOS CADASTRADOS</h3>    
-            <table class="records">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <div class="modal" id="modal">
-                            <div class="modal-content">
-                                <header class="modal-header">
-                                    <h2 class="tituloModal">Adicione os dados do aluno</h2>
-                                    <span class="modal-close" id="modalClose">&#10006;</span>
-                                </header>
-                                <form class="modal-form">
-                                    <input type="text" class="modal-field" placeholder="Nome" id="nome">
-                                    <input type="text" class="modal-field" placeholder="Sobrenome">
-                                    <input type="email" class="modal-field" placeholder="E-mail" id="email">
-                                    <input type="password" class="modal-field" placeholder="Senha" id="senha">
-                                    <input type="password" class="modal-field" placeholder="Confirmação de Senha">
-                                    <div class="termos"> 
-                                        <input type="checkbox" name="agreement" id="agreement">
-                                        <label for="agreement" id="agreement-label" >Eu li e aceito os <a href="#">termos de uso</a></label>
-                                    </div>
-                                </form>
-                                <footer class="modal-footer">
-                                    <button  type="input" class="buttonSave" id="salvar">Salvar</button>
-                                    <button type="input" class="buttonCancel">Cancelar</button>
-                                </footer>
+            <section class="cadastros">
+    
+                <!-- modal de editar -->
+                <div class="modal-editar" id="editar-modal">
+                    <div class="modal-contenttt">
+                        <header class="modal-header">
+                            <h2 class="tituloModal">Editar dados do Aluno</h2>
+                            <span class="modal-close" id="modalClose2">&#10006;</span>
+                        </header>
+                        <form class="modal-form">
+                            <div class="informacoesEditar"> 
+                                <p>Selecione o Aluno que deseja alterar os dados</p>
+                                <select class="escolha" id="editarOp">
+                                    <option value="0">Selecionar</option>
+                                </select>
+                                <input type="text" class="modal-fieldd" id="novo-nome" placeholder="Novo Nome">
+                                <input type="text" class="modal-fieldd" id="novo-email" placeholder="Novo E-mail">
+                                <input type="text" class="modal-fieldd" id="nova-senha" placeholder="Nova Senha">
                             </div>
-                        </div>
-                    </tr>
-                </thead>
-                <tbody id="mostrar">
-                   
-                </tbody>
-            </table>
-        </section>
+                        </form>
+                        <footer class="modal-footeeer">
+                            <button class="buttonSavee" id="comfirmar-editar">Confirmar</button>
+                        </footer>
+                    </div>    
+                </div>
+    
+                  <!-- Modal Excluir -->
+                  <div class="modal-excluir" id="excluir-modal">
+                    <div class="modal-contentt">
+                        <header class="modal-header">
+                            <h2 class="tituloModal">Excluir Aluno</h2>
+                            <span class="modal-close" id="modalClose2">&#10006;</span>
+                        </header>
+                        <div class="informacoesExcluir"> 
+                                <p>Selecione o Aluno que deseja excluir</p>
+                                <select  id="excluirOp">
+                                    <option value="0">Selecionar usuário</option>
+                                </select>
+                            </div>
+                        <footer class="modal-footeer">
+                            <button class="buttonSave" id="comfirmar-excluir">Confirmar</button>
+                        </footer>
+                    </div>
+                </div>
+                <!-- Formulario -->
+                <h3 class="titulo">ALUNOS CADASTRADOS</h3>    
+                <table class="records">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <div class="modal" id="modal">
+                                <div class="modal-content">
+                                    <header class="modal-header">
+                                        <h2 class="tituloModal">Adicione os dados do aluno</h2>
+                                        <span class="modal-close" id="modalClose">&#10006;</span>
+                                    </header>
+                                    <form class="modal-form">
+                                        <input type="text" class="modal-field" placeholder="Nome" id="nome">
+                                        <input type="email" class="modal-field" placeholder="E-mail" id="email">
+                                        <input type="password" class="modal-field" placeholder="Senha" id="senha">
+                                    </form>
+                                    <footer class="modal-footer">
+                                        <button  type="input" class="buttonSave" id="salvar">Salvar</button>
+                                        <button type="input" class="buttonCancel">Cancelar</button>
+                                    </footer>
+                                </div>
+                            </div>
+                        </tr>
+                    </thead>
+                    <tbody id="mostrar">
+                    </tbody>
+                </table>
+            </section>
+        </div>        
 
-        <!-- <table id="mostrar"></table> -->
 </main>
     <script src="https://kit.fontawesome.com/02efa65f01.js" crossorigin="anonymous"></script>   
     <script src="../../requisicoes/cliente/cadastroUsuario.js"></script>

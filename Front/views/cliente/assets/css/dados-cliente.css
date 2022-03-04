@@ -132,7 +132,7 @@
   border-style: none;
   box-shadow: 0 0 2px black;
   padding: 0 2px;
-  font-size:12px;
+  font-size:18px;
 }
 .modal-field:focus{
   border: 2px solid rgba(0, 0, 170, 0.500);
@@ -211,13 +211,13 @@
   color: var(--cor_principal);
 }
 .button{
-  margin-top: 1rem;
-  margin-left: 1rem;
-  font-size: 30px;
+  margin-top: auto;
+  margin-left: 2rem;
+  font-size: 25px;
   background: rgba(0, 0, 170, 0.800);
   color: var(--cor_secundaria);
   cursor: pointer;
-  width: 100px;
+  width: 200px;
   height: 50px;
   display: inline-block;
   text-align: center;
@@ -235,45 +235,112 @@
     .dados{
       background: var(--cor_principal);
       width: 85%;
-      height: 210px;
       margin-top: -55rem;
       margin-left: 260px;
+     }
+     .button{
+       margin-left: 650px;
      }
   }
    @media screen and (max-width: 1100px) {
     .dados {
+      width: 80%;
       margin-left: 150px;
       margin-top: -450px;
       grid-template-columns: 200px 5fr;
       grid-template-rows: 1fr;
       grid-template-areas: "sidebar content";
     }
+    .button{
+      margin-left: -400px;
+    }
+  }
+  @media screen and (max-width: 872px) {
+    .dados {
+      width: 80%;
+      margin-left: 150px;
+      margin-top: -450px;
+      grid-template-columns: 200px 5fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "sidebar content";
+    }
+    .button{
+      margin-left: -500px;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .dados {
+      width: 100%;
+      margin-left: 150px;
+      margin-top: -450px;
+      grid-template-columns: 200px 5fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "sidebar content";
+    }
+    .button{
+      margin-left: -500px;
+    }
   }
     @media screen and (max-width: 700px) {
       .dados {
+        width: 110%;
         margin-left: 100px;
       }
-      .dadosMedidas {
-        margin-left: 100px;
+      .button{
+        margin-left: -600px;
       }
     }
     @media screen and (max-width: 600px) {
       .dados {
+        width: 130%;
         margin-left: 100px;
       }
-      .dadosMedidas {
+      .button{
+        margin-left: -600px;
+      }
+    }
+    @media screen and (max-width: 560px) {
+      .dados {
+        width: 140%;
         margin-left: 100px;
+      }
+      .button{
+        margin-left: -600px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .dados {
+        width: 150%;
+        margin-left: 100px;
+      }
+      .button{
+        margin-left: -600px;
       }
     }
     @media(max-width:440px){
-      .dados{
-        text-align: center;
-          align-items: center;
-          width: 65%;
+      .dados {
+        width: 180%;
+        margin-left: 100px;
       }
-      .dadosMedidas{
-        text-align: center;
-          align-items: center;
-          width: 65%;
+      .button{
+        margin-left: -600px;
       }
   }
+  @media(max-width:390px){
+    .dados {
+      width: 210%;
+      margin-left: 100px;
+    }
+    .button{
+      margin-left: -600px;
+    }
+}
+@media(max-width:360px){
+  .dados {
+    width: 240%;
+    margin-left: 50px;
+  }
+  .button{
+    margin-left: -600px;
+  }
+}

@@ -39,15 +39,17 @@ label #sidebar_btn1{
   }
 
   /* parte da direita da pagina */
-#check:checked ~ .cadastros{
+#check:checked ~ .conteudo{
     display: block;
-    margin-left: 150px;
+    margin-left: -150px;
 }
 .cadastros{
     background: var(--cor_principal);
     margin-left: 260px;
-    margin-top: -550px;
+    margin-top: 1rem;
     width: 75%;
+    height: 400px;
+    overflow-y: scroll;
 }
 .read{
     margin-top: 1rem;
@@ -75,7 +77,7 @@ label #sidebar_btn1{
     margin-bottom: 2rem;
 }
 .titulo{
-    margin-top: 1.5rem;
+    margin-top: auto;
     padding: 5px 0px 5px 0px;
     text-align: center;
     font-size: 1.5rem;
@@ -84,14 +86,20 @@ label #sidebar_btn1{
   }
 
 /*Botões*/
+.botoes{
+    width: 500px;
+    margin-left: 785px;
+    margin-top: -550px;
+}
 .buttonAdd{
     margin-top: auto;
     margin-left: 800;
-    font-size: 20px;
-    background: var(--cor_principal);
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
     cursor: pointer;
-    width: 170px;
-    height: 35px;
+    width: 190px;
+    height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 3px;
@@ -125,19 +133,19 @@ label #sidebar_btn1{
     box-shadow: 0px 0.8px 3px var(--cor_textos);
 }
 #editar{
-    color: var(--cor_textos);
+    color: var(--cor_principal);
 }
 #deletar{
-    color: var(--cor_textos);
+    color: var(--cor_principal);
 }
 .button{
     margin-top: auto;
-    font-size: 16px;
-    background: var(--cor_principal);
-    color: var(--cor_secundaria);
+    font-size: 22px;
+    background: rgba(0, 0, 170, 0.800);
+    color: var(--cor_principal);
     cursor: pointer;
-    width: 80px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 3px;
@@ -225,77 +233,179 @@ a{
 
 /* Responsividade do "molde" do cliente*/
 @media screen and (min-width: 1400px) {
-    #check:checked ~ .cadastros{
+    #check:checked ~ .conteudo{
         display: block;
+        margin-top: auto;
+        margin-left: -100px;
+    }
+    .botoes{
+        margin-left: 1300px;
         margin-top: -850px;
-        margin-left: 100px;
     }
     .cadastros{
         background: var(--cor_principal);
         margin-left: 260px;
-        margin-top: -850px;
+        margin-top: 1rem;
         width: 80%;
-        height: auto;
+        height: 500px;
+        overflow-y: scroll;
+    }
+    .titulo{
+        margin-top: auto;
     }
 }
-@media screen and (max-width:800px){
-    .read{
-        width: 80%;
+@media screen and (max-width: 1082px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-top: 3rem;
+        margin-left: -150px;
     }
-}
-@media screen and (max-width:600px){
-    .read{
-        width: 90%;
-    }
-    .cadastros input{
-        width: 200px;
-        font-size: 16px;
-        height: 18px;
-    }
-    label #sidebar_btn{
-        display: none;
-    }
-    
-}
-@media screen and (max-width: 480px){
-  
-    .read{
+    .conteudo{
+        margin-top: 3rem;
         width: 100%;
-        margin-left: 5px;
-        margin-right: 20px;
+        margin-left: -150px;
     }
-    .cadastros input{
-        width: 200px;
-        font-size: 16px;
-        height: 18px;
-    }
-    .cadastros p{
-        font-size: 20px;
+    .botoes{
+        margin-left: 500px;
     }
 }
-@media screen and (max-width: 410px){
-  
-    .cadastros input{
-        width: 160px;
-        font-size: 14px;
-        height: 16px;
-        margin-right: 10px;
+@media screen and (max-width: 990px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-top: 3rem;
+        margin-left: -150px;
     }
-    
+    .conteudo{
+        margin-top: 3rem;
+        width: 100%;
+        margin-left: -150px;
+    }
+    .botoes{
+        margin-left: 400px;
+    }
 }
-@media screen and (max-width: 410px){
-  
-    .cadastros .cadastrar, .cadastros .apagar-editar{
-        align-items: center;
-        text-align: center;
+@media screen and (max-width: 860px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-top: 3rem;
+        margin-left: -100px;
     }
-    .cadastros .cadastrar p, .cadastros .apagar-editar p{
-        margin-bottom: 20px;
+    .conteudo{
+        margin-top: 3rem;
+        width: 100%;
+        margin-left: -100px;
     }
-    .cadastros .apagar-editar p{
-        margin-top: 15px;
+    .botoes{
+        margin-left: 300px;
     }
-    .cadastros input{
-        margin-bottom: 10px;
+}
+@media screen and (max-width: 725px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-top: 3rem;
+        margin-left: -100px;
+    }
+    .conteudo{
+        margin-top: 3rem;
+        width: 100%;
+        margin-left: -100px;
+    }
+    .botoes{
+        margin-left: 250px;
+    }
+}
+@media screen and (max-width: 650px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        margin-top: 3rem;
+        margin-left: -150px;
+    }
+    .conteudo{
+        margin-top: 3rem;
+        width: 100%;
+        margin-left: -150px;
+    }
+    .botoes{
+        margin-left: 250px;
+    }
+    .botoes .button{
+        width: 100px;
+        font-size: 15px;
+    }
+    .botoes .buttonAdd{
+        width: 120px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        width: 130%;
+        margin-top: 3rem;
+        margin-left: -250px;
+    }
+    .conteudo{
+        margin-top: 3rem;
+        width: 130%;
+        margin-left: -250px;
+    }
+    .botoes{
+        margin-left: 260px;
+    }
+    .botoes .button{
+        width: 100px;
+        font-size: 15px;
+    }
+    .botoes .buttonAdd{
+        width: 120px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 450px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        width: 150%;
+        margin-top: 3rem;
+        margin-left: -220px;
+    }
+    .conteudo{
+        margin-top: 3rem;
+        width: 150%;
+        margin-left: -220px;
+    }
+    .botoes{
+        margin-left: 260px;
+    }
+    .botoes .button{
+        width: 100px;
+        font-size: 15px;
+    }
+    .botoes .buttonAdd{
+        width: 120px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 390px) {
+    #check:checked ~ .conteudo{
+        display: block;
+        width: 150%;
+        margin-top: 3rem;
+        margin-left: -230px;
+    }
+    .conteudo{
+        margin-top: 3rem;
+        width: 150%;
+        margin-left: -230px;
+    }
+    .botoes{
+        margin-left: 260px;
+    }
+    .botoes .button{
+        width: 100px;
+        font-size: 15px;
+    }
+    .botoes .buttonAdd{
+        width: 120px;
+        font-size: 15px;
     }
 }

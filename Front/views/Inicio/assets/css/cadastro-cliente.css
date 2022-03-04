@@ -106,7 +106,8 @@ input:focus {
     display: none;
 } 
 .inc{
-    width: 97%;
+    width: 200px;
+    margin-left: 2rem;
     background: var(--cor_secundaria);
     color: var(--cor_principal);
     display: inline-block;

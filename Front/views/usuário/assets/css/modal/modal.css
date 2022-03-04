@@ -94,22 +94,49 @@
     margin-left: 2.5rem;
 }
 
-
-
-@media (max-width:480px){
-    .modal{
-        top:100%;
-        transition: all 1s ease;
+@media (min-width:930px){
+    .modal-field{
+        width: 100%;
+        margin-left: 7rem;
+        font-size: 16px;
     }
-    .modal.active{
-        top:0;
+}
+@media (min-width:481px){
+    .modal{
+        width: 100%;
     }
     .modal-content{
-        margin:0;
-        width:100%;
-        position:fixed;
+        width: 80%;
+        height: 80%;
     }
     .modal-field{
-        width:100%;
+        width: 80%;
+        margin-left: 3rem;
+        font-size: 16px;
+    }
+    .modal-footer{
+        margin-top: -0.5rem;
+        font-size: 10px;
+    }
+}
+@media (max-width:480px){
+    .modal{
+        width: 100%;
+    }
+    .modal-content{
+        width: 80%;
+        height: 80%;
+    }
+    .modal-field{
+        width: 80%;
+        margin-left: 2rem;
+        font-size: 10px;
+    }
+    .modal-header{
+        font-size: 0.5px;
+    }
+    .modal-footer{
+        margin-top: -0.5rem;
+        font-size: 10px;
     }
 }
