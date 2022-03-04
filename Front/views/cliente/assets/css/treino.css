@@ -879,9 +879,11 @@ form{
             width: 85%;
             height: 90%;
         }
-         .modal.active{
-             top:0;
-         }
+        .modal .informacoes{
+            font-size: 14px;
+            width: 60%;
+            margin-left: 2rem;
+        }
          .modal-content{
              margin:0;
              width:100%;
