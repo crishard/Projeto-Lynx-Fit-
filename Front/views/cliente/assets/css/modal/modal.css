@@ -229,9 +229,10 @@
 }
 @media (max-width:390px){
     .modal-content{
-        margin:0;
-        width:100%;
-        position:fixed;
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 40%;
     }
     .modal-field{
         width:100%;
