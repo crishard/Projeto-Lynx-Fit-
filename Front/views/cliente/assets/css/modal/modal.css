@@ -227,6 +227,7 @@
     .modal.active{
         top:0;
 }
+@media (max-width:390px){
     .modal-content{
         margin:0;
         width:100%;
