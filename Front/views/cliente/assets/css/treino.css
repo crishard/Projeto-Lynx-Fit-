@@ -892,6 +892,8 @@ form{
             font-size: 12px;
             width: 80%;
         }
+        .modal-footer{
+            margin-top: 1rem;
      }
      
   }
