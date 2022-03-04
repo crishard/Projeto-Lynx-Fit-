@@ -132,3 +132,366 @@
     padding: 0 50px;
     margin-top: 5rem;
 }
+@media screen and (min-width: 1400px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 65%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 20px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 20px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1082px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 65%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 20px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 20px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 990px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 65%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 20px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 20px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 860px) {
+     /*Exluir*/
+     .modal-contentt{
+        width: 65%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 20px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 20px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 725px) {
+     /*Exluir*/
+     .modal-contentt{
+        width: 65%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 20px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 20px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 650px) {
+     /*Exluir*/
+     .modal-contentt{
+        width: 80%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 18px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 18px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 500px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 80%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 18px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 18px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 70%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 450px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 80%;
+        height: 50%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 16px;
+        margin-left: -8rem;
+    }
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 60%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
+
+/*Responsividade dos modais*/
+@media screen and (max-width: 390px) {
+    /*Exluir*/
+    .modal-contentt{
+        width: 80%;
+        height: 40%;
+    }
+    .modal-contentt .informacoesExcluir p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contentt .informacoesExcluir select{
+        width: 70%;
+        font-size: 16px;
+        margin-left: -8rem;
+    }
+
+    /*Editar*/
+    .modal-contenttt{
+        width: 80%;
+        height: 60%;
+    }
+    .modal-contenttt .informacoesEditar p{
+        font-size: 16px;
+        margin-left: -7rem;
+    }
+    .modal-contenttt .modal-fieldd{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+        margin-top: 1rem;
+    }
+    .modal-contenttt .informacoesEditar .escolha{
+        width: 100%;
+        font-size: 16px;
+        margin-left: -5rem;
+    }
+    .modal-footeeer .buttonSavee{
+        font-size: 14px;
+        width: 300px;
+    }
+}
