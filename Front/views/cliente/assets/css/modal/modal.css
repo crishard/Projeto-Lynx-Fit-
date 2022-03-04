@@ -113,10 +113,116 @@
     border: 2px solid rgba(0, 0, 170, 0.500);
     box-shadow: 0 0 3px rgba(0, 0, 170, 0.500);
 }
-@media (max-width:480px){
-    .modal{
-        top:100%;
-        transition: all 1s ease;
+@media screen and (min-width: 1400px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 18rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 1082px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 16rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 990px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 14rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 860px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 10rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 725px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 8rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 650px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 5rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 70%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 3rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .modal-content{
+        margin-left: 3rem;
+        margin-top: 8rem;
+        width: 80%;
+        height: 770%;
+    }
+    .modal-field{
+        width: 100%;
+        font-size: 16px;
+        margin-left: 6rem;
+        margin-top: 1rem;
     }
     .modal.active{
         top:0;
